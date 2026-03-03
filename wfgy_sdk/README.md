@@ -1,3 +1,15 @@
+> ⚠️ **Status Notice (Historical / Experimental Module)**
+>
+> The `wfgy_sdk` directory represents an early experimental scaffold from the initial phase of this project.
+> 
+> It is **not** a production-ready engine, and most of the current repository direction has moved toward TXT-style reasoning artifacts rather than executable SDK kernels.
+> 
+> The core `wfgy_engine.py` file does not implement a full standalone algorithm and should not be interpreted as a complete inference system.
+> 
+> This folder remains for historical transparency and structural continuity.
+> 
+> For current active development, please refer to the top-level README and the TXT-based reasoning modules.
+
 # WFGY SDK ─ Inside the Engine Room  
 *A tiny, self-contained Python package that powers every variant-gate demo in the repo.*
 
