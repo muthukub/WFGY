@@ -149,7 +149,7 @@ This section highlights some early and notable “Star Gators” who starred the
 
 Explore the full list of notable supporters:
 
-👉 [Star Gators · notable stargazers](./stargazers/README.md)
+👉 [Star Gators · notable stargazers](https://github.com/onestardao/WFGY/blob/main/stargazers/README.md)
 
 ---
 
