@@ -271,6 +271,7 @@ Audit this query and return:
 
 ---
 
+<!-- WFGY_FOOTER_START -->
 ### Explore More
 
 | Module                | Description                                                          | Link                                                                                               |
@@ -307,4 +308,6 @@ Audit this query and return:
 [![Blow](https://img.shields.io/badge/Blow-Game%20Logic-purple?style=flat-square)](https://github.com/onestardao/WFGY/tree/main/OS/BlowBlowBlow)
 
 </div>
+
+<!-- WFGY_FOOTER_END -->
 

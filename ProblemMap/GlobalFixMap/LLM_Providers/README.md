@@ -167,6 +167,7 @@ Coverage ≥ 0.70 on three paraphrases. λ convergent on two seeds.
 
 ---
 
+<!-- WFGY_FOOTER_START -->
 ### Explore More
 
 | Module | Description | Link |
@@ -201,3 +202,5 @@ Coverage ≥ 0.70 on three paraphrases. λ convergent on two seeds.
 [![Blow](https://img.shields.io/badge/Blow-Game%20Logic-purple?style=flat-square)](https://github.com/onestardao/WFGY/tree/main/OS/BlowBlowBlow)
 
 </div>
+
+<!-- WFGY_FOOTER_END -->

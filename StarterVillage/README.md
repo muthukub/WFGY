@@ -166,6 +166,7 @@ If you want the **60-second runnable boot** for your own tasks, keep reading:
 
 *(Just have fun; theory comes later.)*
 
+<!-- WFGY_FOOTER_START -->
 👉 More info → [TXT OS — Explore More](https://github.com/onestardao/WFGY/blob/main/OS/README.md)
 
 ---
@@ -344,6 +345,8 @@ _“One line to boot them all, one village to guide them.”_
 **— PSBigBig**
 
 </div>
+
+<!-- WFGY_FOOTER_END -->
 
 ---
 
