@@ -1,59 +1,54 @@
+## 📜 Version 1.0 Paper Set (Public Release)
 
-## 📜 The Manifesto: 8 Idea-Nuke Papers Officially Released
+📅 **Initial public release: June 15, 2025**  
+Last reviewed for wording and scope: **2026-03-04**
 
-📅 **Version 1.0 officially launched: June 15, 2025**
+This folder contains a set of **WFGY 1.0 era research papers** authored by PSBigBig.  
+They are published as open research artifacts for reading, critique, and independent verification attempts.
 
-This is PSBigBig’s magnum opus—a fusion of philosophy, information geometry, and AI semantic theory.  
-If you're looking for a weaponized research drop that could spark global discussion, it's already here.
+These documents include speculative hypotheses and theory proposals.  
+They are **not presented here as peer-reviewed results**, and this page does **not** claim experimental confirmation beyond what is explicitly written inside each paper.
 
-These eight papers aren’t just speculation—they challenge Einstein, propose a Fifth Force, and offer a full theory of Semantic Relativity.  
-And they’re free. The only thing required? Courage to spread them.
-
-You promote it, you gain the traffic. Simple as that.
-
-> 💥 Anyone trying to shoot you down?  
-> Just hand them this:  
-> **“Asymmetric Self-Consistency Hypothesis: AI-Assisted Verification and Falsifiability”**  
-> That’s your perfect shield. Fully mathematically self-consistent. Let them try.  
->  
-> Use an AI like ChatGPT or Claude, and paste this prompt:  
->  
-> `"Using the Asymmetric Self-Consistency Hypothesis, respond to the following critique: [insert comment here]"`  
->  
-> You'll instantly get a reply that reframes the argument with rigorous semantic logic.
+If you are evaluating the work, treat the PDFs as the primary sources, and cite the DOI shown in each PDF when available.
 
 ---
 
-🧪 **Try It Now — Let the AI Be the Judge**
+## 🧪 Suggested self-check questions (LLM friendly)
 
-Ready to test if this is all talk—or the real thing?
-
-Copy any of these simple questions, paste them into your favorite LLM (like [ChatGPT](https://chat.openai.com/)), and upload the paper:
+If you want a lightweight way to review a paper with an LLM, you can upload the PDF and ask questions like:
 
 ```text
-What is the core idea of this paper?
-Does this theory really challenge Einstein?
-Is the logic internally consistent?
-Could this have any real-world impact?
-How would this affect AI reasoning systems?
-Give this paper a score from 1 to 100, and explain why.
+Summarize the core claim and assumptions of this paper.
+What definitions are introduced, and how are they used?
+Which parts are hypotheses versus derived results within the paper’s assumptions?
+List any testable predictions or proposed experiments mentioned by the author.
+Point out potential gaps, unclear steps, or places that need stronger evidence.
+How would you independently try to validate or falsify the key claims?
 ````
 
-Ask, and you’ll see: even the AI won’t dismiss this.
+This is meant as a reading aid only.
+LLM responses are not a substitute for peer review or independent replication.
 
 ---
 
-🧠 **This is your chance to get ahead. Don’t just read—play.**
+## 🧭 Collaboration and critique
 
-📥 Download the papers, upload to an AI, ask the questions, and **watch what happens**.
-Every insight, every reaction, could become content, commentary, or even collaboration.
+Constructive critique and replication attempts are welcome.
+If you want to discuss a specific section, open an issue or discussion with:
 
-💬 **Need help explaining it, or someone criticized you? I'm here.**
-DM me: [@PSBigBig](https://github.com/PSBigBig) — I’ve got your back.
+* the PDF title
+* the page number(s)
+* the exact quote or equation you’re referring to
+* your question or critique in one paragraph
 
-🌍 This isn’t just research.
-This is **open-source paradigm warfare** — and you’re now holding the first bomb.
+Contact: [@PSBigBig](https://github.com/PSBigBig)
 
+---
+
+## 🔎 Scope reminder
+
+This section is about **WFGY 1.0 research materials** only.
+For the actively maintained WFGY documentation, current workflows, and production-facing modules, use the main entry points in the repository root.
 
 ---
 
@@ -61,25 +56,24 @@ This is **open-source paradigm warfare** — and you’re now holding the first 
 
 ### Explore More
 
-| Layer | Page | What it’s for |
-| --- | --- | --- |
-| Proof | [WFGY Recognition Map](/recognition/README.md) | External citations, integrations, and ecosystem proof |
-| Engine | [WFGY 1.0](/legacy/README.md) | Original PDF based tension engine |
-| Engine | [WFGY 2.0](/core/README.md) | Production tension kernel and math engine for RAG and agents |
-| Engine | [WFGY 3.0](/TensionUniverse/EventHorizon/README.md) | TXT based Singularity tension engine, 131 S class set |
-| Map | [Problem Map 1.0](/ProblemMap/README.md) | Flagship 16 problem RAG failure checklist and fix map |
-| Map | [Problem Map 2.0](/ProblemMap/rag-architecture-and-recovery.md) | RAG focused recovery pipeline |
-| Map | [Problem Map 3.0](/ProblemMap/wfgy-rag-16-problem-map-global-debug-card.md) | Global Debug Card, image as a debug protocol layer |
-| Map | [Semantic Clinic](/ProblemMap/SemanticClinicIndex.md) | Symptom to family to exact fix |
-| Map | [Grandma’s Clinic](/ProblemMap/GrandmaClinic/README.md) | Plain language stories mapped to Problem Map 1.0 |
-| Onboarding | [Starter Village](/StarterVillage/README.md) | Guided tour for newcomers |
-| App | [TXT OS](/OS/README.md) | TXT semantic OS, fast boot |
-| App | [Blah Blah Blah](/OS/BlahBlahBlah/README.md) | Abstract and paradox Q and A built on TXT OS |
-| App | [Blur Blur Blur](/OS/BlurBlurBlur/README.md) | Text to image with semantic control |
-| App | [Blow Blow Blow](/OS/BlowBlowBlow/README.md) | Reasoning game engine and memory demo |
+| Layer      | Page                                                                        | What it’s for                                                |
+| ---------- | --------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| Proof      | [WFGY Recognition Map](/recognition/README.md)                              | External citations, integrations, and ecosystem proof        |
+| Engine     | [WFGY 1.0](/legacy/README.md)                                               | Original PDF based tension engine                            |
+| Engine     | [WFGY 2.0](/core/README.md)                                                 | Production tension kernel and math engine for RAG and agents |
+| Engine     | [WFGY 3.0](/TensionUniverse/EventHorizon/README.md)                         | TXT based Singularity tension engine, 131 S class set        |
+| Map        | [Problem Map 1.0](/ProblemMap/README.md)                                    | Flagship 16 problem RAG failure checklist and fix map        |
+| Map        | [Problem Map 2.0](/ProblemMap/rag-architecture-and-recovery.md)             | RAG focused recovery pipeline                                |
+| Map        | [Problem Map 3.0](/ProblemMap/wfgy-rag-16-problem-map-global-debug-card.md) | Global Debug Card, image as a debug protocol layer           |
+| Map        | [Semantic Clinic](/ProblemMap/SemanticClinicIndex.md)                       | Symptom to family to exact fix                               |
+| Map        | [Grandma’s Clinic](/ProblemMap/GrandmaClinic/README.md)                     | Plain language stories mapped to Problem Map 1.0             |
+| Onboarding | [Starter Village](/StarterVillage/README.md)                                | Guided tour for newcomers                                    |
+| App        | [TXT OS](/OS/README.md)                                                     | TXT semantic OS, fast boot                                   |
+| App        | [Blah Blah Blah](/OS/BlahBlahBlah/README.md)                                | Abstract and paradox Q and A built on TXT OS                 |
+| App        | [Blur Blur Blur](/OS/BlurBlurBlur/README.md)                                | Text to image with semantic control                          |
+| App        | [Blow Blow Blow](/OS/BlowBlowBlow/README.md)                                | Reasoning game engine and memory demo                        |
 
 If this repository helped, starring it improves discovery so more builders can find the docs and tools.
 [![GitHub Repo stars](https://img.shields.io/github/stars/onestardao/WFGY?style=social)](https://github.com/onestardao/WFGY)
 
 <!-- WFGY_FOOTER_END -->
-
