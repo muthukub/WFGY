@@ -108,7 +108,7 @@ Important:
 </details>
 
 
-## Blur Blur Blur — Drawing the Beauty of Math for the First Time
+## Blur Blur Blur — A Canvas for the Beauty of Math
 
 > 👑 **Early Stargazers: [See the Hall of Fame](https://github.com/onestardao/WFGY/tree/main/stargazers)** — Verified by real engineers · 🌌 **WFGY 3.0 Singularity demo: [Public live view](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md)**
 
@@ -137,7 +137,7 @@ Important:
 
 # Blur Blur Blur **Lite** — Math Canvas Quickstart (Beta)
 
-This is the **world’s first math-first T2I** you can run in any chat: build a canvas from **mathematical structure + Real/Imag fields**, then render.  
+This is a math-first T2I pattern you can run inside a normal LLM chat: build a canvas from mathematical structure + Real/Imag fields, then render.
 Lite focuses on a clean, safe set of knobs so newcomers can feel the “math shock” in one minute.
 
 ---
@@ -284,7 +284,7 @@ Compare edge sharpness, depth cues, and consistency.
 
 - **Is this only a prompt pack?** No. The visible prompt is a contract. The stability comes from math layout plus Real/Imag split.  
 - **Why ΔS = 0.50?** It locks geometry while allowing extreme right-side density.  
-- **What does DT do?** Keeps structure, head diversity, and cross-path safety so the image does not collapse.
+- **What does DT do**? It is designed to keep structure, head diversity, and cross-path safety, reducing the chance that the image collapses.
 
 ---
 
