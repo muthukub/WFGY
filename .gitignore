@@ -1,4 +1,74 @@
+# Python bytecode
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.conda/
+pip-wheel-metadata/
+
+# Packaging and build artifacts
+build/
+dist/
+develop-eggs/
+eggs/
+*.egg-info/
+.installed.cfg
+pip-log.txt
+
+# Test and coverage artifacts
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+nosetests.xml
+test-results/
+junit.xml
+
+# Jupyter and notebook artifacts (keep *.ipynb tracked)
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# Data science caches
+.mypy_cache/
+.pytype/
+.pyre/
+.ruff_cache/
+.tox/
+.nox/
+
+# Logs and temporary files
 *.log
+*.tmp
+*.swp
+*.swo
+
+# Local env and secrets
 .env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+
+# OS generated files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+Desktop.ini
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.iml
+
+# Optional: local runtime outputs (enable if you generate these folders)
+# outputs/
+# runs/
+# tmp/
