@@ -23,24 +23,23 @@
 
 _Type legend: **Theory** (concepts, specs, PDFs) · **Application** (engines, OS modules, tools) · **Teaching** (maps, tutorials, clinics)_
 
-_Last updated: Oct 13, 2025_
+_Last updated: March 8, 2026_
 
 ---
 ## PSBigBig — Self-Unlocked
 
 | Date (YYYY/MM/DD) | Product | Type | Description | Status |
 |------------------:|---------|------|-------------|:-----:|
-| 2025/06/15 | [WFGY 1.0](https://github.com/onestardao/WFGY/) | Theory | Project home and baseline reference for the WFGY stack. | ✅ |
+| 2025/06/15 | [WFGY 1.0](https://github.com/onestardao/WFGY/blob/main/legacy/README.md) | Theory | Project home and baseline reference for the WFGY stack. | ✅ |
 | 2025/07/02 | [TXTOS](https://github.com/onestardao/WFGY/blob/main/OS/README.md) | Application | Text-native reasoning OS modules and runtime glue for real tasks. | ✅ |
 | 2025/07/15 | [TXT: Blah Blah Blah](https://github.com/onestardao/WFGY/blob/main/OS/BlahBlahBlah/README.md) | Application | Embedding and semantics submodule integrated with TXTOS. | ✅ |
 | 2025/07/28 | [Problem Map 1.0](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md) | Teaching | The original 16-mode diagnostic map for failure modes and fixes. | ✅ |
-| 2025/07/28 | [Problem Map 2.0](https://github.com/onestardao/WFGY/blob/main/ProblemMap/rag-architecture-and-recovery.md) | Teaching | RAG-focused recovery tree and pipeline with practical playbooks. | ✅ |
 | 2025/07/28 | [Semantic Clinic](https://github.com/onestardao/WFGY/blob/main/ProblemMap/SemanticClinicIndex.md) | Teaching | Injection, memory bugs, drift catalog with triage and treatment patterns. | ✅ |
 | 2025/07/30 | [Semantic Blueprint](https://github.com/onestardao/WFGY/blob/main/SemanticBlueprint/README.md) | Theory | Layer-based symbolic reasoning blueprint and semantic modulation notes. | ✅ |
 | 2025/09/05 | [Global Fix Map](https://github.com/onestardao/WFGY/blob/main/ProblemMap/GlobalFixMap/README.md) | Teaching | Cross-tool guardrails and fix patterns for VectorDBs, agents, embeddings, dev tools, and more. | ✅ |
 | 2025/09/14 | [Your Grandma Knows the 16 AI Bugs](https://github.com/onestardao/WFGY/tree/main/ProblemMap/GrandmaClinic) | Teaching | Everyday analogies for each failure mode — from coffee machine hallucinations and WiFi retrieval errors to grandma’s recipe book turning into a vector store. A light but sharp guide that makes the 16 bugs impossible to forget. | ✅  |
 | 2026/01/31 | [WFGY 3.0 · Singularity Demo](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/WFGY-3.0_Singularity-Demo_AutoBoot_SHA256-Verifiable.txt) | Evaluation | Reproducible, AI-driven self-evaluation arena. A TXT-based entry point that lets models read, run, and assess WFGY under pressure without fine-tuning. | ✅ |
-| 2026/03/03 | [WFGY Global Debug Card](https://github.com/onestardao/WFGY/releases/tag/WFGY-Global-Debug-Card) | Teaching | Image-as-protocol diagnostic card for RAG runs. A compact visual workflow for classifying failures, tracing root causes, and guiding minimal structural fixes across Q/E/P/A. | ✅ |
+| 2026/03/03 | [Problem Map 2.0 Global Debug Card](https://github.com/onestardao/WFGY/releases/tag/WFGY-Global-Debug-Card) | Teaching | Image-as-protocol diagnostic card for RAG runs. A compact visual workflow for classifying failures, tracing root causes, and guiding minimal structural fixes across Q/E/P/A. | ✅ |
 
 **Notes:**  
 Personal self-unlocks turned on directly by PSBigBig.  
