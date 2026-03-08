@@ -1,6 +1,7 @@
 cff-version: 1.2.0
-message: "If you use this work, please cite it."
+message: "If you use WFGY in research, evaluation, teaching, or debugging workflows, please cite this repository."
 title: "WFGY"
+abstract: "WFGY is an open-source reasoning and debugging ecosystem for AI systems. It includes the Problem Map line for structured failure diagnosis, the Global Debug Card for image-first triage, and broader framework layers for reasoning, evaluation, and system-level analysis."
 type: software
 authors:
   - name: "PSBigBig"
@@ -12,8 +13,8 @@ keywords:
   - "RAG"
   - "LLM"
   - "retrieval-augmented generation"
+  - "agent systems"
   - "debugging"
   - "troubleshooting"
   - "evaluation"
-  - "knowledge graph"
   - "reasoning"
