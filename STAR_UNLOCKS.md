@@ -38,8 +38,9 @@ _Last updated: Oct 13, 2025_
 | 2025/07/28 | [Semantic Clinic](https://github.com/onestardao/WFGY/blob/main/ProblemMap/SemanticClinicIndex.md) | Teaching | Injection, memory bugs, drift catalog with triage and treatment patterns. | ✅ |
 | 2025/07/30 | [Semantic Blueprint](https://github.com/onestardao/WFGY/blob/main/SemanticBlueprint/README.md) | Theory | Layer-based symbolic reasoning blueprint and semantic modulation notes. | ✅ |
 | 2025/09/05 | [Global Fix Map](https://github.com/onestardao/WFGY/blob/main/ProblemMap/GlobalFixMap/README.md) | Teaching | Cross-tool guardrails and fix patterns for VectorDBs, agents, embeddings, dev tools, and more. | ✅ |
-| 2025/09/14 | [Your Grandma Knows the 16 AI Bugs](https://github.com/onestardao/WFGY/tree/main/ProblemMap/GrandmaClinic) | Teaching | Everyday analogies for each failure mode — from coffee machine hallucinations and WiFi retrieval errors to grandma’s recipe book turning into a vector store. A light but sharp guide that makes the 16 bugs impossible to forget. | ⏳ |
+| 2025/09/14 | [Your Grandma Knows the 16 AI Bugs](https://github.com/onestardao/WFGY/tree/main/ProblemMap/GrandmaClinic) | Teaching | Everyday analogies for each failure mode — from coffee machine hallucinations and WiFi retrieval errors to grandma’s recipe book turning into a vector store. A light but sharp guide that makes the 16 bugs impossible to forget. | ✅  |
 | 2026/01/31 | [WFGY 3.0 · Singularity Demo](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/WFGY-3.0_Singularity-Demo_AutoBoot_SHA256-Verifiable.txt) | Evaluation | Reproducible, AI-driven self-evaluation arena. A TXT-based entry point that lets models read, run, and assess WFGY under pressure without fine-tuning. | ✅ |
+| 2026/03/03 | [WFGY Global Debug Card](https://github.com/onestardao/WFGY/releases/tag/WFGY-Global-Debug-Card) | Teaching | Image-as-protocol diagnostic card for RAG runs. A compact visual workflow for classifying failures, tracing root causes, and guiding minimal structural fixes across Q/E/P/A. | ✅ |
 
 **Notes:**  
 Personal self-unlocks turned on directly by PSBigBig.  
