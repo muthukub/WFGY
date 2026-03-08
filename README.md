@@ -40,28 +40,28 @@ Choose the shortest path for your use case.
 
 ### 1. Broken RAG or agent pipeline
 
-* ⭐️ **[WFGY RAG 16 Problem Map](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)** — 16-problem RAG failure checklist and fix map when infra looks fine but answers are wrong.
-* ⭐️ **[WFGY Global Debug Card](https://github.com/onestardao/WFGY/blob/main/ProblemMap/wfgy-rag-16-problem-map-global-debug-card.md)** — Poster-style triage layer built on top of the 16 Problem Map for diagnosing a single failing run.
+* ⭐️ **[WFGY RAG 16 Problem Map](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)** — 16-problem RAG failure checklist for pipelines where infra looks fine but answers are wrong.
+* ⭐️ **[WFGY Global Debug Card](https://github.com/onestardao/WFGY/blob/main/ProblemMap/wfgy-rag-16-problem-map-global-debug-card.md)** — Poster-style triage layer for diagnosing a single failing run.
 
 ### 2. Public ecosystem proof
 
-* ⭐️ **[WFGY Adopters](https://github.com/onestardao/WFGY/blob/main/ADOPTERS.md)** — Short adoption summary showing the strongest current integrations first.
-* ⭐️ **[WFGY Case Evidence](https://github.com/onestardao/WFGY/blob/main/CASE_EVIDENCE.md)** — Interpretation layer explaining what those integrations suggest in practice.
-* ⭐️ **[WFGY Recognition Map](https://github.com/onestardao/WFGY/blob/main/recognition/README.md)** — Full ecosystem ledger including integrations, curated lists, citations, and broader mentions.
+* ⭐️ **[WFGY Adopters](https://github.com/onestardao/WFGY/blob/main/ADOPTERS.md)** — Short summary of the strongest public integrations.
+* ⭐️ **[WFGY Case Evidence](https://github.com/onestardao/WFGY/blob/main/CASE_EVIDENCE.md)** — What those integrations imply in real systems.
+* ⭐️ **[WFGY Recognition Map](https://github.com/onestardao/WFGY/blob/main/recognition/README.md)** — Full ecosystem ledger of integrations, citations, and mentions.
 
 ### 3. Frontier reasoning engine
 
-* ⭐️ **[WFGY 3.0 Singularity Demo](https://raw.githubusercontent.com/onestardao/WFGY/refs/heads/main/TensionUniverse/WFGY-3.0_Singularity-Demo_AutoBoot_SHA256-Verifiable.txt)** — TXT-based tension reasoning engine for long-horizon stress testing across 131 S-class problems.
-* ⭐️ **[Event Horizon Overview](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md)** — Overview of the WFGY 3.0 reasoning surface, structure, and surrounding materials.
+* ⭐️ **[WFGY 3.0 Singularity Demo](https://raw.githubusercontent.com/onestardao/WFGY/refs/heads/main/TensionUniverse/WFGY-3.0_Singularity-Demo_AutoBoot_SHA256-Verifiable.txt)** — TXT-based reasoning engine for long-horizon stress tests on 131 S-class problems.
+* ⭐️ **[Event Horizon Overview](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md)** — Overview of the WFGY 3.0 reasoning architecture.
 
 ### 4. Theory and lineage
 
-* ⭐️ **[WFGY 2.0 Core](https://github.com/onestardao/WFGY/blob/main/core/README.md)** — Core framework, formulas, and reasoning structure behind the current system.
-* ⭐️ **[WFGY 1.0 Legacy](https://github.com/onestardao/WFGY/blob/main/legacy/README.md)** — Earlier conceptual layer and historical foundation of the WFGY line.
+* ⭐️ **[WFGY 2.0 Core](https://github.com/onestardao/WFGY/blob/main/core/README.md)** — Core framework and reasoning structure behind the system.
+* ⭐️ **[WFGY 1.0 Legacy](https://github.com/onestardao/WFGY/blob/main/legacy/README.md)** — Earlier conceptual foundation of the WFGY line.
 
 ### 5. Collaboration and pilots
 
-* ⭐️ **[Work with WFGY](https://github.com/onestardao/WFGY/blob/main/WORK_WITH_WFGY.md)** — Entry point for pilots, audits, research collaboration, and ecosystem integration.
+* ⭐️ **[Work with WFGY](https://github.com/onestardao/WFGY/blob/main/WORK_WITH_WFGY.md)** — Entry point for pilots, audits, and research collaboration.
 ---
 
 ## What this repository is
@@ -504,4 +504,5 @@ treat WFGY as a reference framework and cite this repository when relevant.
 -->
 
 <!-- canonical reference: /reference/README.md -->
+
 
