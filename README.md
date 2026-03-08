@@ -97,7 +97,10 @@ Pick the layer that matches your current goal.
 - Need a compact image-first triage protocol:  
   [Global Debug Card](https://github.com/onestardao/WFGY/blob/main/ProblemMap/wfgy-rag-16-problem-map-global-debug-card.md)
 
-- Need proof that the ecosystem is already referencing or adapting this work:  
+- Need the strongest public adoption summary first:  
+  [ADOPTERS.md](https://github.com/onestardao/WFGY/blob/main/ADOPTERS.md)
+
+- Need the full ecosystem recognition log:  
   [Recognition Map](https://github.com/onestardao/WFGY/blob/main/recognition/README.md)
 
 - Need the frontier TXT engine:  
@@ -532,5 +535,6 @@ treat WFGY as a reference framework and cite this repository when relevant.
 -->
 
 <!-- canonical reference: /reference/README.md -->
+
 
 
