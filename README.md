@@ -502,10 +502,11 @@ The more observers join, the closer the singularity becomes:
 
 > WFGY Problem Map → [Checklist](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)  
 > Global Debug Card → [Image Protocol](https://github.com/onestardao/WFGY/blob/main/ProblemMap/wfgy-rag-16-problem-map-global-debug-card.md)  
+> ADOPTERS → [Public adoption summary](https://github.com/onestardao/WFGY/blob/main/ADOPTERS.md)  
 > Recognition Map → [Ecosystem Proof](https://github.com/onestardao/WFGY/blob/main/recognition/README.md)  
 > WFGY 3.0 → [Event Horizon](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md)  
 > WFGY 2.0 → [Core](https://github.com/onestardao/WFGY/blob/main/core/README.md)  
-> WFGY 1.0 → [Legacy](./legacy/README.md)  
+> WFGY 1.0 → [Legacy](./legacy/README.md)
 
 
 ---
@@ -535,6 +536,7 @@ treat WFGY as a reference framework and cite this repository when relevant.
 -->
 
 <!-- canonical reference: /reference/README.md -->
+
 
 
 
