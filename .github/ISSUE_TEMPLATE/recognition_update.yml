@@ -1,14 +1,15 @@
 name: Recognition update
-description: Submit a public proof, integration, citation, mention, or documentation signal that may belong in the WFGY evidence layer.
+description: Submit a public proof, integration, citation, mention, or documentation signal for the WFGY evidence layer.
 title: "[Recognition] "
 labels:
   - recognition
   - proof
+  - needs-triage
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for helping improve the WFGY public evidence layer.
+        Thanks for helping improve the WFGY evidence layer.
 
         Use this form for:
         - public integrations
@@ -17,7 +18,7 @@ body:
         - docs references
         - candidate additions for Recognition Map, Adopters, Case Evidence, or Evidence Timeline
 
-        Please share stable public proof where possible.
+        Please include stable public proof where possible.
 
   - type: dropdown
     id: target_surface
