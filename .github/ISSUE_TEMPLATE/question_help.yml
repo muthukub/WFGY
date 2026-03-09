@@ -1,0 +1,64 @@
+name: Question or help
+description: Ask a focused question about using WFGY, reading its docs, or understanding where to start.
+title: "[Question] "
+labels:
+  - question
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before opening a question, please check:
+
+        - README
+        - Problem Map
+        - Ecosystem Map
+        - existing issues
+
+        Use this form when you need focused help understanding WFGY or choosing the right entry point.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: Ask your question clearly
+      placeholder: Describe what you want to understand
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: What are you trying to do
+      description: Describe your use case, goal, or current situation
+      placeholder: e.g. I want to debug a RAG pipeline, understand the ecosystem, or find the right collaboration path
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you already tried
+      description: Explain what pages, steps, or approaches you already checked
+      placeholder: Describe what you already looked at or tested
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add links, screenshots, logs, or relevant references if useful
+      placeholder: Paste extra context here
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I checked the main entry pages before opening this question
+          required: true
+        - label: I understand this issue may be redirected to docs, collaboration, or another template if needed
+          required: true
