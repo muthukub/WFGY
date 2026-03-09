@@ -293,7 +293,7 @@ Depending on how the archive evolves, there are or will be questions about:
 - long term stability of biospheres  
 - tradeoffs between robustness and adaptability in complex systems
 
-You can treat TU CH07 as a narrative preface to those questions. When you open them, try rewriting their content using the variables from this file: island, boundary, internal state, repair, scenario set, weights.
+You can treat TU CH06 as a narrative preface to those questions. When you open them, try rewriting their content using the variables from this file: island, boundary, internal state, repair, scenario set, weights.
 
 ### 6.3 Multi agent tension and artificial systems
 
