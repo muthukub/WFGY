@@ -14,7 +14,7 @@ It is a connected ecosystem with multiple public entry points.
 Without a clear map, new readers may misread the project as a set of unrelated parallel products.  
 This page exists to prevent that.
 
-For the main front door, use [README.md](./README.md).
+For the main front door, use [README](./README.md).
 
 ---
 
@@ -184,14 +184,14 @@ It is the public evidence and collaboration surface around the engine.
 
 **Key surfaces**
 
-* [ADOPTERS](./ADOPTERS.md)
-* [CASE_EVIDENCE](./CASE_EVIDENCE.md)
+* [Adopters](./ADOPTERS.md)
+* [Case Evidence](./CASE_EVIDENCE.md)
 * [Recognition Map](./recognition/README.md)
-* [EVIDENCE_TIMELINE](./EVIDENCE_TIMELINE.md)
-* [WORK_WITH_WFGY.md](./WORK_WITH_WFGY.md)
-* [PILOT_OFFER_ONE_PAGER.md](./PILOT_OFFER_ONE_PAGER.md)
-* [SAMPLE_DELIVERABLE.md](./SAMPLE_DELIVERABLE.md)
-* [CITATION.cff](./CITATION.cff)
+* [Evidence Timeline](./EVIDENCE_TIMELINE.md)
+* [Work with WFGY](./WORK_WITH_WFGY.md)
+* [Pilot Offer One-Pager](./PILOT_OFFER_ONE_PAGER.md)
+* [Sample Deliverable](./SAMPLE_DELIVERABLE.md)
+* [Citation Metadata](./CITATION.cff)
 
 ---
 
@@ -224,7 +224,7 @@ Start here:
 Then move to:
 
 * [Problem Map 1.0](./ProblemMap/README.md)
-* [ECOSYSTEM_MAP.md](./ECOSYSTEM_MAP.md)
+* [Ecosystem Map](./ECOSYSTEM_MAP.md)
 
 ---
 
@@ -238,7 +238,7 @@ Start here:
 Then move to:
 
 * [WFGY 2.0 Core](./core/README.md)
-* [EVIDENCE_TIMELINE](./EVIDENCE_TIMELINE.md)
+* [Evidence Timeline](./EVIDENCE_TIMELINE.md)
 
 ---
 
@@ -246,14 +246,14 @@ Then move to:
 
 Start here:
 
-* [ADOPTERS](./ADOPTERS.md)
-* [CASE_EVIDENCE](./CASE_EVIDENCE.md)
+* [Adopters](./ADOPTERS.md)
+* [Case Evidence](./CASE_EVIDENCE.md)
 * [Recognition Map](./recognition/README.md)
 
 Then move to:
 
-* [EVIDENCE_TIMELINE](./EVIDENCE_TIMELINE.md)
-* [WORK_WITH_WFGY.md](./WORK_WITH_WFGY.md)
+* [Evidence Timeline](./EVIDENCE_TIMELINE.md)
+* [Work with WFGY](./WORK_WITH_WFGY.md)
 
 ---
 
@@ -280,12 +280,12 @@ TXTOS belongs to the application line of the ecosystem.
 
 ### Public proof pages are not the engine
 
-ADOPTERS, CASE_EVIDENCE, Recognition Map, and EVIDENCE_TIMELINE help outside readers evaluate the ecosystem.  
+Adopters, Case Evidence, Recognition Map, and Evidence Timeline help outside readers evaluate the ecosystem.  
 They should not be mistaken for the framework itself.
 
 ### Collaboration pages are not deployment claims
 
-WORK_WITH_WFGY, PILOT_OFFER_ONE_PAGER, and SAMPLE_DELIVERABLE describe how collaboration may begin.  
+Work with WFGY, Pilot Offer One-Pager, and Sample Deliverable describe how collaboration may begin.  
 They do not by themselves prove deployment, revenue, or enterprise-scale adoption.
 
 ---
@@ -313,7 +313,7 @@ They only need to enter through the right door.
 
 ### Main entry
 
-* [README.md](./README.md)
+* [README](./README.md)
 
 ### Version lineage
 
@@ -336,14 +336,14 @@ They only need to enter through the right door.
 
 ### Proof and collaboration line
 
-* [ADOPTERS](./ADOPTERS.md)
-* [CASE_EVIDENCE](./CASE_EVIDENCE.md)
+* [Adopters](./ADOPTERS.md)
+* [Case Evidence](./CASE_EVIDENCE.md)
 * [Recognition Map](./recognition/README.md)
-* [EVIDENCE_TIMELINE](./EVIDENCE_TIMELINE.md)
-* [WORK_WITH_WFGY.md](./WORK_WITH_WFGY.md)
-* [PILOT_OFFER_ONE_PAGER.md](./PILOT_OFFER_ONE_PAGER.md)
-* [SAMPLE_DELIVERABLE.md](./SAMPLE_DELIVERABLE.md)
-* [CITATION.cff](./CITATION.cff)
+* [Evidence Timeline](./EVIDENCE_TIMELINE.md)
+* [Work with WFGY](./WORK_WITH_WFGY.md)
+* [Pilot Offer One-Pager](./PILOT_OFFER_ONE_PAGER.md)
+* [Sample Deliverable](./SAMPLE_DELIVERABLE.md)
+* [Citation Metadata](./CITATION.cff)
 
 ---
 
