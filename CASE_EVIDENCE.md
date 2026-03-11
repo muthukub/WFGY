@@ -39,56 +39,25 @@ For the full ecosystem record see
 
 Across current public evidence, the pattern is consistent.
 
-The most visible adoption wedge today is:
+The clearest adoption wedge today is:
 
 **WFGY ProblemMap · the 16-problem failure map for RAG and agent systems**
 
-In most cases, WFGY appears as a **diagnostic layer** rather than a full system component.
+In most public cases, WFGY appears as a **diagnostic layer** rather than a full runtime component.
 
-Teams use it to:
+Teams and researchers use it to:
 
 - classify failure patterns
 - structure debugging workflows
 - reduce ambiguity when RAG or agent systems behave unpredictably
-- turn symptoms into actionable debugging steps
+- turn symptoms into actionable troubleshooting steps
+- create a shared vocabulary for failure analysis
 
-The following cases illustrate how that pattern appears across different parts of the ecosystem.
-
----
-
-# Case 1 · RAGFlow
-
-## Context
-
-[RAGFlow](https://github.com/infiniflow/ragflow) is a production-oriented RAG framework focused on real pipeline deployments.
-
-Frameworks at this layer care about practical debugging guidance because real systems often fail in ways that are difficult to diagnose.
-
-## Where WFGY fit
-
-A troubleshooting guide derived from the **WFGY 16-problem failure map** was previously merged into the RAGFlow repository to support structured RAG pipeline diagnostics.
-
-The goal was to give developers a clear checklist of failure categories rather than leaving debugging entirely ad-hoc.
-
-## Public proof
-
-[RAGFlow PR #13204](https://github.com/infiniflow/ragflow/pull/13204)
-
-## What this suggests
-
-The merge record shows that WFGY's failure-mode structure was considered useful enough to be integrated into documentation for a mainstream RAG framework.
-
-This indicates that WFGY is legible as a **practical debugging structure** rather than only a conceptual framework.
-
-## Important boundary
-
-Open-source documentation evolves over time.
-
-This case is included as a **public merge record demonstrating ecosystem interaction**, not as a claim that the documentation placement is permanent.
+The following cases show how that pattern appears across different parts of the ecosystem.
 
 ---
 
-# Case 2 · LlamaIndex
+# Case 1 · LlamaIndex
 
 ## Context
 
@@ -96,11 +65,11 @@ This case is included as a **public merge record demonstrating ecosystem interac
 
 Documentation patterns in this ecosystem strongly influence how developers reason about system failures.
 
-## Where WFGY fit
+## Where WFGY fits
 
 The **WFGY 16-problem failure checklist** was integrated into LlamaIndex troubleshooting documentation as a structured failure taxonomy.
 
-This provides developers with a systematic way to interpret symptoms such as:
+This gives developers a more systematic way to interpret symptoms such as:
 
 - hallucinated answers
 - empty retrieval results
@@ -115,8 +84,8 @@ This provides developers with a systematic way to interpret symptoms such as:
 
 This case shows that WFGY can function as a **framework-agnostic debugging reference**.
 
-The ProblemMap is not tied to a specific runtime stack.  
-Instead it acts as a conceptual structure for diagnosing failures across different RAG implementations.
+The ProblemMap is not tied to a single runtime stack.  
+Instead, it can serve as a reusable conceptual layer for diagnosing failures across many RAG implementations.
 
 ## Important boundary
 
@@ -124,19 +93,51 @@ This integration demonstrates documentation-level adoption rather than full syst
 
 ---
 
+# Case 2 · RAGFlow
+
+## Context
+
+[RAGFlow](https://github.com/infiniflow/ragflow) is a production-oriented RAG framework focused on real pipeline deployments.
+
+Frameworks at this layer care about practical debugging guidance because real systems often fail in ways that are difficult to diagnose.
+
+## Where WFGY fits
+
+A troubleshooting guide derived from the **WFGY 16-problem failure map** was merged into the RAGFlow repository to support structured RAG pipeline diagnostics.
+
+The goal was to give developers a clear checklist of failure categories instead of leaving debugging entirely ad hoc.
+
+## Public proof
+
+[RAGFlow PR #13204](https://github.com/infiniflow/ragflow/pull/13204)
+
+## What this suggests
+
+The merge record shows that WFGY's failure-mode structure was useful enough to appear inside documentation for a mainstream RAG framework.
+
+This suggests that WFGY is legible as a **practical debugging structure**, not only as a conceptual framework.
+
+## Important boundary
+
+Open-source documentation evolves over time.
+
+This case is included as a **public merge record demonstrating ecosystem interaction**, not as a claim that documentation placement is permanent.
+
+---
+
 # Case 3 · FlashRAG
 
 ## Context
 
-[FlashRAG](https://github.com/RUC-NLPIR/FlashRAG) is a research-oriented RAG toolkit designed for experimentation and evaluation.
+[FlashRAG (RUC NLPIR Lab)](https://github.com/RUC-NLPIR/FlashRAG) is a research-oriented RAG toolkit developed in an academic setting for experimentation and evaluation.
 
-In research settings, debugging structures must support **reproducibility** rather than only practical troubleshooting.
+In research workflows, debugging structures need to support **reproducibility** in addition to practical troubleshooting.
 
-## Where WFGY fit
+## Where WFGY fits
 
 FlashRAG documentation references the **WFGY ProblemMap** as a structured checklist for RAG failure analysis.
 
-The taxonomy helps researchers reason about failure causes when evaluating retrieval pipelines.
+The taxonomy helps researchers reason about failure causes when evaluating retrieval pipelines and interpreting breakdowns across experiments.
 
 ## Public proof
 
@@ -146,25 +147,57 @@ The taxonomy helps researchers reason about failure causes when evaluating retri
 
 This case shows that WFGY is useful not only in engineering operations but also in **research-side evaluation workflows**.
 
-The ProblemMap can act as a bridge between experimentation and debugging.
+The ProblemMap can act as a bridge between experimentation, analysis, and debugging.
 
 ## Important boundary
 
 Research citation does not imply benchmark status or universal adoption.
 
-It demonstrates that the framework is useful enough to be referenced in structured evaluation contexts.
+It shows that the framework was useful enough to be referenced in a structured evaluation context.
 
 ---
 
-# Case 4 · ToolUniverse
+# Case 4 · DeepAgent
 
 ## Context
 
-[ToolUniverse](https://github.com/mims-harvard/ToolUniverse) is an academic-lab project exploring tool ecosystems for LLM systems.
+[DeepAgent (RUC NLPIR Lab)](https://github.com/RUC-NLPIR/DeepAgent) is an academic agent research project focused on complex multi-tool workflows.
 
-Unlike documentation references, this project exposed a **tool interface** around WFGY triage logic.
+In this setting, failures often come from tool misuse, poor tool selection, repeated tool loops, or weak coordination across steps.
 
-## Where WFGY fit
+## Where WFGY fits
+
+DeepAgent includes a **multi-tool agent failure modes troubleshooting note** inspired by WFGY-style debugging concepts.
+
+This extends the ProblemMap mindset beyond retrieval-heavy systems into **agent workflow diagnosis**, especially where the issue is not just missing context but incorrect tool behavior.
+
+## Public proof
+
+[DeepAgent PR #15](https://github.com/RUC-NLPIR/DeepAgent/pull/15#issuecomment-4020600680)
+
+## What this suggests
+
+This case suggests that WFGY-style failure mapping has value beyond classic RAG.
+
+It can also help organize diagnosis in **multi-tool agent systems**, where errors are often procedural, compositional, or loop-driven.
+
+## Important boundary
+
+This example demonstrates conceptual extension rather than proof of full domain coverage.
+
+Agent systems introduce many failure classes that go beyond the original 16-problem map.
+
+---
+
+# Case 5 · ToolUniverse
+
+## Context
+
+[ToolUniverse (Harvard MIMS Lab)](https://github.com/mims-harvard/ToolUniverse) is an academic-lab project exploring tool ecosystems for LLM systems.
+
+Unlike a pure documentation reference, this project exposed a **tool interface** around WFGY triage logic.
+
+## Where WFGY fits
 
 ToolUniverse includes a `WFGY_triage_llm_rag_failure` utility that wraps the failure map as an incident triage tool.
 
@@ -176,9 +209,9 @@ This shifts WFGY from a static checklist into a **tool-level diagnostic mechanis
 
 ## What this suggests
 
-This suggests that the WFGY failure map is structured enough to be operationalized as tooling rather than remaining documentation.
+This suggests that the WFGY failure map is structured enough to be operationalized as tooling, not just documentation.
 
-It indicates potential for WFGY concepts to serve as **diagnostic infrastructure**.
+It points to the possibility that WFGY concepts can serve as **diagnostic infrastructure**.
 
 ## Important boundary
 
@@ -186,54 +219,17 @@ This example shows conceptual wrapping rather than production deployment.
 
 ---
 
-# Case 5 · LightAgent
-
-## Context
-
-[LightAgent](https://github.com/wanxingai/LightAgent) is an agent framework where system failures often emerge from coordination problems rather than simple retrieval issues.
-
-Examples include:
-
-- role drift between agents
-- inconsistent shared memory
-- coordination loops
-- incorrect task decomposition
-
-## Where WFGY fit
-
-The documentation includes a troubleshooting section inspired by WFGY-style failure mapping.
-
-This applies the ProblemMap approach to **multi-agent coordination failures**.
-
-## Public proof
-
-[LightAgent PR #24](https://github.com/wanxingai/LightAgent/pull/24)
-
-## What this suggests
-
-This shows that WFGY-style structured debugging is not limited to RAG pipelines.
-
-It can also help interpret failures in **agent orchestration systems**.
-
-## Important boundary
-
-The agent domain introduces new classes of failure beyond the original map.
-
-This example demonstrates conceptual portability rather than full domain coverage.
-
----
-
 # Case 6 · Rankify
 
 ## Context
 
-[Rankify](https://github.com/DataScienceUIBK/Rankify) focuses on ranking and reranking pipelines for retrieval systems.
+[Rankify (University of Innsbruck)](https://github.com/DataScienceUIBK/Rankify) focuses on ranking and reranking pipelines for retrieval systems.
 
-Failures in these pipelines are often subtle and difficult to categorize.
+Failures in these workflows are often subtle and difficult to categorize because the system can appear functional while still producing weak or unstable ranking behavior.
 
-## Where WFGY fit
+## Where WFGY fits
 
-Rankify troubleshooting documentation references the **16-problem failure patterns** as a way to interpret common pipeline breakdowns.
+Rankify troubleshooting documentation references the **16-problem failure patterns** as a way to interpret common pipeline breakdowns in retrieval and reranking workflows.
 
 ## Public proof
 
@@ -241,7 +237,9 @@ Rankify troubleshooting documentation references the **16-problem failure patter
 
 ## What this suggests
 
-This case indicates that the WFGY diagnostic framing can remain useful even when the system boundary shifts from retrieval to ranking-heavy workflows.
+This case indicates that the WFGY diagnostic framing remains useful even when the system boundary shifts away from pure retrieval and toward ranking-heavy workflows.
+
+It suggests that the ProblemMap has some portability across adjacent retrieval infrastructure layers.
 
 ## Important boundary
 
@@ -253,11 +251,11 @@ This demonstrates conceptual reuse rather than domain-specific specialization.
 
 ## Context
 
-Survey repositories help shape how the field organizes knowledge.
+[Multimodal RAG Survey (QCRI LLM Lab)](https://github.com/llm-lab-org/Multimodal-RAG-Survey) is a survey-style academic resource.
 
-Inclusion in a survey indicates that a resource has become visible enough to be referenced by researchers.
+Survey repositories help shape how the field organizes knowledge, and inclusion in a survey usually means a resource has become visible enough to be referenced in a broader research conversation.
 
-## Where WFGY fit
+## Where WFGY fits
 
 The survey cites WFGY as a practical diagnostic resource for multimodal RAG systems.
 
@@ -267,13 +265,51 @@ The survey cites WFGY as a practical diagnostic resource for multimodal RAG syst
 
 ## What this suggests
 
-This indicates that WFGY has begun to appear as a **field-level reference point** for debugging and failure analysis.
+This indicates that WFGY has begun to appear as a **field-facing reference point** for debugging and failure analysis, not just as an isolated project artifact.
 
 ## Important boundary
 
 Survey citation is weaker evidence than direct integration.
 
-It shows recognition rather than operational use.
+It shows recognition and visibility, not operational use.
+
+---
+
+# Case 8 · LightAgent
+
+## Context
+
+[LightAgent](https://github.com/wanxingai/LightAgent) is an agent framework where system failures often emerge from coordination problems rather than simple retrieval issues.
+
+Examples include:
+
+- role drift between agents
+- inconsistent shared memory
+- coordination loops
+- poor task decomposition
+- unstable handoffs across agent roles
+
+## Where WFGY fits
+
+The documentation includes a troubleshooting section inspired by WFGY-style failure mapping.
+
+This applies the ProblemMap approach to **multi-agent coordination failures** rather than only classic RAG retrieval issues.
+
+## Public proof
+
+[LightAgent PR #24](https://github.com/wanxingai/LightAgent/pull/24)
+
+## What this suggests
+
+This shows that WFGY-style structured debugging is not limited to RAG pipelines.
+
+It can also help interpret failures in **agent orchestration systems**, especially when the failure is distributed across memory, coordination, and control flow.
+
+## Important boundary
+
+The agent domain introduces new classes of failure beyond the original map.
+
+This example demonstrates conceptual portability rather than full domain coverage.
 
 ---
 
@@ -285,6 +321,8 @@ Taken together, these cases suggest a consistent pattern.
 
 The WFGY ProblemMap is currently the most visible and reusable component of the ecosystem.
 
+It is the clearest entry point through which external projects can adopt, cite, adapt, or extend WFGY ideas.
+
 ## WFGY functions primarily as a diagnostic layer
 
 Across integrations, the most common role is:
@@ -293,23 +331,39 @@ Across integrations, the most common role is:
 - failure taxonomy
 - triage framework
 - troubleshooting reference
+- shared interpretation layer for system failures
 
-## The framework has crossed the “pure idea” stage
+## The framework has crossed the pure-idea stage
 
 WFGY now appears in:
 
 - official documentation
 - academic tools
 - research toolkits
+- agent troubleshooting guides
+- survey-style research references
 - curated ecosystem lists
 
-This indicates meaningful ecosystem interaction.
+This suggests meaningful ecosystem interaction rather than a purely internal theory project.
+
+## The signal spans industry, research, and framework ecosystems
+
+The strongest current public cases are not concentrated in a single niche.
+
+They now span:
+
+- mainstream RAG infrastructure
+- academic RAG research
+- agent tooling and orchestration
+- survey and field-facing references
+
+That distribution matters because it suggests the core diagnostic framing is legible across different audiences.
 
 ## Frontier components are still earlier
 
-The **WFGY 3.0 tension reasoning engine** has visibility but currently has fewer public integration signals than the diagnostic layer.
+The **WFGY 3.0 tension reasoning engine** has visibility, but it currently has fewer public integration signals than the diagnostic layer.
 
-This is expected for frontier research infrastructure.
+That is expected for frontier reasoning infrastructure, where adoption usually comes later than the first diagnostic interfaces.
 
 ---
 
@@ -319,9 +373,10 @@ A realistic interpretation is:
 
 - WFGY already has visible ecosystem traction
 - the most mature interface today is the **diagnostic framework**
+- the ProblemMap is currently the clearest adoption surface
 - the frontier reasoning components are still emerging
 
-This combination provides a practical entry point for teams that need structured debugging for complex AI systems.
+This combination gives teams a practical entry point if they need more structured debugging for complex AI systems today, while also showing that the broader WFGY stack is still expanding.
 
 ---
 
