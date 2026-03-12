@@ -2,27 +2,22 @@
 AI_NOTE_START
 
 Document role:
-This file is the README for Demo 2 of the official flagship demo pack.
+This file is the official README for Demo 2 of the flagship runnable demo pack.
 
 How to use this file:
 1. Read this file before opening the notebook.
-2. Treat this demo as the flagship proof that some failures must be repaired through observability first, not through direct answer fixing first.
+2. Treat this demo as the flagship proof that some failures must be repaired through observability first.
 3. Use this file to understand:
    - why this case belongs to F5
-   - why it is not primarily F4 or F6
+   - why it is not primarily F4
    - what the first repair move is
-   - what replay mode and live rerun mode each prove
-4. Read together with:
-   - [Atlas Final Freeze v1](../../../../atlas-final-freeze-v1.md)
-   - [Canonical Casebook v1](../../../../canonical-casebook-v1.md)
-   - [Family Fix Surface v1](../../family-fix-surface-v1.md)
-   - [Atlas to WFGY Bridge v1](../../atlas-to-wfgy-bridge-v1.md)
-   - [Misrepair Patterns v1](../../misrepair-patterns-v1.md)
+   - what replay mode is meant to prove
 
 What this file is:
 - The official README for Demo 2
 - A proof-of-use page for observability-first repair
 - A teaching page for F5 diagnosability failures
+- A replay-first MVP companion for the notebook
 
 What this file is not:
 - Not the atlas core
@@ -33,8 +28,8 @@ What this file is not:
 Reading discipline for AI:
 - Preserve the distinction between diagnosability failure, execution failure, and boundary failure.
 - Do not collapse this case into generic “the system is buggy” language.
-- Do not treat replay mode as weaker than live rerun mode.
 - Route first, then repair.
+- Treat replay mode as a valid teaching layer, not as a weaker substitute.
 
 AI_NOTE_END
 -->
@@ -43,6 +38,11 @@ AI_NOTE_END
 
 ## Problem Map 3.0 Troubleshooting Atlas
 ## Official flagship demo for diagnosability-first repair
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onestardao/WFGY/blob/Atlas/ProblemMap/Atlas/Fixes/official/demos/demo-f5-observability-first/demo_f5_observability.ipynb)
+
+**Replay-only MVP**  
+**No API key required**
 
 This is the second flagship demo in the official runnable demo pack.
 
@@ -53,11 +53,11 @@ It was chosen because many real systems fail in a painful but very common way:
 
 This demo is designed to make that situation visible.
 
-It shows that once a case is routed as **F5 Observability & Diagnosability Integrity**, the first repair move changes from premature system intervention to explicit visibility uplift.
+It shows that once a case is routed as **F5 Observability & Diagnosability Integrity**, the first repair move changes from premature intervention to explicit visibility uplift.
 
 ---
 
-## 1. What this demo proves 🧪
+## 1. What this demo proves
 
 This demo proves four things.
 
@@ -68,7 +68,7 @@ A system can fail in a way that tempts people to say:
 - the workflow is broken
 - the model is confused
 - the chain is unstable
-- the safety layer is weak
+- the execution layer must be fixed first
 
 Sometimes those statements may later become true.
 
@@ -81,34 +81,37 @@ But the first practical problem is still:
 
 That is an F5-style first cut.
 
-### B. The correct route changes the first repair move
+### B. Correct routing changes the first repair move
 
 If the case is routed correctly into **F5**, the first repair move becomes:
 
 - observability insertion
 - trace exposure
 - logging uplift
-- warning surface improvement
 - diagnostic visibility recovery
 
-This is different from trying to fix the workflow logic, prompt logic, or policy logic too early.
+This is different from trying to fix workflow logic or model behavior too early.
 
 ### C. Replay mode is enough to teach the pattern
 
-A user should be able to understand this demo without executing anything.
+This demo is intentionally **replay-first**.
 
-The replay artifacts should make clear that the first breakthrough is not “the answer got better.”
-The first breakthrough is “the failure became legible.”
+The user should be able to understand the case without live execution.
+The point is not “the answer became magically better.”
+The point is:
 
-### D. Live rerun remains optional but useful
+> the failure became legible
 
-If the user wants to reproduce the same pattern with a live trace or model-assisted workflow, live mode can be used.
+### D. This MVP does not require live mode
 
-But the core lesson of the demo must remain understandable even without execution.
+For this first release, replay mode is enough.
+
+This demo is about the first correct repair move.  
+It is not trying to simulate a full observability platform.
 
 ---
 
-## 2. Family route 🧭
+## 2. Family route
 
 ### Primary family
 
@@ -118,43 +121,37 @@ But the core lesson of the demo must remain understandable even without executio
 
 **F4 · Execution & Contract Integrity**
 
-### Outer pressure
-
-Possible secondary or later pressure may also point toward **F6** in some variants, but not in the flagship teaching version.
-
 ### Why F5 is primary
 
 The main failure is that the system still cannot stably expose enough structure to diagnose the problem correctly.
 
 The workflow may indeed be broken.
-A boundary may later prove to be drifting.
 But the first broken invariant is still:
 
 > the failure path cannot yet be seen, traced, or audited well enough
-
-### Short routing statement
-
-- the system is failing
-- the path of failure is still opaque
-- diagnosability fails before deeper repair can become reliable
 
 ### Best current fit
 
 **F5_N01 Failure Path Opacity**
 
-In stronger warning-oriented variants this may move toward:
+In stronger warning-oriented variants this may later move toward:
 
 **F5_E02 Early Warning Deficit**
 
-But the flagship teaching version should remain centered on failure-path opacity.
+But the flagship teaching version stays centered on failure-path opacity.
 
 ---
 
-## 3. Why not neighbor ❌
+## 3. Why not F4 first
 
 The main tempting neighboring cut is **F4**.
 
-That temptation is reasonable because many systems that lack observability are in fact also suffering from execution closure failure, weak liveness, or broken bridges.
+That temptation is reasonable because many systems with poor observability also suffer from:
+
+- weak execution closure
+- broken bridges
+- thin stage boundaries
+- unreliable liveness
 
 But this demo is not primarily about closure failure yet.
 
@@ -166,11 +163,11 @@ That means the first broken layer is diagnosability, not execution closure.
 
 ### Wrong cut
 
-- “this is mainly a workflow execution bug”
+“This is mainly a workflow execution bug.”
 
 ### Better cut
 
-- “this is a diagnosability-first case with possible execution pressure behind it”
+“This is a diagnosability-first case with possible execution pressure behind it.”
 
 That distinction matters because the first repair move changes immediately.
 
@@ -178,14 +175,11 @@ If you cut too early to F4, you are likely to start rebuilding the machine befor
 
 ---
 
-## 4. Baseline failure 🧱
+## 4. Baseline failure
 
-The baseline case should be intentionally realistic, but still easy to inspect.
+The baseline case is intentionally simple and realistic.
 
-### Core pattern
-
-A small workflow, agent chain, or tool-calling loop produces a bad or unstable result.
-
+A workflow produces a bad result.
 The operator can observe that:
 
 - the result is wrong
@@ -205,25 +199,11 @@ So the operator is left with the most frustrating state:
 
 > I know something is wrong, but I cannot yet see the right thing to repair
 
-### What the baseline should make visible
-
-The user should be able to see:
-
-1. the workflow input
-2. the baseline result
-3. the lack of useful trace structure
-4. the diagnostic ambiguity that follows
-5. the repair temptation toward the wrong layer
-
-### Important design note
-
-Do not make the baseline too theatrical.
-
-This should feel like a familiar engineering pain, not like a made-up disaster movie.
+This is exactly why the first repair move belongs to F5.
 
 ---
 
-## 5. First repair move 🔧
+## 5. First repair move
 
 Once the case is routed to F5, the first repair move should be simple and disciplined.
 
@@ -241,8 +221,8 @@ Once the case is routed to F5, the first repair move should be simple and discip
 4. **failure-surface clarification**  
    Separate what is visible from what is still inferred.
 
-5. **only then consider deeper family repair**  
-   After visibility improves, reassess whether the real downstream repair belongs to F4, F6, F1, or elsewhere.
+5. **only then consider deeper repair**  
+   After visibility improves, reassess whether the downstream repair belongs to F4, F6, F1, or elsewhere.
 
 ### What should not happen first
 
@@ -250,9 +230,8 @@ Do **not** start with:
 
 - large workflow rewrites
 - broad prompt overhauls
-- aggressive policy changes
 - random retry loops
-- “let’s just upgrade the model” reactions
+- “just upgrade the model” reactions
 
 Those may create movement, but they do not solve the first problem if the failure path is still hidden.
 
@@ -264,52 +243,11 @@ That is the teaching core of this demo.
 
 ---
 
-## 6. Optional WFGY 3.0 escalation 🌊
+## 6. Replay mode
 
-This demo can teach its lesson without deeper escalation.
+Replay mode is the default reading mode for this MVP.
 
-But if the user wants to explore a stronger structural diagnosis path, this is where WFGY 3.0 becomes useful.
-
-### When escalation makes sense
-
-Escalate beyond the simple first repair move if:
-
-- the workflow becomes visible but still remains unstable
-- the system exposes traces but they are too noisy to interpret
-- the warning surface appears late and inconsistently
-- there are repeated hidden transitions or collapse regions
-- the team needs a deeper failure grammar, not just better logs
-
-### What WFGY 3.0 can add
-
-A WFGY 3.0 handoff can help explore:
-
-- stronger failure-structure interpretation
-- layered warning-surface analysis
-- deeper collapse signatures
-- stress-path variants
-- experimental observability regimes
-- routing-sensitive escalation patterns
-
-### Correct relationship
-
-The right order remains:
-
-1. atlas route
-2. first observability repair
-3. reassess the case
-4. escalate into deeper WFGY exploration if needed
-
-The atlas is still the router.
-WFGY 3.0 is the deeper experimental engine.
-
----
-
-## 7. Replay mode ▶️
-
-Replay mode is the default public reading mode.
-
-It should require no API key and no notebook execution.
+It requires no API key and no live execution.
 
 ### Replay mode should show
 
@@ -320,8 +258,8 @@ It should require no API key and no notebook execution.
 - the why-primary-not-secondary statement
 - the broken invariant
 - the first repair move
-- the replayed improved visibility state
-- a short note on what new things became visible
+- the improved visibility state
+- a short note on what newly became visible
 
 ### What replay mode proves
 
@@ -332,92 +270,19 @@ Replay mode proves that:
 - the result shift can be measured in legibility, not only in output quality
 - a demo can teach through structure, not only through live execution
 
-### Why replay mode matters
-
-This is one of the demos where replay mode is especially important.
-
-The reader should be able to feel the pain of opacity and the relief of visibility just from the replay artifacts.
-
-If that feeling is not there, the demo is weak.
+This is enough for the first public MVP.
 
 ---
 
-## 8. Live rerun mode ⚙️
-
-Live rerun mode is optional.
-
-It exists for users who want to reproduce the same pattern with live execution, traces, or model-assisted steps.
-
-### Live rerun should do
-
-- load the case
-- show the baseline workflow state
-- show what trace information is missing
-- apply the observability-first repair move
-- produce a more legible trace or debug path
-- compare before and after at the diagnosability layer
-
-### Live rerun should not pretend to do
-
-- universal tracing coverage
-- full-scale observability engineering
-- final architectural closure
-- full production-grade telemetry design
-
-It is a reproduction layer, not a full platform.
-
-### Live rerun design rule
-
-If a more realistic trace makes the notebook harder to understand, clarity should win.
-
-This demo is teaching a first repair move, not simulating an entire infra team.
-
----
-
-## 9. API key note 🔐
-
-Some live variants may require an API key.
-
-If so, the rule stays the same:
-
-- no hard-coded keys
-- no saved secrets in the repository
-- key entry happens only at run time
-- replay mode remains readable without any secret
-
-### Important note for users
-
-This demo is meant for **understanding and reproduction**.
-
-You do **not** need to run the notebook in order to understand the point.
-
-A strong observability demo should still teach through:
-
-- README
-- fixtures
-- replay outputs
-- before / after visibility comparison
-
-The live rerun is optional.
-
----
-
-## 10. Files in this folder 📂
-
-This demo folder should contain the following assets.
+## 7. Files in this folder
 
 ### Required
 
 - `README.md`
+- `demo_f5_observability.ipynb`
 - `input_case.json`
 - `replay_outputs.json`
 - `expected_output.json`
-
-### Recommended
-
-- `demo_f5_observability.ipynb`
-- optional prompt or trace notes
-- optional helper references from the shared folder
 
 ### File roles
 
@@ -425,17 +290,17 @@ This demo folder should contain the following assets.
 Contains the workflow case, visible artifacts, and missing-diagnosability context.
 
 #### `replay_outputs.json`
-Contains the baseline state, route explanation, first repair move, and replayed improved visibility state.
+Contains the baseline state, route explanation, first repair move, and improved visibility state.
 
 #### `expected_output.json`
-Contains the clean target structure for what the demo is trying to make visible.
+Contains the clean target structure for what the demo is meant to make visible.
 
-#### notebook
-Contains the optional live reproduction flow.
+#### `demo_f5_observability.ipynb`
+Contains the replay-first notebook version of the demo, runnable in Colab.
 
 ---
 
-## 11. Expected outcome ✅
+## 8. Expected outcome
 
 If the demo works, the user should walk away with the following understanding:
 
@@ -452,7 +317,7 @@ That is enough.
 
 ---
 
-## 12. Limits of this demo 🧱
+## 9. Limits of this demo
 
 This demo has real limits, and those limits should be stated clearly.
 
@@ -475,38 +340,7 @@ There is no need to inflate them.
 
 ---
 
-## 13. Community extension ideas 🌱
-
-This demo is also a seed template for future community work.
-
-Possible extensions include:
-
-- adding different workflow types
-- adding tool-calling traces
-- comparing low-trace and high-trace versions
-- testing different visibility surfaces
-- connecting warning delay to deeper boundary drift
-- extending the case into a stronger F5 to F6 escalation example
-
-### Community boundary rule
-
-Contributors should preserve the official logic:
-
-- route first
-- explain why primary not secondary
-- show the first repair move
-- keep replay outputs understandable
-- do not turn the demo into a giant tracing jungle
-
-For contribution structure, see:
-
-- [Community Fix Lab](../../community/README.md)
-- [Contribution Checklist](../../templates/contribution-checklist.md)
-- [Fix Recipe Template](../../templates/fix-recipe-template.md)
-
----
-
-## Short summary
+## 10. Why this demo matters
 
 This demo teaches one clean lesson:
 
@@ -514,23 +348,19 @@ This demo teaches one clean lesson:
 
 That is why this is the second flagship demo.
 
+It turns F5 from an abstract family label into a practical debugging move.
+
 ---
 
 ## One-line version
 
-**Demo 2 shows that some failures should be repaired through observability first, and that correct routing changes the first repair move from premature system intervention to explicit failure-path exposure.**
+**Demo 2 shows that some failures should be repaired through observability first, and that correct routing changes the first repair move from premature intervention to explicit failure-path exposure.**
 
 ---
 
-## Closing note ✨
+## Back to the main page
 
-This demo is intentionally focused.
+Read the full product page here:  
+[Problem Map 3.0 Troubleshooting Atlas](https://github.com/onestardao/WFGY/blob/main/ProblemMap/wfgy-ai-problem-map-troubleshooting-atlas.md)
 
-Its job is not to simulate every tracing platform.
-Its job is to make one key pattern obvious:
-
-- the system is failing
-- the failure path is still hidden
-- visibility becomes the first repair target
-
-If that becomes clear, the atlas has already done something powerful.
+If you like the project, star the repo ⭐
