@@ -120,7 +120,6 @@ Different readers need different entry paths.
 2. [Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
 3. [Canonical Casebook v1](./canonical-casebook-v1.md)
 4. [Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
-5. [Troubleshooting Atlas Router v1 Freeze Note](./troubleshooting-atlas-router-v1-freeze-note.md)
 
 Use this path if you want the shortest route from “what is this” to “how does this system behave in practice.”
 
