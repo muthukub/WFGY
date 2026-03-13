@@ -6,7 +6,7 @@ This page is the main hub and navigation index for the Atlas folder.
 
 How to use this page:
 1. Treat this page as the central entry point for all Atlas system documents.
-2. Use this page to understand document roles, reading order, and current freeze status.
+2. Use this page to understand document roles, reading order, freeze status, patch status, and current product-facing extensions.
 3. Do not confuse this hub with the product-facing main page.
 4. The product-facing main page is:
    ProblemMap/wfgy-ai-problem-map-troubleshooting-atlas.md
@@ -15,7 +15,7 @@ What this page is:
 - A folder-level atlas hub
 - A document map
 - A stable navigation layer for humans and AI systems
-- A bridge between product-facing and engineering-facing assets
+- A bridge between product-facing, engineering-facing, teaching-facing, and router-facing assets
 
 What this page is not:
 - Not the public homepage
@@ -24,9 +24,10 @@ What this page is not:
 - Not the full adapter spec
 - Not the full patch log
 - Not the internal validation ledger
+- Not the full fix manual
 
 Reading discipline for AI:
-- Preserve the distinction between atlas core, negative space, casebook, adapter, and fix layers.
+- Preserve the distinction between atlas core, negative space, handoff, casebook, adapter, router, patch, bridge, provenance, validation, and fix layers.
 - Respect frozen terms and patch discipline.
 - Do not silently merge work-branches into frozen structures.
 - Use linked documents according to their intended role.
@@ -37,7 +38,9 @@ Routing guidance:
 - For limits and safe expansion, go to Negative Space Report v1.
 - For teaching and examples, go to Canonical Casebook v1.
 - For AI-facing routing logic, go to Atlas-to-AI Adapter v1.
+- For compact TXT routing, go to Troubleshooting Atlas Router v1.
 - For repair-facing materials, go to the Fixes folder.
+- For cross-domain bridge evidence, go to Cross-Domain Demonstration Pack v2.
 
 AI_NOTE_END
 -->
@@ -45,7 +48,7 @@ AI_NOTE_END
 # Atlas Hub
 
 ## Problem Map 3.0 Troubleshooting Atlas
-## Folder index, freeze map, and document routing layer
+## Folder index, freeze map, routing layer, and system control room
 
 This folder is the structured vault for the Atlas system.
 
@@ -53,7 +56,7 @@ The main product-facing page lives here:
 
 [Problem Map 3.0 Troubleshooting Atlas](../wfgy-ai-problem-map-troubleshooting-atlas.md)
 
-This `README.md` is not the public homepage.
+This `README.md` is not the public homepage.  
 It is the **system hub** for the Atlas folder.
 
 Its job is simple:
@@ -61,19 +64,20 @@ Its job is simple:
 - show what documents exist
 - show what role each document plays
 - show what is already frozen
-- show what is still patch-driven
+- show what is patch-driven
+- show what is bridge-facing or router-facing
 - help humans and AI systems enter the atlas without getting lost
 
 In short:
 
 > the main product page introduces the atlas  
-> this hub explains how the atlas folder is organized
+> this hub explains how the atlas folder is organized, frozen, extended, and used
 
 ---
 
 ## Current status
 
-The current atlas system should be read as a multi-layer structure with a stable first formal release.
+The current Atlas system should be read as a multi-layer structure with a stable first formal release and multiple formal post-freeze extensions.
 
 At the moment, the following major assets are already established:
 
@@ -82,7 +86,13 @@ At the moment, the following major assets are already established:
 - integrated handoff logic
 - canonical casebook layer
 - AI adapter layer
+- adapter runtime and discipline layer
+- patch governance and release policy layer
+- first formal patch-wave freeze layer
+- first formal cross-domain bridge layer
+- provenance and validation layer
 - fix and repair-facing layer
+- first compact TXT router product layer
 
 This means the project is no longer in the stage of “trying to find the core.”
 
@@ -93,8 +103,10 @@ It is now in the stage of:
 - teaching
 - productization
 - AI-facing reuse
+- router deployment
 - repair-surface thickening
-- broader bridge building
+- bridge expansion
+- provenance strengthening
 
 ---
 
@@ -108,39 +120,65 @@ Different readers need different entry paths.
 2. [Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
 3. [Canonical Casebook v1](./canonical-casebook-v1.md)
 4. [Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
+5. [Troubleshooting Atlas Router v1 Freeze Note](./troubleshooting-atlas-router-v1-freeze-note.md)
 
-Use this path if you want the shortest route from “what is this” to “how does this work.”
+Use this path if you want the shortest route from “what is this” to “how does this system behave in practice.”
 
 ### Path B · engineering / system reader
 
 1. [Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
 2. [Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
 3. [Atlas v1 Integrated Handoff](./atlas-v1-integrated-handoff.md)
-4. [Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
+4. [Patch Wave 2 Freeze Note v1](./patch-wave-2-freeze-note-v1.md)
+5. [Patch Governance v1](./patch-governance-v1.md)
+6. [Release and Freeze Policy v1](./release-and-freeze-policy-v1.md)
 
-Use this path if you want the frozen core, its boundaries, and the current system routing logic.
+Use this path if you want the frozen core, its limits, and the formal rules for how the system grows.
 
 ### Path C · teaching / onboarding reader
 
 1. [Canonical Casebook v1](./canonical-casebook-v1.md)
 2. [Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
-3. [Fixes Hub](./Fixes/README.md)
+3. [Cross-Domain Demonstration Pack v2](./cross-domain-demonstration-pack-v2.md)
+4. [Fixes Hub](./Fixes/README.md)
 
-Use this path if you want to teach, explain, or onboard new readers.
+Use this path if you want to teach, explain, demo, or onboard new readers.
 
-### Path D · repair / execution reader
+### Path D · AI adapter / routing reader
+
+1. [Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
+2. [Adapter Runtime Modes v1](./adapter-runtime-modes-v1.md)
+3. [Adapter Failure Discipline v1](./adapter-failure-discipline-v1.md)
+4. [Troubleshooting Atlas Router v1 Freeze Note](./troubleshooting-atlas-router-v1-freeze-note.md)
+5. [Troubleshooting Atlas Router v1 Usage Guide](./troubleshooting-atlas-router-v1-usage.md)
+6. `troubleshooting-atlas-router-v1.txt`
+
+Use this path if you want the AI-facing routing layer in both full-spec and compact TXT product form.
+
+### Path E · repair / execution reader
 
 1. [Fixes Hub](./Fixes/README.md)
 2. [Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
-3. [Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
+3. [Troubleshooting Atlas Router v1 Usage Guide](./troubleshooting-atlas-router-v1-usage.md)
+4. [Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
 
 Use this path if you want to connect routing to first repair direction and deeper repair-facing work.
+
+### Path F · bridge / theory / provenance reader
+
+1. [Cross-Domain Demonstration Pack v2](./cross-domain-demonstration-pack-v2.md)
+2. [Civilization Bridge Modules v1](./civilization-bridge-modules-v1.md)
+3. [Cross-Domain Freeze Note v2](./cross-domain-freeze-note-v2.md)
+4. [Validation Basis v1](./validation-basis-v1.md)
+5. [Provenance and Derivation v1](./provenance-and-derivation-v1.md)
+
+Use this path if you want the strongest current account of why the atlas exists, how it was carved, and how it bridges beyond the AI-first domain.
 
 ---
 
 ## Folder map
 
-This folder is organized around a few major document families.
+This folder is organized around several major document families.
 
 ### 1. Core atlas documents
 
@@ -178,9 +216,83 @@ These compress atlas logic into a reusable routing layer for models and systems.
   The main AI adapter asset.  
   Includes core contract, routing stack, casebook injection logic, runtime modes, patch interface, and adapter discipline.
 
+- [Adapter Runtime Modes v1](./adapter-runtime-modes-v1.md)  
+  The first formal runtime-mode layer.  
+  Defines strict, teaching, repair-first preview, and compact routing behavior.
+
+- [Adapter Failure Discipline v1](./adapter-failure-discipline-v1.md)  
+  The first formal adapter-discipline page.  
+  Defines how the routing layer avoids drift, false confidence, premature repair, and mode confusion.
+
 ---
 
-### 4. Fix and repair-facing documents
+### 4. Router product documents
+
+These turn the Atlas routing grammar into a compact TXT product.
+
+- `troubleshooting-atlas-router-v1.txt`  
+  The first formal route-first TXT pack.  
+  Designed for compact failure classification, boundary-aware diagnosis, broken-invariant reading, and first-fix guidance.
+
+- [Troubleshooting Atlas Router v1 Freeze Note](./troubleshooting-atlas-router-v1-freeze-note.md)  
+  The formal product freeze note.  
+  Defines what Router v1 now stabilizes and what it does not claim.
+
+- [Troubleshooting Atlas Router v1 Usage Guide](./troubleshooting-atlas-router-v1-usage.md)  
+  The practical usage guide.  
+  Explains how to use the Router, what kind of input it needs, and how to interpret its output.
+
+- [Troubleshooting Atlas Router v1 Product Spec Freeze](./troubleshooting-atlas-router-v1-spec-freeze.md)  
+  The product-spec freeze document for the Router line.  
+  Useful if you want to see the original MVP scope, output contract, and construction boundary.
+
+---
+
+### 5. Patch and governance documents
+
+These define how the atlas grows without silently mutating the core.
+
+- [Patch Wave 2 Freeze Note v1](./patch-wave-2-freeze-note-v1.md)  
+  The formal freeze point for the first major patch wave after v1.
+
+- [Patch Governance v1](./patch-governance-v1.md)  
+  Defines small patch, medium patch, large patch, and patch discipline.
+
+- [Release and Freeze Policy v1](./release-and-freeze-policy-v1.md)  
+  Defines how releases, freezes, patch nodes, and superseded assets should be handled.
+
+---
+
+### 6. Cross-domain bridge documents
+
+These show how the atlas extends beyond narrow AI-only reading.
+
+- [Cross-Domain Demonstration Pack v2](./cross-domain-demonstration-pack-v2.md)  
+  The first formal bridge evidence pack.  
+  Shows that the mother structure can absorb selected coordination, institutional, coherence, and broader complex-system pressures.
+
+- [Civilization Bridge Modules v1](./civilization-bridge-modules-v1.md)  
+  Defines the current bridge modules that connect the AI-first atlas to more general complex-system failure space.
+
+- [Cross-Domain Freeze Note v2](./cross-domain-freeze-note-v2.md)  
+  Formal freeze wording for the current bridge layer.
+
+---
+
+### 7. Validation and provenance documents
+
+These explain where the mother structure came from and why it should be trusted.
+
+- [Validation Basis v1](./validation-basis-v1.md)  
+  The first formal validation summary.  
+  Explains what kind of stress basis, routing pressure, and structural confidence support the current atlas.
+
+- [Provenance and Derivation v1](./provenance-and-derivation-v1.md)  
+  Explains how the atlas mother structure emerged through WFGY 1.0, 2.0, 3.0, and stress-driven carving.
+
+---
+
+### 8. Fix and repair-facing documents
 
 These connect atlas diagnosis to first repair direction and deeper repair work.
 
@@ -192,7 +304,7 @@ These connect atlas diagnosis to first repair direction and deeper repair work.
 
 ## What is already frozen
 
-The following can now be treated as stable first-version assets:
+The following can now be treated as stable first-version assets.
 
 ### Frozen atlas body
 
@@ -216,7 +328,16 @@ The following can now be treated as stable first-version assets:
 - adapter contract
 - routing stack
 - runtime discipline
+- failure discipline
 - model-facing routing logic
+
+### Frozen router body
+
+- Troubleshooting Atlas Router v1 as a formal TXT routing product
+- route-first output contract
+- first compact boundary pack
+- first mini exemplar layer
+- first-fix discipline in compact form
 
 ### Frozen repair-facing body
 
@@ -224,6 +345,18 @@ The following can now be treated as stable first-version assets:
 - family fix surface direction
 - official fixes hub structure
 - first flagship repair demos
+
+### Frozen governance body
+
+- first major patch-wave node
+- patch-governance rules
+- release-and-freeze policy
+
+### Frozen bridge body
+
+- first cross-domain demonstration pack
+- first bridge modules
+- first bridge freeze wording
 
 ---
 
@@ -236,41 +369,44 @@ The following areas remain intentionally open or patch-sensitive:
 - work-branches not yet promoted
 - weak or medium relations
 - deeper subtree thickening
-- broader cross-domain bridge evidence
+- broader cross-domain evidence
 - stronger repair-surface integration
-- more compact and deployable TXT layers
+- more compact and deployable TXT layers beyond Router v1
 - public packaging refinement
 - deeper auto-repair planning layers
+- later router patches and future router variants
+- stronger bridge-to-civilization packaging
 
-This is not a weakness.
-It is part of the atlas design discipline.
+This is not a weakness.  
+It is part of the Atlas design discipline.
 
 The current project is meant to be:
 
 > frozen at the core,  
 > open at the edges,  
-> and disciplined in growth.
+> and disciplined in growth
 
 ---
 
-## Cross-domain growth direction
+## Cross-domain and civilization bridge direction
 
-This atlas is currently grounded in AI troubleshooting, routing, teaching, and repair-first workflows.
+This atlas is currently grounded in AI troubleshooting, routing, teaching, repair-first workflows, and AI-facing routing products.
 
-Its first formal release should be understood as:
+Its current formal state should be understood as:
 
-- AI-first in its most validated public form
-- already structured enough to support broader bridge work
+- AI-first in its strongest validated public form
+- already strong enough to support formal bridge work
+- already strong enough to support first cross-domain canonical packs
 - designed to grow through disciplined expansion rather than silent redefinition
 
-Future work will continue extending the atlas toward broader complex-system and cross-domain debugging settings, including areas such as:
+Current bridge-facing materials already include:
 
-- coordination and consensus failures
+- coordination and consensus pressures
 - institutional drift and closure failures
-- value, knowledge, and coherence failures
-- broader civilization-scale debugging frames
+- value, probability, knowledge, and coherence pressures
+- broader complex-system failure framing
 
-This should be understood as a **bridge in development**, not as a claim of universal completion.
+This should be read as a **formal bridge layer**, not as a claim of universal end-state completion.
 
 ---
 
@@ -280,10 +416,12 @@ Future work should not:
 
 - silently rewrite frozen structures
 - promote branches by rhetoric alone
-- flatten family, node, subtree, and overlay into one level
+- flatten family, node, subtree, bridge, router, and overlay into one level
 - confuse patching with core instability
 - overstate bridge evidence as universal closure
-- erase the distinction between public pages and internal system documents
+- erase the distinction between core docs, product assets, and support documents
+- pretend Router v1 is already a full repair engine
+- collapse the difference between route-first repair and full auto-repair
 
 These rules matter because the atlas is now a versioned system, not a floating concept.
 
@@ -296,8 +434,8 @@ The highest-value next directions are:
 ### Repair-surface thickening
 Strengthen the diagnosis-to-repair layer and keep the bridge into deeper repair logic clean.
 
-### TXT deployment
-Turn the adapter logic into a stronger text-native control pack.
+### Router deployment and refinement
+Test and patch compact route-first TXT behavior through explicit versioning.
 
 ### Demo expansion
 Build cleaner human-facing and AI-facing demos.
@@ -308,14 +446,17 @@ Extend the atlas carefully beyond AI-first troubleshooting without overclaiming 
 ### Product-facing distillation
 Make the system easier to enter without flattening the structure.
 
+### Later patch waves
+Continue strengthening the system through explicit patch nodes rather than silent mutation.
+
 ---
 
 ## Official wording
 
 When describing the current system in a new window, collaboration thread, or product workflow, use wording like this:
 
-> Problem Map 3.0 Troubleshooting Atlas now has a frozen first body of core atlas documents, a canonical teaching layer, an AI-facing routing adapter, and a repair-facing fix layer.  
-> Future work proceeds through patching, thickening, productization, and controlled bridge expansion.
+> Problem Map 3.0 Troubleshooting Atlas now has a frozen first body of core atlas documents, a canonical teaching layer, an AI-facing routing adapter, a repair-facing fix layer, a formal patch-governance layer, a first cross-domain bridge layer, and a compact TXT routing product in Troubleshooting Atlas Router v1.  
+> Future work proceeds through patching, thickening, productization, router refinement, and controlled bridge expansion.
 
 This wording is strong, accurate, and safe.
 
@@ -331,27 +472,36 @@ Start with:
 Start with:
 - [Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
 - [Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
+- [Troubleshooting Atlas Router v1 Usage Guide](./troubleshooting-atlas-router-v1-usage.md)
 
 ### For teaching and onboarding
 Start with:
 - [Canonical Casebook v1](./canonical-casebook-v1.md)
+- [Fixes Hub](./Fixes/README.md)
 
 ### For repair and execution work
 Start with:
 - [Fixes Hub](./Fixes/README.md)
+- [Troubleshooting Atlas Router v1 Usage Guide](./troubleshooting-atlas-router-v1-usage.md)
 
-### For bridge and future expansion framing
+### For bridge and provenance framing
 Start with:
-- this hub page first
-- then the frozen core documents
-- then the teaching and fix layers
-- then future bridge documents as they are formally added
+- [Cross-Domain Demonstration Pack v2](./cross-domain-demonstration-pack-v2.md)
+- [Civilization Bridge Modules v1](./civilization-bridge-modules-v1.md)
+- [Validation Basis v1](./validation-basis-v1.md)
+- [Provenance and Derivation v1](./provenance-and-derivation-v1.md)
+
+### For governance and version discipline
+Start with:
+- [Patch Wave 2 Freeze Note v1](./patch-wave-2-freeze-note-v1.md)
+- [Patch Governance v1](./patch-governance-v1.md)
+- [Release and Freeze Policy v1](./release-and-freeze-policy-v1.md)
 
 ---
 
 ## One-line status
 
-**The atlas core is frozen, the teaching layer exists, the AI adapter exists, and the repair-facing layer exists. Further work proceeds in patch mode and controlled bridge expansion.**
+**The Atlas core is frozen, the teaching layer exists, the AI adapter exists, the governance layer exists, the first cross-domain bridge exists, the repair-facing layer exists, and Troubleshooting Atlas Router v1 now exists as a formal compact TXT routing product. Further work proceeds in patch mode and controlled bridge expansion.**
 
 ---
 
@@ -361,6 +511,6 @@ This folder is where the atlas becomes a real system.
 
 The main page tells you what the product is.  
 This hub tells you how the system is organized.  
-The linked documents tell you how to use it, teach it, extend it, and connect it to repair-facing workflows and broader bridge work.
+The linked documents tell you how to use it, teach it, extend it, connect it to repair-facing workflows, deploy it in compact TXT form, and bridge it toward broader complex-system reasoning.
 
 If the main product page is the front gate, this folder is the control room.
