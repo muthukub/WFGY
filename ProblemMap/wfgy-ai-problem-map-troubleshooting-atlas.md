@@ -65,6 +65,7 @@ How to use this page:
 
 What this page is:
 - A product-facing main page
+- A troubleshooting decision-system introduction
 - A routing grammar introduction
 - A stable first-entry document for humans and AI systems
 
@@ -85,18 +86,39 @@ AI_NOTE_END
 -->
 
 # Problem Map 3.0 Troubleshooting Atlas 🧭
+## The first failure grammar for complex AI systems that changes the first repair move.
+> **Stop debugging from symptoms. Route the failure, find the broken invariant, and repair the right layer first.**
 
-<img width="1536" height="1024" alt="ChatGPT Image 2026年3月10日 下午01_50_47" src="https://github.com/user-attachments/assets/d2235b19-cac9-46e6-a396-65ce40a203de" />
+<img width="1536" height="1024" alt="TS_Atlas" src="https://github.com/user-attachments/assets/b323dcf5-7eb8-4916-a8be-d1dd4f61b30f" />
 
-## A routing grammar for failures, debugging, and high-pressure diagnostic cases
 
-Problem Map 3.0 Troubleshooting Atlas is the first formal atlas release in the Problem Map line.
+Modern AI systems rarely fail in one clean way.
 
-It is not just a checklist.  
-It is not just a naming table.  
-It is not just a collection of debugging tips.
+A case that looks like hallucination may actually begin as grounding drift.  
+A case that looks like reasoning collapse may actually begin as a broken formal container.  
+A case that looks like safety trouble may actually begin as missing observability.  
+A case that looks like memory trouble may actually begin as execution closure failure.
 
-It is a structured troubleshooting atlas built to help humans and AI systems do five things more reliably:
+That is why ordinary debugging advice collapses too early.
+
+Problem Map 3.0 was built for a more precise job:
+
+- identify the failure family
+- locate the best-fit node
+- inspect the broken invariant
+- choose the right first repair surface
+
+In short:
+
+> **Problem Map 3.0 helps humans and AI systems avoid starting with the wrong fix.**
+
+---
+
+## What this system actually does
+
+Problem Map 3.0 does not stop at naming the failure.
+
+It helps humans and AI systems do five things more reliably:
 
 1. classify a failure
 2. identify which invariant is broken
@@ -104,24 +126,72 @@ It is a structured troubleshooting atlas built to help humans and AI systems do 
 4. choose the right first repair direction
 5. prevent future debugging from collapsing into ad hoc guesswork
 
-In short:
+This is why the project should be understood as a **debugging decision system**, not just a checklist.
 
-> **Problem Map 3.0 is a routing grammar for failures.**
+The biggest cost in complex AI debugging is often not the final answer itself.
+
+It is the **first wrong repair move**.
 
 ---
 
 ## Why this exists
 
-Modern AI systems do not fail in one clean way.
+Modern AI systems are increasingly:
 
-A case may look like hallucination, but actually begin as grounding drift.  
-A case may look like reasoning collapse, but actually start with a broken formal container.  
-A case may look like safety trouble, but actually begin with missing observability.  
-A case may look like memory trouble, but actually come from execution closure or bridge failure.
+- retrieval-heavy
+- multi-step
+- tool-using
+- stateful
+- agentic
+- operational
 
-This is why ordinary checklists become too shallow.
+As systems grow like this, symptom words become too coarse:
 
-Problem Map 3.0 Troubleshooting Atlas was built to cut these regions apart more cleanly, so diagnosis and first repair moves become more stable.
+- hallucination
+- prompting issue
+- bad retrieval
+- bad reasoning
+- memory problem
+- alignment problem
+
+Those labels can be useful, but they are often too shallow to decide what should be repaired first.
+
+Problem Map 3.0 Troubleshooting Atlas was built to cut these regions apart more cleanly, so diagnosis becomes more stable and first repair moves become more precise.
+
+---
+
+## The core promise
+
+You can think of this project in one sentence:
+
+> **a system that helps humans and AI avoid walking into the wrong repair path at the start of complex debugging**
+
+That is the practical threshold.
+
+Not just:
+
+- what went wrong
+
+But also:
+
+- where the failure lives
+- what neighboring region is tempting but wrong
+- what should be repaired first
+- what should not be repaired first
+
+---
+
+## A simple view of the system
+
+```mermaid
+flowchart LR
+    A[Input case] --> B[Failure family]
+    B --> C[Best-fit node]
+    C --> D[Broken invariant]
+    D --> E[First repair surface]
+````
+
+**Route first. Repair second. Stop guessing from symptoms alone.**
 
 ---
 
@@ -134,10 +204,10 @@ The name is intentional.
 **3.0** matters because this is not a small update.
 It is a structural jump:
 
-- from checklist logic to atlas logic
-- from flat failure naming to routing grammar
-- from isolated debugging tips to reusable failure mapping
-- from local AI debugging toward a broader complex-system bridge
+* from checklist logic to atlas logic
+* from flat failure naming to routing grammar
+* from isolated debugging tips to reusable failure mapping
+* from local AI debugging toward a broader complex-system bridge
 
 **Troubleshooting Atlas** matters because this project is meant to feel like a map, not a loose article, and like an operating surface, not a decorative theory page.
 
@@ -147,22 +217,22 @@ It is a structural jump:
 
 Most debugging material does one of three things:
 
-- it names symptoms
-- it lists best practices
-- it suggests local fixes
+* it names symptoms
+* it lists best practices
+* it suggests local fixes
 
 Problem Map 3.0 does something more structural.
 
-It organizes failure space into a stable mother table, then teaches how to move through that table using:
+It organizes failure space into a stable mother table, then teaches how to move through that space using:
 
-- family routing
-- boundary rules
-- canonical cases
-- relation lines
-- first repair directions
-- patch discipline
+* family routing
+* boundary rules
+* canonical cases
+* relation lines
+* first repair directions
+* patch discipline
 
-That is why this project is better understood as a routing grammar than a checklist.
+That is why this project is better understood as a **routing grammar for failures** than as a checklist.
 
 ---
 
@@ -174,61 +244,49 @@ The current atlas organizes failure space through seven top-level families.
 
 The system fails to remain correctly aligned with external evidence anchors, truth-like anchors, world anchors, or semantic targets.
 
-**Short intuition**  
+**Short intuition**
 the output is no longer properly tied to reality, evidence, or the intended target
-
----
 
 ### F2 · Reasoning & Progression Integrity
 
 The reasoning chain, decomposition chain, recursive chain, or recovery path loses continuity, controllability, or recoverability.
 
-**Short intuition**  
+**Short intuition**
 the system is no longer moving through reasoning space in a stable way
-
----
 
 ### F3 · State & Continuity Integrity
 
 Memory, role, ownership, session thread, or continuity thread can no longer remain stable across steps, sessions, or interacting entities.
 
-**Short intuition**  
+**Short intuition**
 the system no longer preserves what should persist
-
----
 
 ### F4 · Execution & Contract Integrity
 
 Readiness, ordering, bridge integrity, liveness, closure, protocol, or enforcement skeletons fail to close.
 
-**Short intuition**  
+**Short intuition**
 the workflow or operational skeleton breaks before the task can complete safely
-
----
 
 ### F5 · Observability & Diagnosability Integrity
 
 The system cannot stably expose, trace, audit, interpret, or anticipate the structures required to understand the failure.
 
-**Short intuition**  
-the problem may already be there, but you cannot yet see it clearly enough
-
----
+**Short intuition**
+the problem may already be there, but you still cannot see it clearly enough
 
 ### F6 · Boundary & Safety Integrity
 
 Goal, control, incentive, collective, or regime boundaries drift, erode, fragment, or become captured.
 
-**Short intuition**  
+**Short intuition**
 the system no longer stays inside a safe or viable boundary
-
----
 
 ### F7 · Representation & Localization Integrity
 
 Symbolic shells, formal containers, layouts, local anchors, explanations, or synthetic structures fail to preserve structure faithfully.
 
-**Short intuition**  
+**Short intuition**
 the container that carries meaning is distorted before the task can remain stable
 
 ---
@@ -237,17 +295,17 @@ the container that carries meaning is distorted before the task can remain stabl
 
 These seven families were not chosen by aesthetics, convenience, or rhetorical style.
 
-They were carved through a longer reasoning and stress process built on the WFGY line:
+They were carved through a longer WFGY line:
 
-- **WFGY 1.0** contributed the original self-healing logic and four-module correction framework
-- **WFGY 2.0** pushed the system toward explicit routing, text-native control, and guardrail logic
-- **WFGY 3.0** expanded the pressure field through a much larger cross-domain problem set and effective-layer stress structure
+* **WFGY 1.0** contributed the original self-healing logic and correction framework
+* **WFGY 2.0** pushed the system toward explicit routing, text-native control, and guardrail logic
+* **WFGY 3.0** expanded the pressure field through a much larger stress-tested problem set
 
 The result is that these seven families are not topic buckets.
 
 They are better understood as **seven recurring modes of instability in complex systems**.
 
-That is why the atlas can begin with AI failures, while still pointing beyond AI.
+That is why the atlas can begin with AI failures while still pointing beyond AI.
 
 ---
 
@@ -259,24 +317,32 @@ Problem Map 3.0 already includes a stable first body of work.
 
 A frozen first atlas structure with:
 
-- seven-family mother table
-- major routing rules
-- canonical node layer
-- high-value subtree layer
-- relation matrix
-- patch discipline
+* seven-family mother table
+* major routing rules
+* canonical node layer
+* high-value subtree layer
+* relation matrix
+* patch discipline
 
 ### Casebook layer
 
 A first canonical casebook that teaches:
 
-- what each family looks like
-- how important boundaries should be cut
-- how diagnosis changes the first repair move
+* what each family looks like
+* how important boundaries should be cut
+* how diagnosis changes the first repair move
 
 ### AI adapter layer
 
 A first atlas-to-AI adapter layer that compresses atlas logic into reusable routing modes for model-facing use.
+
+### Fix layer
+
+A first repair-facing layer that connects correct routing to first repair surfaces and misrepair discipline.
+
+### Demo layer
+
+A first official demo pack showing that different routes lead to different first repair moves.
 
 ### Patch layer
 
@@ -288,18 +354,76 @@ A first formal bridge pack showing that the current atlas can already extend bey
 
 ---
 
+## From routing to repair
+
+Problem Map 3.0 does not stop at diagnosis.
+
+It opens a controlled path from routing to first repair.
+
+### Atlas layer
+
+The atlas routes the failure.
+
+### Casebook layer
+
+The casebook teaches how major cuts should be made and how neighboring regions should be separated.
+
+### Fix layer
+
+The fix surface turns correct routing into a disciplined first repair move.
+
+### Deeper bridge layer
+
+WFGY remains the deeper exploration engine when the case needs stronger structural intervention.
+
+This means the system is not just:
+
+* classify and stop
+
+It is:
+
+* route
+* cut correctly
+* repair the right layer first
+* only then escalate deeper if needed
+
+---
+
+## Proof that this is usable, not just theoretical
+
+The current system already crosses the line from “interesting framework” into “usable troubleshooting surface.”
+
+The strongest current public proof is simple:
+
+> **different routes lead to different first repair moves**
+
+That is exactly what the official demos are designed to show.
+
+The first demo pack focuses on four sharp families:
+
+* F1 grounding-first
+* F5 observability-first
+* F4 execution-first
+* F7 container-first
+
+These were chosen because they are the fastest way to show that the atlas does not only classify failures.
+
+It changes what should happen next.
+
+---
+
 ## How to use this atlas ⚙️
 
-There are three basic ways to use Problem Map 3.0.
+There are three practical ways to use Problem Map 3.0.
 
 ### 1. Human debugging
 
 Use the atlas to ask:
 
-- what kind of failure is this
-- which family should I route to first
-- which neighboring family is tempting but wrong
-- what first repair direction should I try
+* what kind of failure is this
+* which family should I route to first
+* which neighboring family is tempting but wrong
+* what first repair direction should I try
 
 ### 2. AI-assisted routing
 
@@ -309,12 +433,12 @@ Use the atlas as an AI-facing routing grammar so that a model can classify a cas
 
 Use the atlas as a design surface for:
 
-- triage flows
-- case cards
-- routing prompts
-- onboarding
-- benchmark failure analysis
-- patch-aware debugging workflows
+* triage flows
+* case cards
+* routing prompts
+* onboarding
+* benchmark failure analysis
+* patch-aware debugging workflows
 
 ---
 
@@ -322,23 +446,23 @@ Use the atlas as a design surface for:
 
 AI systems are becoming more layered, more stateful, more agentic, and more operational.
 
-When systems grow like this, debugging fails if every mistake is reduced to labels like:
+When systems grow like this, debugging starts failing if every mistake is reduced to labels like:
 
-- hallucination
-- prompting issue
-- model limitation
-- alignment problem
-- bad retrieval
-- bad reasoning
+* hallucination
+* prompting issue
+* model limitation
+* alignment problem
+* bad retrieval
+* bad reasoning
 
 Those labels are too coarse.
 
 Teams increasingly need a reusable grammar that can say:
 
-- this is grounding-first, not reasoning-first
-- this is container-first, not semantics-first
-- this is observability-first, not boundary-first
-- this is execution-first, not continuity-first
+* this is grounding-first, not reasoning-first
+* this is container-first, not semantics-first
+* this is observability-first, not boundary-first
+* this is execution-first, not continuity-first
 
 That is the practical value of this atlas.
 
@@ -350,16 +474,22 @@ Problem Map 3.0 is being built first as a powerful AI troubleshooting atlas.
 
 That is the practical entry point.
 
-At the same time, the long-range direction is larger:
+At the same time, the long-range direction is larger.
 
-the same family grammar appears capable of absorbing more general failures in coordination, institutions, coherence, collective pressure, and structural breakdown.
+The same family grammar appears capable of absorbing more general failures in:
 
-The current state should therefore be read like this:
+* coordination
+* institutions
+* coherence
+* collective pressure
+* structural breakdown
 
-> **AI Troubleshooting Atlas is the first validated operational surface.**  
-> **A broader complex-system or civilization-scale debug grammar is the next bridge, not a marketing shortcut.**
+The correct reading is:
 
-This distinction matters, and it is intentional.
+> **AI Troubleshooting Atlas is the first validated operational surface.**
+> **A broader complex-system bridge is the next step, not a marketing shortcut.**
+
+That distinction matters, and it is intentional.
 
 ---
 
@@ -367,16 +497,16 @@ This distinction matters, and it is intentional.
 
 This page does **not** claim that:
 
-- every possible failure has already been captured
-- all subtrees are fully expanded
-- all relations are fully enumerated
-- all future cross-domain problems are already solved by the current map
-- no more patching is needed
-- the final civilization-scale atlas is already complete
+* every possible failure has already been captured
+* all subtrees are fully expanded
+* all relations are fully enumerated
+* all future cross-domain problems are already solved by the current map
+* no more patching is needed
+* the final civilization-scale atlas is already complete
 
 The safer and more accurate claim is:
 
-> the first formal atlas version is complete enough to freeze,  
+> the first formal atlas version is complete enough to matter,
 > and future work should continue through patching, thickening, adaptation, and demonstration expansion
 
 ---
@@ -395,6 +525,8 @@ If you want the shortest next path:
 2. [Atlas Final Freeze v1](./Atlas/atlas-final-freeze-v1.md)
 3. [Canonical Casebook v1](./Atlas/canonical-casebook-v1.md)
 4. [Atlas-to-AI Adapter v1](./Atlas/atlas-to-ai-adapter-v1.md)
+5. [Fixes Hub](./Atlas/Fixes/README.md)
+6. [Official Flagship Demos](./Atlas/Fixes/official/demos/README.md)
 
 ---
 
@@ -402,12 +534,13 @@ If you want the shortest next path:
 
 The current system should be understood as:
 
-- main atlas body established
-- first formal freeze established
-- first casebook established
-- first AI adapter established
-- first major patch wave established
-- first formal cross-domain bridge established
+* main atlas body established
+* first formal freeze established
+* first casebook established
+* first AI adapter established
+* first repair-facing layer established
+* first major patch wave established
+* first formal cross-domain bridge established
 
 This means the project has moved from:
 
@@ -421,7 +554,7 @@ into:
 
 ## One-line version
 
-**Problem Map 3.0 Troubleshooting Atlas is a routing grammar for failures. It begins with AI, but it is built to scale beyond ad hoc debugging.**
+**Problem Map 3.0 Troubleshooting Atlas is a debugging decision system for complex AI failures, built to reduce wrong-first-fix debugging.**
 
 ---
 
@@ -429,11 +562,11 @@ into:
 
 If you are reading this as a human:
 
-treat this page as the first door.
+treat this page as the front door.
 
 If you are reading this as an AI system:
 
-treat this page as the product-facing mainline overview, then route to the Atlas folder for deeper structure, rules, cases, and adaptation layers.
+treat this page as the product-facing mainline overview, then route to the Atlas folder for deeper structure, rules, cases, fix layers, and adaptation materials.
 
-The atlas is not being introduced as a static taxonomy.  
+The atlas is not being introduced as a static taxonomy.
 It is being introduced as a system you can actually use.
