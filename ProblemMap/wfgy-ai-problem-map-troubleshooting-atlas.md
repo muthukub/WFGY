@@ -93,86 +93,44 @@ AI_NOTE_END
 
 ---
 
-> **People say coding feels like 2050, but debugging still feels like 1999.**  
-> AI debugging often fails because the wrong repair path sounds convincing enough to try first.  
-> **Problem Map 3.0 exists to cut the failure at the right layer before the first wrong fix compounds the damage.**
+> People say coding feels like 2050, but debugging still feels like 1999.  
+> Building gets easier, but AI can still make the wrong fix sound right.  
+> Miss the right layer on the first cut, and the whole debug flow drifts, like going to the wrong medical department first.  
+> Problem Map 3.0 Troubleshooting Atlas helps AI make the right first cut before the damage compounds.  
 
 ---
 
 ## Start here in 60 seconds ⚡
 
-You do **not** need deep RAG knowledge to start.
-
-This is built for people who use AI to build things:
-
-- vibe coders
-- AI app builders
-- tool / workflow builders
-- agent builders
-- engineers debugging AI-heavy systems
-
-### Fast path
-
-1. **Download the TXT**
-   - [Troubleshooting Atlas Router v1 TXT Pack](./Atlas/troubleshooting-atlas-router-v1.txt)
-
-2. **Drop it into your AI**
-   - ChatGPT
-   - Claude
-   - Gemini
-   - Cursor
-   - Copilot
-   - or your preferred workflow
-
-3. **Keep building as usual**
-   - prompts
-   - tools
-   - workflows
-   - agents
-   - code
-   - multi-step tasks
-
-4. **Let AI debug with a better first cut**
-   - better failure routing
-   - better broken-layer reading
-   - better first repair direction
-   - fewer wrong-first-fix loops
-
-**Short version:**
+You do **not** need deep RAG knowledge to start. This is built for vibe coders, AI app builders, workflow / agent builders, and engineers debugging AI-heavy systems.
 
 > **Install the TXT once. Build normally. Let AI start debugging from the right layer more often.**
+
+| Step | What to do |
+|------|------------|
+| 1 | Download the [Router TXT Pack](./Atlas/troubleshooting-atlas-router-v1.txt) |
+| 2 | Drop it into ChatGPT, Claude, Gemini, Cursor, Copilot, or your preferred AI workflow |
+| 3 | Keep building as usual |
+| 4 | Let AI make a better first cut during debugging |
 
 For harder cases, logs, traces, outputs, or failure examples can still be added later for sharper routing.
 
 ---
 
-## Quick nav 🧩
+## Quick nav · choose your entry point 🧩
 
-Choose the shortest path based on what you want right now.
+> Not sure where to start? Begin with the **Router TXT Pack**. Everything else can be explored later.
 
-- **Just give me the TXT**  
-  [Router TXT Pack](./Atlas/troubleshooting-atlas-router-v1.txt)
+| What you want | Go here | Level |
+|---------------|--------|-------|
+| Get the TXT router and try it immediately | [Router TXT Pack](./Atlas/troubleshooting-atlas-router-v1.txt) | 🟢 Beginner |
+| See the fastest way to test it in practice | [Router Usage Guide](./Atlas/troubleshooting-atlas-router-v1-usage.md) | 🟢 Beginner |
+| Jump directly to common questions | [Jump to FAQ](#faq) | 🟢 Beginner |
+| See proof that routing changes the first repair move | [Official Flagship Demos](./Atlas/Fixes/official/demos/README.md) | 🟡 Builder |
+| Explore repair strategies after routing | [Fixes Hub](./Atlas/Fixes/README.md) | 🟡 Builder |
+| Browse the full atlas structure and documentation | [Atlas Hub](./Atlas/README.md) | 🟠 Advanced |
+| Support the project | [⭐ Star the WFGY repo](https://github.com/onestardao/WFGY) | ⭐ |
 
-- **Show me the fastest how-to**  
-  [Router Usage Guide](./Atlas/troubleshooting-atlas-router-v1-usage.md)
-
-- **Show me proof it changes the first fix**  
-  [Official Flagship Demos](./Atlas/Fixes/official/demos/README.md)
-
-- **Show me repair-facing materials**  
-  [Fixes Hub](./Atlas/Fixes/README.md)
-
-- **Show me the full atlas system**  
-  [Atlas Hub](./Atlas/README.md)
-
-- **I want the deeper theory and structure**  
-  [Atlas Hub](./Atlas/README.md)
-
-- **I want the FAQ first**  
-  [Jump to FAQ](#faq)
-
-- **I like this direction, show support**  
-  [⭐ Star the WFGY repo](https://github.com/onestardao/WFGY)
 
 ---
 
@@ -182,10 +140,7 @@ Most AI debugging fails too early because the first cut is wrong.
 
 - what looks like hallucination may begin as **grounding drift**
 - what looks like reasoning collapse may begin as a **broken formal container**
-- what looks like safety trouble may begin as **missing observability**
-- what looks like memory trouble may begin as **execution closure failure**
-
-That is why ordinary debugging advice often creates the wrong first repair move.
+- what looks like safety or memory trouble may begin as **missing observability** or **execution closure failure**
 
 > **Wrong first diagnosis creates wrong first repair.**
 
@@ -193,25 +148,14 @@ That is why ordinary debugging advice often creates the wrong first repair move.
 
 ## What you get right now ✅
 
-This is already a usable product surface, not just a theory page.
-
-### Router TXT
-A compact routing pack you can drop into an AI workflow today.
-
-### Usage Guide
-The shortest practical entry if you want to test it in minutes.
-
-### Official Demos
-Concrete proof that different routes produce different first repair moves.
-
-### Fixes Hub
-The repair-facing layer after the route is chosen.
-
-### Atlas Hub
-The deeper map, casebook, adapter, patch notes, and bridge materials.
-
-### Recognition Map
-External proof that the earlier WFGY ProblemMap line is already used or referenced in real projects.
+| Layer | What you get |
+|------|---------------|
+| Router TXT | A compact routing pack you can drop into an AI workflow today |
+| Usage Guide | The shortest practical entry if you want to test it in minutes |
+| Official Demos | Concrete proof that different routes produce different first repair moves |
+| Fixes Hub | The repair-facing layer after the route is chosen |
+| Atlas Hub | The deeper map, casebook, adapter, patch notes, and bridge materials |
+| Recognition Map | External proof that the earlier WFGY ProblemMap line is already used or referenced in real projects |
 
 ---
 
@@ -221,9 +165,10 @@ External proof that the earlier WFGY ProblemMap line is already used or referenc
 
 > As of 2026-03, the **WFGY RAG 16 Problem Map** line has been adopted or referenced by
 > **30+ frameworks, academic labs, and curated lists** in the RAG and agent ecosystem.
-> Most external references use the WFGY ProblemMap as a diagnostic layer for RAG / agent pipelines,
-> not the full WFGY product stack.
-> A smaller but growing set also uses **WFGY 3.0 · Singularity Demo** as a long-horizon TXT stress test.
+> Most external references use the WFGY ProblemMap as a diagnostic layer for RAG / agent pipelines.
+> These references primarily correspond to earlier versions in the **WFGY Series**
+> (especially the RAG 16 Problem Map lineage) and should not be interpreted as
+> direct adoption of the newer **Troubleshooting Atlas (Problem Map 3.0)** layer.
 
 Some representative integrations:
 
@@ -247,27 +192,27 @@ For the complete 30+ project list (frameworks, benchmarks, curated lists), see t
 
 </details>
 
-## What this system actually does
+## What this system actually does 🧭
 
 Problem Map 3.0 does not stop at naming the failure.
 
 It helps humans and AI systems do five things more reliably:
 
-1. classify a failure
-2. identify which invariant is broken
-3. separate neighboring failure regions that are easy to confuse
-4. choose the right first repair direction
-5. prevent future debugging from collapsing into ad hoc guesswork
+1. classify a failure  
+2. identify which invariant is broken  
+3. separate neighboring failure regions that are easy to confuse  
+4. choose the right first repair direction  
+5. prevent future debugging from collapsing into ad hoc guesswork  
 
 This is why the project should be understood as a **debugging decision system**, not just a checklist.
 
-The biggest cost in complex AI debugging is often not the final answer itself.
+In complex AI debugging, the biggest cost is often not the final answer itself.
 
 It is the **first wrong repair move**.
 
 ---
 
-## The core promise
+## The core promise 🎯
 
 You can think of this project in one sentence:
 
@@ -275,15 +220,15 @@ You can think of this project in one sentence:
 
 Not just:
 
-- what went wrong
-- but where the failure lives
-- what neighboring region is tempting but wrong
-- what should be repaired first
-- what should not be repaired first
+- what went wrong  
+- but where the failure lives  
+- what neighboring region is tempting but wrong  
+- what should be repaired first  
+- what should not be repaired first  
 
 ---
 
-## A simple view of the system
+## A simple view of the system 👀
 
 ```mermaid
 flowchart LR
@@ -291,7 +236,7 @@ flowchart LR
     B --> C[Best-fit node]
     C --> D[Broken invariant]
     D --> E[First repair surface]
-```
+````
 
 **Route first. Repair second. Stop guessing from symptoms alone.**
 
@@ -302,15 +247,19 @@ flowchart LR
 This page is designed to be useful at more than one depth.
 
 ### If you are a vibe coder
+
 Use the TXT, keep building, and let AI debug with a better first cut.
 
 ### If you are building AI apps or workflows
+
 Use the atlas to reduce wrong-first-fix debugging in prompt chains, tool flows, agents, and stateful systems.
 
 ### If you are an engineer
+
 Use it as a routing grammar, failure map, and repair-first discipline.
 
 ### If you want to go much deeper
+
 Use the Atlas Hub, casebook, adapter, bridge pack, demos, and fixes layer.
 
 You do **not** need deep RAG expertise to start.
@@ -324,45 +273,52 @@ You do **not** need deep RAG expertise to start.
 The current atlas organizes failure space through seven top-level families.
 
 ### F1 · Grounding & Evidence Integrity
+
 The system fails to remain correctly aligned with external evidence anchors, truth-like anchors, world anchors, or semantic targets.
 
-**Short intuition**  
+**Short intuition**
 the output is no longer properly tied to reality, evidence, or the intended target
 
 ### F2 · Reasoning & Progression Integrity
+
 The reasoning chain, decomposition chain, recursive chain, or recovery path loses continuity, controllability, or recoverability.
 
-**Short intuition**  
+**Short intuition**
 the system is no longer moving through reasoning space in a stable way
 
 ### F3 · State & Continuity Integrity
+
 Memory, role, ownership, session thread, or continuity thread can no longer remain stable across steps, sessions, or interacting entities.
 
-**Short intuition**  
+**Short intuition**
 the system no longer preserves what should persist
 
 ### F4 · Execution & Contract Integrity
+
 Readiness, ordering, bridge integrity, liveness, closure, protocol, or enforcement skeletons fail to close.
 
-**Short intuition**  
+**Short intuition**
 the workflow or operational skeleton breaks before the task can complete safely
 
 ### F5 · Observability & Diagnosability Integrity
+
 The system cannot stably expose, trace, audit, interpret, or anticipate the structures required to understand the failure.
 
-**Short intuition**  
+**Short intuition**
 the problem may already be there, but you still cannot see it clearly enough
 
 ### F6 · Boundary & Safety Integrity
+
 Goal, control, incentive, collective, or regime boundaries drift, erode, fragment, or become captured.
 
-**Short intuition**  
+**Short intuition**
 the system no longer stays inside a safe or viable boundary
 
 ### F7 · Representation & Localization Integrity
+
 Symbolic shells, formal containers, layouts, local anchors, explanations, or synthetic structures fail to preserve structure faithfully.
 
-**Short intuition**  
+**Short intuition**
 the container that carries meaning is distorted before the task can remain stable
 
 </details>
@@ -373,30 +329,35 @@ the container that carries meaning is distorted before the task can remain stabl
 <summary><strong>🧰 The product stack</strong></summary>
 <br>
 
-Problem Map 3.0 is not a single page.  
+Problem Map 3.0 is not a single page.
 It is a layered system.
 
 ### Atlas
+
 The map of failure space.
 
 ### Router
+
 The compact executable entry that helps AI systems route failures first.
 
 ### Casebook
+
 The teaching layer that shows how important cuts should be made.
 
 ### Fixes
+
 The repair-facing layer after the route is chosen.
 
 ### Demos
+
 The proof layer that shows different routes create different first repair moves.
 
 Short version:
 
-> **Atlas = the map**  
-> **Router = the fast entry**  
-> **Casebook = the teaching layer**  
-> **Fixes = the first repair surface**  
+> **Atlas = the map**
+> **Router = the fast entry**
+> **Casebook = the teaching layer**
+> **Fixes = the first repair surface**
 > **Demos = the proof**
 
 </details>
@@ -407,7 +368,7 @@ Short version:
 
 Problem Map 3.0 is not only a document system.
 
-It now also includes a compact product-facing routing pack:
+It also includes a compact product-facing routing pack:
 
 ### [Troubleshooting Atlas Router v1](./Atlas/troubleshooting-atlas-router-v1-freeze-note.md)
 
@@ -415,65 +376,73 @@ This is the first compact TXT routing pack built from the atlas.
 
 Its purpose is simple:
 
-- route the case first
-- identify the broken invariant
-- separate the strongest neighboring pressure
-- suggest the first repair direction
-- warn about likely misrepair
-- stay honest when evidence is weak
+* route the case first
+* identify the broken invariant
+* separate the strongest neighboring pressure
+* suggest the first repair direction
+* warn about likely misrepair
+* stay honest when evidence is weak
 
 Short version:
 
-> **The Atlas is the map.**  
+> **The Atlas is the map.**
 > **The Router is the first compact executable surface of that map.**
 
 If you want the practical entry points:
 
-- [Router Freeze Note](./Atlas/troubleshooting-atlas-router-v1-freeze-note.md)
-- [Router Usage Guide](./Atlas/troubleshooting-atlas-router-v1-usage.md)
-- [Router TXT Pack](./Atlas/troubleshooting-atlas-router-v1.txt)
+* [Router Freeze Note](./Atlas/troubleshooting-atlas-router-v1-freeze-note.md)
+* [Router Usage Guide](./Atlas/troubleshooting-atlas-router-v1-usage.md)
+* [Router TXT Pack](./Atlas/troubleshooting-atlas-router-v1.txt)
 
 What the Router is **not**:
 
-- not the full Atlas
-- not the full Casebook
-- not a full auto-repair engine
-- not a claim of full diagnosis closure
+* not the full Atlas
+* not the full Casebook
+* not a full auto-repair engine
+* not a claim of full diagnosis closure
 
-What it does give you is something more immediate:
+What it does give you is something much more immediately useful:
 
 > **drop the TXT into an AI system, and make better first cuts before the wrong fix starts compounding**
 
 ---
 
-## From routing to repair
+<details>
+<summary><strong>🔧 From routing to repair</strong></summary>
+<br>
 
 Problem Map 3.0 does not stop at diagnosis.
 
 It opens a controlled path from routing to first repair.
 
 ### Atlas layer
+
 The atlas routes the failure.
 
 ### Casebook layer
+
 The casebook teaches how major cuts should be made and how neighboring regions should be separated.
 
 ### Fix layer
+
 The fix surface turns correct routing into a disciplined first repair move.
 
 ### Deeper bridge layer
+
 WFGY remains the deeper exploration engine when the case needs stronger structural intervention.
 
 This means the system is not just:
 
-- classify and stop
+* classify and stop
 
 It is:
 
-- route
-- cut correctly
-- repair the right layer first
-- only then escalate deeper if needed
+* route
+* cut correctly
+* repair the right layer first
+* only then escalate deeper if needed
+
+</details>
 
 ---
 
@@ -491,41 +460,42 @@ That is exactly what the official demos are designed to show.
 
 The first demo pack focuses on four sharp families:
 
-- F1 grounding-first
-- F5 observability-first
-- F4 execution-first
-- F7 container-first
+* F1 grounding-first
+* F5 observability-first
+* F4 execution-first
+* F7 container-first
 
 These were chosen because they are the fastest way to show that the atlas does not only classify failures.
 
 It changes what should happen next.
 
 See:
-- [Official Flagship Demos](./Atlas/Fixes/official/demos/README.md)
+
+* [Official Flagship Demos](./Atlas/Fixes/official/demos/README.md)
 
 </details>
 
 ---
 
-## Why this exists
+## Why this exists 🛠️
 
 Modern AI systems are increasingly:
 
-- retrieval-heavy
-- multi-step
-- tool-using
-- stateful
-- agentic
-- operational
+* retrieval-heavy
+* multi-step
+* tool-using
+* stateful
+* agentic
+* operational
 
 As systems grow like this, symptom words become too coarse:
 
-- hallucination
-- prompting issue
-- bad retrieval
-- bad reasoning
-- memory problem
-- alignment problem
+* hallucination
+* prompting issue
+* bad retrieval
+* bad reasoning
+* memory problem
+* alignment problem
 
 Those labels can be useful, but they are often too shallow to decide what should be repaired first.
 
@@ -533,27 +503,27 @@ Problem Map 3.0 Troubleshooting Atlas was built to cut these regions apart more 
 
 ---
 
-## Why this matters now
+## Why this matters now 🚨
 
 AI systems are becoming more layered, more stateful, more agentic, and more operational.
 
 When systems grow like this, debugging starts failing if every mistake is reduced to labels like:
 
-- hallucination
-- prompting issue
-- model limitation
-- alignment problem
-- bad retrieval
-- bad reasoning
+* hallucination
+* prompting issue
+* model limitation
+* alignment problem
+* bad retrieval
+* bad reasoning
 
 Those labels are too coarse.
 
 Teams increasingly need a reusable grammar that can say:
 
-- this is grounding-first, not reasoning-first
-- this is container-first, not semantics-first
-- this is observability-first, not boundary-first
-- this is execution-first, not continuity-first
+* this is grounding-first, not reasoning-first
+* this is container-first, not semantics-first
+* this is observability-first, not boundary-first
+* this is execution-first, not continuity-first
 
 That is the practical value of this atlas.
 
@@ -567,23 +537,23 @@ It has been pressure-tested, but it is still growing.
 
 That means:
 
-- the core structure is already usable
-- the Router is already usable
-- the demo path is already usable
-- edge cases still exist
-- stronger future versions are expected
+* the core structure is already usable
+* the Router is already usable
+* the demo path is already usable
+* edge cases still exist
+* stronger future versions are expected
 
 If you find:
 
-- a gap
-- an edge case
-- a misroute
-- a confusing page flow
-- a demo that should exist but does not
+* a gap
+* an edge case
+* a misroute
+* a confusing page flow
+* a demo that should exist but does not
 
 please open an issue.
 
-> **The goal is not a frozen monument.**  
+> **The goal is not a frozen monument.**
 > **The goal is a sharper debugging surface over time.**
 
 ---
@@ -598,15 +568,15 @@ At the same time, the long-range direction is larger.
 
 The same family grammar appears capable of absorbing more general failures in:
 
-- coordination
-- institutions
-- coherence
-- collective pressure
-- structural breakdown
+* coordination
+* institutions
+* coherence
+* collective pressure
+* structural breakdown
 
 The correct reading is:
 
-> **AI Troubleshooting Atlas is the first validated operational surface.**  
+> **AI Troubleshooting Atlas is the first validated operational surface.**
 > **A broader complex-system bridge is the next step, not a marketing shortcut.**
 
 That distinction matters, and it is intentional.
@@ -617,160 +587,528 @@ That distinction matters, and it is intentional.
 
 This page does **not** claim that:
 
-- every possible failure has already been captured
-- all subtrees are fully expanded
-- all relations are fully enumerated
-- all future cross-domain problems are already solved by the current map
-- no more patching is needed
-- the final civilization-scale atlas is already complete
+* every possible failure has already been captured
+* all subtrees are fully expanded
+* all relations are fully enumerated
+* all future cross-domain problems are already solved by the current map
+* no more patching is needed
+* the final civilization-scale atlas is already complete
 
 The safer and more accurate claim is:
 
-> the first formal atlas version is complete enough to matter,  
+> the first formal atlas version is complete enough to matter,
 > and future work should continue through patching, thickening, adaptation, and demonstration expansion
+
 
 ---
 
 ## FAQ
 
+### 1. Getting Started
+
 <details>
-<summary><strong>What is the difference between Problem Map 1.0, 2.0, and 3.0?</strong></summary>
+<summary><strong>Where should a new user start?</strong></summary>
 
-**Problem Map 1.0** is the canonical 16-problem RAG failure taxonomy and fix map.
-
-**Problem Map 2.0** is the Global Debug Card layer.  
-It compresses debugging objects, metrics, ΔS zones, and operating modes into a visual protocol.
-
-**Problem Map 3.0** is the broader troubleshooting atlas.  
-It moves from flat failure naming toward routing grammar, family structure, boundary rules, case teaching, repair-facing direction, and broader bridge work.
-
-Short version:
-
-- **1.0** gives the base failure vocabulary
-- **2.0** gives the compressed visual debug protocol
-- **3.0** gives the broader troubleshooting atlas and routing system
+> That depends on what kind of user you are.
+>
+> **If you want the fastest practical entry**
+>
+> Start with:
+>
+> * [Router TXT Pack](./Atlas/troubleshooting-atlas-router-v1.txt)
+> * [Router Usage Guide](./Atlas/troubleshooting-atlas-router-v1-usage.md)
+>
+> **If you want the product overview**
+>
+> Start with this page, then go to:
+>
+> * [Atlas Hub](./Atlas/README.md)
+>
+> **If you want the core structure**
+>
+> Go to:
+>
+> * [Atlas Final Freeze v1](./Atlas/atlas-final-freeze-v1.md)
+>
+> **If you want examples and teaching cases**
+>
+> Go to:
+>
+> * [Canonical Casebook v1](./Atlas/canonical-casebook-v1.md)
+>
+> **If you want repair-facing materials**
+>
+> Go to:
+>
+> * [Fixes Hub](./Atlas/Fixes/README.md)
+>
+> **If you want demos**
+>
+> Go to:
+>
+> * [Official Flagship Demos](./Atlas/Fixes/official/demos/README.md)
 
 </details>
 
 <details>
 <summary><strong>Do I need deep RAG knowledge to use this?</strong></summary>
 
-No.
-
-That is exactly why the Router TXT and Usage Guide exist.
-
-If you are building with AI and debugging with AI, you can start from:
-
-- [Troubleshooting Atlas Router v1 TXT Pack](./Atlas/troubleshooting-atlas-router-v1.txt)
-- [Troubleshooting Atlas Router v1 Usage Guide](./Atlas/troubleshooting-atlas-router-v1-usage.md)
-
-The deeper Atlas exists for people who want more structure, more cases, more theory, and more extension layers.
+> No.
+>
+> That is exactly why the Router TXT and Usage Guide exist.
+>
+> If you are building with AI and debugging with AI, you can start from:
+>
+> * [Troubleshooting Atlas Router v1 TXT Pack](./Atlas/troubleshooting-atlas-router-v1.txt)
+> * [Troubleshooting Atlas Router v1 Usage Guide](./Atlas/troubleshooting-atlas-router-v1-usage.md)
+>
+> The deeper Atlas exists for people who want more structure, more cases, more theory, and more extension layers.
 
 </details>
 
 <details>
 <summary><strong>What does Troubleshooting Atlas Router actually do?</strong></summary>
 
-The Router is the first compact TXT routing pack built from the Atlas.
-
-Its job is to help an AI system do the following in order:
-
-1. identify the most likely primary family
-2. identify the strongest neighboring family pressure if it is real
-3. explain why the primary cut is stronger
-4. identify the broken invariant
-5. suggest the first repair direction
-6. warn about likely misrepair
-7. stay honest about confidence and evidence sufficiency
-
-It is best understood as:
-
+> The Router is the first compact TXT routing pack built from the Atlas.
+>
+> Its job is to help an AI system do the following in order:
+>
+> 1. identify the most likely primary family
+> 2. identify the strongest neighboring family pressure if it is real
+> 3. explain why the primary cut is stronger
+> 4. identify the broken invariant
+> 5. suggest the first repair direction
+> 6. warn about likely misrepair
+> 7. stay honest about confidence and evidence sufficiency
+>
+> It is best understood as:
+>
 > **the first compact executable surface of the Atlas**
-
-It is not the whole Atlas and not a full repair engine.
+>
+> It is not the whole Atlas and not a full repair engine.
 
 </details>
 
 <details>
+<summary><strong>What is the difference between Problem Map 1.0, 2.0, and 3.0?</strong></summary>
+
+> [**Problem Map 1.0**](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md) is the canonical 16-problem RAG failure taxonomy and fix map.
+>
+> [**Problem Map 2.0**](https://github.com/onestardao/WFGY/blob/main/ProblemMap/wfgy-rag-16-problem-map-global-debug-card.md) is the Global Debug Card layer.  
+> It compresses debugging objects, metrics, ΔS zones, and operating modes into a visual protocol.
+>
+> [**Problem Map 3.0**](https://github.com/onestardao/WFGY/blob/main/ProblemMap/wfgy-ai-problem-map-troubleshooting-atlas.md) is the broader troubleshooting atlas.  
+> It moves from flat failure naming toward routing grammar, family structure, boundary rules, case teaching, repair-facing direction, and broader bridge work.
+>
+> The short version is:
+>
+> * **1.0** gives the base failure vocabulary
+> * **2.0** gives the compressed visual debug protocol
+> * **3.0** gives the broader troubleshooting atlas and routing system
+
+</details>
+
+### 2. Why This Matters
+
+<details>
+<summary><strong>Does this move AI closer to automatic debugging or bug fixing?</strong></summary>
+
+> Yes, in an important but limited sense.
+>
+> Problem Map 3.0 does **not** claim that full autonomous debugging or full autonomous bug fixing has already arrived.
+>
+> What it does claim is narrower and more useful:
+>
+> * it helps humans and AI systems route failures more correctly
+> * it helps identify the broken invariant more clearly
+> * it helps choose a better first repair direction
+> * it helps warn against likely misrepair
+>
+> That matters because many debugging failures begin with the wrong first move.
+>
+> If AI systems become better at cutting the first diagnostic boundary, avoiding tempting but wrong neighboring regions, and staying honest about evidence and confidence, then more reliable automatic debugging becomes more realistic.
+>
+> So the correct reading is:
+>
+> **this system does not claim that full autonomous repair is already solved**  
+> **but it does help push AI debugging closer to a world where automatic repair becomes more viable**
+
+</details>
+
+<details>
+<summary><strong>If AI writes code faster, why does debugging still feel broken?</strong></summary>
+
+> Because faster code generation does not automatically produce better failure diagnosis.
+>
+> AI can often accelerate local coding tasks.  
+> But real systems still fail at higher layers:
+>
+> * integration
+> * ordering
+> * continuity
+> * contracts
+> * visibility
+> * state handoff
+> * deployment behavior
+> * wrong first diagnosis
+>
+> In many real workflows, the bottleneck is no longer “can code be generated quickly?”  
+> The bottleneck becomes:
+>
+> * can the failure be routed correctly
+> * can the broken invariant be identified early
+> * can the wrong repair region be avoided
+> * can confidence stay disciplined when evidence is thin
+>
+> That is exactly where a troubleshooting atlas becomes useful.
+>
+> So the atlas should not be read as “another code generator.”  
+> It should be read as a routing grammar for the AI-first debugging era, where generation is fast but diagnosis still breaks easily.
+
+</details>
+
+<details>
+<summary><strong>How much debugging time can this realistically save?</strong></summary>
+
+> It depends on the system and the failure type, so this atlas does **not** claim a universal fixed number.
+>
+> The value is strongest in complex systems where the main cost of debugging comes from entering the wrong diagnostic region first.
+>
+> In those cases, a route-first system like Problem Map 3.0 can plausibly reduce wasted debugging time by roughly **30 to 50 percent** in many situations.
+>
+> That estimate should be read carefully.
+>
+> It does **not** mean every bug becomes 30 to 50 percent faster to fix.  
+> It means that many teams lose a large amount of time through:
+>
+> * wrong first cuts
+> * misrepair
+> * chasing neighboring but incorrect failure regions
+> * missing the broken invariant early
+> * debugging without enough structural visibility
+>
+> This atlas is designed to reduce exactly that kind of waste.
+>
+> So the safest reading is:
+>
+> **it does not promise a fixed benchmark in every environment**  
+> **but in complex, multi-step, failure-prone systems, it can materially reduce time lost to wrong early diagnosis**
+
+</details>
+
+<details>
+<summary><strong>Can this help in blind benchmarks or hidden-task settings?</strong></summary>
+
+> Yes, especially when the benchmark contains misleading surface signals, partial information, or multiple plausible failure regions.
+>
+> In those settings, the problem is often not only “can the model solve the task?”  
+> The problem is also:
+>
+> * can the model identify what kind of failure or task it is dealing with
+> * can it avoid being pulled into the wrong neighboring region
+> * can it choose a more correct first diagnostic move under uncertainty
+>
+> That is where a routing grammar can help.
+>
+> Problem Map 3.0 does not magically reveal hidden answers.  
+> What it can do is reduce the chance of entering the wrong search region too early.
+>
+> That makes it especially relevant for:
+>
+> * blind issue triage
+> * hidden-task settings
+> * misleading benchmark prompts
+> * agentic repair benchmarks
+> * real-world debugging where symptoms do not cleanly reveal the true failure family
+>
+> So the safest reading is:
+>
+> **this atlas does not replace task solving**  
+> **but it can improve task typing, early routing, and first-move discipline in settings where wrong initial classification is costly**
+
+</details>
+
+### 3. Why Trust This
+
+<details>
+<summary><strong>How do you know this atlas is not just a made-up classification system?</strong></summary>
+
+> Because it was not created by naming categories first and forcing cases into them later.
+>
+> The current mother structure was tested through repeated routing pressure, boundary pressure, and cross-domain pressure.
+>
+> Its origin came from two major pressure sources:
+>
+> * the earlier [Problem Map 1.0](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md), which already proved useful in real AI and RAG debugging
+> * the deeper [WFGY 3.0](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md) stress surface, including repeated pressure testing against 131 S-class problems
+>
+> So far, the important result is not that every future subtree is already complete.
+>
+> The important result is that:
+>
+> * the top-level mother structure has remained stable
+> * no eighth family pressure has clearly emerged
+> * major family boundaries have not collapsed under the tested cases
+> * later work mostly belongs to subtree refinement, node carving, relation refinement, and disciplined patch iteration
+>
+> So the claim is not that the atlas is final in every detail.
+>
+> The claim is that the main routing grammar is already stable enough to freeze, and future work should refine it through disciplined patching rather than redraw it from scratch.
+
+</details>
+
+<details>
+<summary><strong>How was this atlas structure actually derived?</strong></summary>
+
+> It was not created by inventing seven family names first and forcing cases into them afterward.
+>
+> The derivation happened in layers.
+>
+> First, the earlier [Problem Map 1.0](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md) was carved through the underlying logic of [WFGY 1.0](https://github.com/onestardao/WFGY/blob/main/legacy/README.md).  
+> That was the original practical failure surface.
+>
+> Second, [WFGY 2.0](https://github.com/onestardao/WFGY/blob/main/core/README.md) added a stronger numerical and operational constraint layer.  
+> That made the system more disciplined in how failures, routing tension, and structural instability were interpreted.
+>
+> Third, a deeper Tension Universe reasoning layer, which is not yet public, was used to lift the earlier failure surface into a broader mother structure instead of keeping it as a flat checklist.
+>
+> Finally, [WFGY 3.0](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md) was used to pressure-test the boundaries of that mother structure across harder and broader stress cases.  
+> That is how the current atlas was refined into a routing grammar rather than a simple naming table.
+>
+> So the short version is:
+>
+> * [WFGY 1.0](https://github.com/onestardao/WFGY/blob/main/legacy/README.md) helped carve the original RAG failure structure
+> * [WFGY 2.0](https://github.com/onestardao/WFGY/blob/main/core/README.md) added stronger structural and numerical discipline
+> * a deeper unpublished reasoning layer lifted that into a mother framework
+> * [WFGY 3.0](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md) pressure-tested the boundaries into the current atlas
+>
+> That is why the atlas should not be read as an arbitrary taxonomy.  
+> It should be read as a stress-shaped framework that grew out of earlier validated failure maps.
+
+</details>
+
+<details>
+<summary><strong>Why seven families and not more or fewer?</strong></summary>
+
+> Because the seven-family mother structure was not chosen first as a preferred number.
+>
+> It was carved under pressure.
+>
+> The important result is not “seven sounds elegant.”
+> The important result is that, under the tested coverage so far:
+>
+> * the top-level families remain readable
+> * major boundary cuts remain stable
+> * refinement pressure mainly lands on subtrees and node structure
+> * no clear eighth-family pressure has yet forced a redraw of the mother table
+>
+> So the atlas does not claim that seven is a mystical final number for all time.
+>
+> It claims something narrower and stronger:
+>
+> **so far, seven is the smallest stable mother structure that has survived the tested pressure without obvious top-level collapse**
+
+</details>
+
+<details>
+<summary><strong>What would falsify or seriously challenge this atlas?</strong></summary>
+
+> The atlas is not meant to be treated as unfalsifiable.
+>
+> Several things would count as serious challenge signals:
+>
+> * a repeated clear no-fit zone that cannot be absorbed honestly by the current families
+> * sustained eighth-family pressure across multiple hard cases
+> * repeated collapse of major boundary rules
+> * evidence that top-level routing fails systematically rather than locally
+>
+> That is different from ordinary refinement.
+>
+> Normal subtree thickening, node carving, relation refinement, and patch updates do **not** count as falsification of the mother structure.
+>
+> So the correct standard is:
+>
+> **local refinement pressure is expected**
+> **top-level structural failure would be the real challenge**
+
+</details>
+
+<details>
+<summary><strong>Is this just relabeled debugging common sense?</strong></summary>
+
+> No.
+>
+> Good engineers have always had some intuition about not fixing the wrong thing first.
+>
+> The point of the atlas is not to claim that human debugging wisdom never existed.
+>
+> The point is to turn that intuition into a reusable routing grammar with explicit structure:
+>
+> * family boundaries
+> * broken invariants
+> * why-primary-not-secondary reasoning
+> * misrepair warning
+> * confidence discipline
+> * evidence sufficiency discipline
+>
+> That matters because informal intuition is hard to reuse, hard to teach, and very hard to make AI systems follow consistently.
+>
+> So this is not “common sense with fancier words.”
+>
+> It is an attempt to make failure routing more explicit, repeatable, teachable, and AI-readable.
+
+</details>
+
+<details>
+<summary><strong>What if different models route the same case differently?</strong></summary>
+
+> That can happen, especially when evidence is incomplete or the case sits near a real boundary.
+>
+> The atlas does not assume that every model will always produce identical wording or identical local emphasis.
+>
+> What it tries to force is something more important:
+>
+> * a defendable primary cut
+> * an explicit neighboring alternative
+> * a broken invariant claim
+> * visible confidence and evidence discipline
+>
+> In other words, disagreement is not automatically failure.
+>
+> The real question is whether the competing routes are structurally defendable, and whether the disagreement can be reduced by better boundary reasoning or better evidence.
+>
+> So the goal is not perfect wording identity across all models.
+>
+> The goal is more stable structural routing under pressure.
+
+</details>
+
+### 4. Scope, Limits, and What Comes Next
+
+<details>
 <summary><strong>Does this system already repair everything automatically?</strong></summary>
 
-No.
-
-The current public system is strongest at:
-
-- route-first classification
-- boundary-aware diagnosis
-- broken-invariant reading
-- first repair direction
-- misrepair warning
-- deeper escalation paths when needed
-
-That is already very valuable.
-
-But it is not the same thing as claiming:
-
-- full autonomous diagnosis
-- full autonomous repair
-- complete root-cause closure in every case
-
-The current repair logic is best understood as:
-
+> No.
+>
+> The current public system is strongest at:
+>
+> * route-first classification
+> * boundary-aware diagnosis
+> * broken-invariant reading
+> * first repair direction
+> * misrepair warning
+> * deeper escalation paths when needed
+>
+> That is already very valuable.
+>
+> But it is not the same thing as claiming:
+>
+> * full autonomous diagnosis
+> * full autonomous repair
+> * complete root-cause closure in every case
+>
+> The current repair logic is best understood as:
+>
 > **route first, choose the right first move, then escalate deeper only when needed**
+
+</details>
+
+<details>
+<summary><strong>Why not just use better prompts, tests, or observability tools?</strong></summary>
+
+> Because those tools and this atlas do different jobs.
+>
+> Better prompts, better tests, logging, tracing, and observability tools are all useful.
+>
+> But they do not automatically answer the routing question:
+>
+> * what kind of failure is this
+> * which neighboring region is tempting but wrong
+> * which invariant is most likely broken first
+> * what should be checked or repaired first
+>
+> The atlas is not meant to replace tests or observability.
+>
+> It is meant to sit above them as a routing layer, helping humans and AI systems decide where to look first and how not to waste time in the wrong region.
+
+</details>
+
+<details>
+<summary><strong>When is this atlas overkill or unnecessary?</strong></summary>
+
+> It is not meant for every tiny mistake.
+>
+> If the issue is a simple typo, a trivial syntax error, or an obvious one-line fix with a clear local cause, then a full routing layer may be unnecessary.
+>
+> The atlas becomes most valuable when the case has one or more of the following:
+>
+> * multiple plausible failure regions
+> * hidden contracts or hidden state
+> * multi-step workflows
+> * cross-module interactions
+> * poor observability
+> * high misrepair risk
+> * repeated wrong first cuts
+>
+> So the right reading is:
+>
+> **this is not a tool for dramatizing trivial bugs**
+> **it is a tool for reducing wrong search and wrong repair in complex failure space**
+
+</details>
+
+<details>
+<summary><strong>Is this only the first generation of the atlas?</strong></summary>
+
+> Yes.
+>
+> The current public release should be understood as the **first formal generation** of the atlas.
+>
+> Its strongest validated public form is intentionally **AI-first**.  
+> That is because AI troubleshooting is the first operational surface where the mother framework has already been carved deeply enough to freeze.
+>
+> At the same time, the seven-family grammar was not carved as a narrow topic list only for AI.  
+> It was carved as a broader failure grammar for complex systems.
+>
+> That is why the project already includes controlled bridge work beyond AI, and why future work can expand into:
+>
+> * additional application surfaces
+> * more casebook layers
+> * more repair-facing materials
+> * more adapter layers
+> * broader cross-domain bridge work
+> * eventually a fuller civilization-facing debugging framework
+>
+> So the right reading is:
+>
+> **this is the first generation**  
+> **the mother structure is already stable**  
+> **future work expands the applications, not the core from scratch**
+>
+> If you want to follow those expansions, future bridge work, and new application layers, follow the ongoing project updates and community channels.
 
 </details>
 
 <details>
 <summary><strong>Is this only for AI systems?</strong></summary>
 
-The current strongest public form is **AI-first**.
-
-That is intentional, because AI troubleshooting is the first validated operational surface of the atlas.
-
-At the same time, the family grammar was not carved as a narrow topic list.  
-It was carved as a more general failure grammar for complex systems.
-
-That is why the atlas already has a formal bridge layer through documents such as:
-
-- [Cross-Domain Demonstration Pack v2](./Atlas/cross-domain-demonstration-pack-v2.md)
-- [Civilization Bridge Modules v1](./Atlas/civilization-bridge-modules-v1.md)
-
-So the correct reading is:
-
+> The current strongest public form is **AI-first**.
+>
+> That is intentional, because AI troubleshooting is the first validated operational surface of the atlas.
+>
+> At the same time, the family grammar was not carved as a narrow topic list.  
+> It was carved as a more general failure grammar for complex systems.
+>
+> That is why the atlas already has a formal bridge layer through documents such as:
+>
+> * [Cross-Domain Demonstration Pack v2](./Atlas/cross-domain-demonstration-pack-v2.md)
+> * [Civilization Bridge Modules v1](./Atlas/civilization-bridge-modules-v1.md)
+>
+> So the correct reading is:
+>
 > **AI-first in its strongest validated public form**  
 > **already structured enough to support controlled bridge work beyond AI**  
 > **not yet claiming universal final closure**
-
-</details>
-
-<details>
-<summary><strong>Where should a new user start?</strong></summary>
-
-That depends on what kind of user you are.
-
-### If you want the fastest practical entry
-Start with:
-- [Router TXT Pack](./Atlas/troubleshooting-atlas-router-v1.txt)
-- [Router Usage Guide](./Atlas/troubleshooting-atlas-router-v1-usage.md)
-
-### If you want the product overview
-Start with this page, then go to:
-- [Atlas Hub](./Atlas/README.md)
-
-### If you want the core structure
-Go to:
-- [Atlas Final Freeze v1](./Atlas/atlas-final-freeze-v1.md)
-
-### If you want examples and teaching cases
-Go to:
-- [Canonical Casebook v1](./Atlas/canonical-casebook-v1.md)
-
-### If you want repair-facing materials
-Go to:
-- [Fixes Hub](./Atlas/Fixes/README.md)
-
-### If you want demos
-Go to:
-- [Official Flagship Demos](./Atlas/Fixes/official/demos/README.md)
 
 </details>
 
