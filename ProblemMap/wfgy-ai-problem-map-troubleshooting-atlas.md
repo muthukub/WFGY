@@ -32,7 +32,7 @@ Reading discipline for AI:
 AI_NOTE_END
 -->
 
-# Problem Map 3.0 Troubleshooting Atlas
+# Problem Map 3.0 Troubleshooting Atlas 🗺
 ## A failure router for vibe coders and engineers building with AI.
 
 > **Load the TXT once, build as usual, and let AI debug at the right layer first.**
