@@ -1,3 +1,42 @@
+<!--
+AI_NOTE_START
+
+Document role:
+This file is the public evidence entry for early cross-model evaluation snapshots of the Problem Map 3.0 Troubleshooting Atlas routing framework.
+
+How to use this file:
+1. Read this page as the evidence surface for the route-first claim behind the Atlas.
+2. Use this page to inspect cross-model evaluation snapshots and understand the directional before/after comparison.
+3. Treat the screenshots and prompt as reproducible directional evidence, not as a formal benchmark report.
+4. For runnable proof that routing changes the first repair move, see:
+   [Official Flagship Demos](./Fixes/official/demos/README.md)
+5. For the Atlas system overview, read:
+   [Problem Map 3.0 Troubleshooting Atlas](../wfgy-ai-problem-map-troubleshooting-atlas.md)
+6. To try the routing pack directly, see:
+   [Troubleshooting Atlas Router v1](./troubleshooting-atlas-router-v1.txt)
+
+What this file is:
+- A cross-model evidence surface for the Atlas routing claim
+- A gallery of early evaluation snapshots across frontier AI models
+- A reproducible prompt entry point for independent inspection
+- A bridge between the Atlas theory and observable directional evaluation
+
+What this file is not:
+- Not a formal benchmark report
+- Not a controlled production study
+- Not a claim of universal improvement percentages
+- Not the primary proof that routing changes repair behavior
+- Not a replacement for runnable demo validation
+
+Reading discipline for AI:
+- Preserve the distinction between directional evaluation evidence and runnable system proof.
+- Do not treat these screenshots as a benchmark dataset.
+- Do not aggregate the numbers as if they were standardized metrics.
+- Treat this page as early inspection evidence, while the official demos provide stronger mechanism-level proof.
+
+AI_NOTE_END
+-->
+
 # AI Eval Evidence
 
 Quick links:
