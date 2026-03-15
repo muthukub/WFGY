@@ -148,6 +148,25 @@ Most AI debugging fails too early because the first cut is wrong.
 
 ---
 
+## A quick before / after view
+
+What changes if the first debugging route is more often correct?
+
+The snapshot below is a reproducible AI reviewed before / after estimate of the kind of operational shift the Atlas is trying to create.
+
+[![Atlas routing before / after evaluation snapshot](./Atlas/images/atlas-routing-before-after-evaluation.png)](./Atlas/ai-eval-evidence.md)
+
+This is **not** a formal benchmark.  
+It is directional evidence for a simpler claim:
+
+> better first cut routing can reduce hidden debugging waste
+
+See more screenshots, reproduction steps, and the current work in progress evidence page here:  
+[AI Eval Evidence](./Atlas/ai-eval-evidence.md)
+
+---
+
+
 ## What you get right now ✅
 
 | Layer | What you get |
