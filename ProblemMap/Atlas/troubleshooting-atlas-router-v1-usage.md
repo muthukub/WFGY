@@ -39,6 +39,16 @@ AI_NOTE_END
 ## Problem Map 3.0 Troubleshooting Atlas
 ## How to use the first route-first TXT troubleshooting pack
 
+Quick links:
+
+- [Back to Atlas landing page](../wfgy-ai-problem-map-troubleshooting-atlas.md)
+- [Get the Router TXT Pack](./troubleshooting-atlas-router-v1.txt)
+- [Router Freeze Note](./troubleshooting-atlas-router-v1-freeze-note.md)
+- [Atlas Hub](./README.md)
+- [Official Flagship Demos](./Fixes/official/demos/README.md)
+
+---
+
 This document explains how to use `Troubleshooting Atlas Router v1`.
 
 Its purpose is simple:
@@ -49,14 +59,76 @@ Its purpose is simple:
 > what kind of output to expect,  
 > and how to read that output correctly
 
-That is the job of this file.
-
-This is a usage guide.
-It is not the full Atlas.
-It is not the full teaching layer.
+This is a usage guide.  
+It is not the full Atlas.  
+It is not the full teaching layer.  
 It is not the full repair engine.
 
 It is the practical onboarding page for using the Router well.
+
+---
+
+## Quick start
+
+If you want the shortest practical path, do this:
+
+1. download the [Router TXT Pack](./troubleshooting-atlas-router-v1.txt)
+2. paste the TXT into ChatGPT, Claude, Gemini, Copilot, Cursor, or your preferred model
+3. paste one real case below it
+4. use the minimal prompt below
+5. read the output in this order:
+   - `primary_family`
+   - `why_primary_not_secondary`
+   - `broken_invariant`
+   - `first_fix_direction`
+   - `misrepair_risk`
+   - `confidence`
+   - `evidence_sufficiency`
+
+If that already works for you, you do not need to read the whole page first.
+
+---
+
+## Minimal prompt pattern
+
+Here is the simplest way to use the Router.
+
+### Minimal usage prompt
+
+```text
+Use the attached Troubleshooting Atlas Router v1.
+
+Route the following case using the Router output contract.
+
+Case:
+[paste your bug, issue, trace, workflow failure, or structured-output failure here]
+````
+
+That is enough for a first pass.
+
+---
+
+## Tiny example
+
+Here is a small example of the kind of case that already works well.
+
+```text
+Use the attached Troubleshooting Atlas Router v1.
+
+Route the following case using the Router output contract.
+
+Case:
+The agent keeps producing valid-looking JSON, but the schema parser fails because required fields appear in inconsistent places across steps.
+
+Expected behavior:
+Stable schema-compatible output.
+
+Actual behavior:
+Parse failures and downstream workflow breaks.
+```
+
+This is not the only valid format.
+It is just a simple example of the level of signal that helps the Router cut cleanly.
 
 ---
 
@@ -68,12 +140,12 @@ Its job is not to do everything.
 
 Its job is to do the most important early step well:
 
-- classify the most likely failure family
-- explain why that family is primary
-- identify the most likely broken invariant
-- suggest the first repair direction
-- warn about likely misrepair
-- stay honest when evidence is weak
+* classify the most likely failure family
+* explain why that family is primary
+* identify the most likely broken invariant
+* suggest the first repair direction
+* warn about likely misrepair
+* stay honest when evidence is weak
 
 Short version:
 
@@ -87,25 +159,25 @@ Use the Router when you have a real troubleshooting case and want a faster route
 
 Good use cases include:
 
-- AI bug reports
-- issue threads
-- workflow failures
-- agent step failures
-- structured-output failures
-- prompt and output mismatches
-- strange model behavior with logs or traces
-- system summaries where something is clearly wrong but the failure family is not obvious yet
+* AI bug reports
+* issue threads
+* workflow failures
+* agent step failures
+* structured-output failures
+* prompt and output mismatches
+* strange model behavior with logs or traces
+* system summaries where something is clearly wrong but the failure family is not obvious yet
 
 This product is especially useful when the question is not only:
 
-- what happened
+* what happened
 
 but more like:
 
-- what kind of failure is this
-- why is it this kind
-- what should be tried first
-- what should not be tried first
+* what kind of failure is this
+* why is it this kind
+* what should be tried first
+* what should not be tried first
 
 ---
 
@@ -113,25 +185,25 @@ but more like:
 
 Do not use the Router as if it were already:
 
-- a full autonomous repair engine
-- a full benchmark framework
-- a full root-cause analysis suite
-- a replacement for logs, traces, or actual debugging work
-- a substitute for the full Atlas when deep study is needed
+* a full autonomous repair engine
+* a full benchmark framework
+* a full root-cause analysis suite
+* a replacement for logs, traces, or actual debugging work
+* a substitute for the full Atlas when deep study is needed
 
 If you need:
 
-- richer family definitions
-- full teaching examples
-- deeper bridge logic
-- more careful case interpretation
-- stronger repair design
+* richer family definitions
+* full teaching examples
+* deeper bridge logic
+* more careful case interpretation
+* stronger repair design
 
 then move from the Router back into the larger Atlas system.
 
 Short version:
 
-> use the Router for compact route-first help  
+> use the Router for compact route-first help
 > use the full Atlas when you need deeper structure
 
 ---
@@ -152,14 +224,14 @@ The case can be small or medium-sized, but it should contain enough signal to su
 
 Useful forms of input include:
 
-- a bug description
-- an issue body
-- an error summary
-- a workflow trace excerpt
-- expected vs actual behavior
-- a prompt and output pair
-- a JSON failure sample
-- a short log snippet with context
+* a bug description
+* an issue body
+* an error summary
+* a workflow trace excerpt
+* expected vs actual behavior
+* a prompt and output pair
+* a JSON failure sample
+* a short log snippet with context
 
 You do not need a perfect formal schema.
 But the better the case description, the better the route.
@@ -200,35 +272,16 @@ Read the result in this order:
 
 Decide whether the result is strong enough to act on directly, or whether you need:
 
-- more evidence
-- deeper Atlas reading
-- deeper WFGY bridge exploration
-- a real implementation step
+* more evidence
+* deeper Atlas reading
+* deeper WFGY bridge exploration
+* a real implementation step
 
 That is the healthy use pattern.
 
 ---
 
-## 6. Minimal prompt pattern
-
-Here is the simplest way to use the Router.
-
-### Minimal usage prompt
-
-```text
-Use the attached Troubleshooting Atlas Router v1.
-
-Route the following case using the Router output contract.
-
-Case:
-[paste your bug, issue, trace, workflow failure, or structured-output failure here]
-````
-
-That is enough for a first pass.
-
----
-
-## 7. Stronger prompt pattern
+## 6. Stronger prompt pattern
 
 If you want a cleaner result, use a slightly more guided prompt.
 
@@ -255,7 +308,7 @@ This version tends to reduce sloppy outputs.
 
 ---
 
-## 8. What kind of input works best
+## 7. What kind of input works best
 
 The Router works best when the case contains enough material to expose the failure shape.
 
@@ -279,7 +332,7 @@ That gives the model something real to cut.
 
 ---
 
-## 9. What the output means
+## 8. What the output means
 
 The Router’s output is compact, but every field matters.
 
@@ -335,7 +388,7 @@ This tells you whether the current case actually contained enough material to su
 
 ---
 
-## 10. How to judge whether the output is good
+## 9. How to judge whether the output is good
 
 A good Router output usually has these qualities:
 
@@ -361,7 +414,7 @@ That is how you should read the result.
 
 ---
 
-## 11. What to do when evidence is weak
+## 10. What to do when evidence is weak
 
 Sometimes the Router will say:
 
@@ -388,7 +441,7 @@ Short version:
 
 ---
 
-## 12. How to use the Router with different kinds of cases
+## 11. How to use the Router with different kinds of cases
 
 The Router can be used across several common troubleshooting styles.
 
@@ -450,7 +503,7 @@ Likely value:
 
 ---
 
-## 13. What the Router is especially good at
+## 12. What the Router is especially good at
 
 Router v1 is especially strong at these things:
 
@@ -476,7 +529,7 @@ This is one of the biggest product thresholds the Router crosses.
 
 ---
 
-## 14. What the Router is still limited at
+## 13. What the Router is still limited at
 
 Router v1 is useful, but it still has normal first-version limits.
 
@@ -501,7 +554,7 @@ If you need stronger coverage, move up into:
 
 ---
 
-## 15. Relationship to the larger Atlas system
+## 14. Relationship to the larger Atlas system
 
 The Router should be seen as one layer in the larger system.
 
@@ -525,7 +578,7 @@ The Router is strongest when used as a front layer, not when forced to become th
 
 ---
 
-## 16. Suggested usage pattern for humans
+## 15. Suggested usage pattern for humans
 
 If a human wants to use this product manually, the best pattern is:
 
@@ -541,7 +594,7 @@ This keeps the product useful and honest.
 
 ---
 
-## 17. Suggested usage pattern for AI workflows
+## 16. Suggested usage pattern for AI workflows
 
 If the Router is used inside a workflow, the safest first-version pattern is:
 
@@ -560,7 +613,7 @@ This keeps the Router acting like a disciplined front-end classifier.
 
 ---
 
-## 18. What not to do
+## 17. What not to do
 
 To use Router v1 well, avoid these mistakes.
 
@@ -579,7 +632,7 @@ These are exactly the kinds of mistakes the Router is meant to reduce.
 
 ---
 
-## 19. Recommended short wording
+## 18. Recommended short wording
 
 If you need a short explanation for a README, demo, or collaboration thread, use wording like this:
 
@@ -590,9 +643,27 @@ This is strong, clear, and safe.
 
 ---
 
-## 20. One-line status
+## 19. One-line status
 
 **This guide explains how to use Troubleshooting Atlas Router v1 as a compact route-first TXT pack for failure classification and first-fix guidance.**
+
+---
+
+## 20. Next steps
+
+If you want the shortest next path:
+
+1. [Get the Router TXT Pack](./troubleshooting-atlas-router-v1.txt)
+2. [Go back to the Atlas landing page](../wfgy-ai-problem-map-troubleshooting-atlas.md)
+3. [See the Official Flagship Demos](./Fixes/official/demos/README.md)
+4. [Open the Atlas Hub](./README.md)
+
+If this guide helped you get started, consider:
+
+* [starring the WFGY repo](https://github.com/onestardao/WFGY)
+* sharing a real edge case
+* opening an issue
+* testing the Router on a difficult workflow
 
 ---
 
@@ -608,3 +679,8 @@ Sometimes the biggest upgrade is simply this:
 
 That is what Router v1 is for.
 
+---
+
+Back to the main entry:
+
+[Problem Map 3.0 Troubleshooting Atlas](../wfgy-ai-problem-map-troubleshooting-atlas.md)
