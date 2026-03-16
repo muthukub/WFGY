@@ -1,6 +1,6 @@
 # WFGY ProblemMap Scan
 
-Generated at: 2026-03-15 06:06:54 UTC
+Generated at: 2026-03-16 06:21:04 UTC
 
 ## ProblemMap files
 
@@ -370,6 +370,7 @@ ProblemMap/GlobalFixMap/LLM_Providers/grok_xai.md
 ProblemMap/GlobalFixMap/LLM_Providers/groq.md
 ProblemMap/GlobalFixMap/LLM_Providers/kimi.md
 ProblemMap/GlobalFixMap/LLM_Providers/meta_llama.md
+ProblemMap/GlobalFixMap/LLM_Providers/minimax.md
 ProblemMap/GlobalFixMap/LLM_Providers/mistral.md
 ProblemMap/GlobalFixMap/LLM_Providers/mvp_demo/.gitkeep
 ProblemMap/GlobalFixMap/LLM_Providers/openai.md
@@ -771,4 +772,4 @@ ProblemMap/wfgy-metrics.md
 ProblemMap/wfgy-rag-16-problem-map-global-debug-card.md
 
 Total ProblemMap docs:
-765
+766
