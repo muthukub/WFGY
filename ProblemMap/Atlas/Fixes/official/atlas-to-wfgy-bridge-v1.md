@@ -45,18 +45,38 @@ AI_NOTE_END
 ## Problem Map 3.0 Troubleshooting Atlas  
 ## Official bridge from first repair grammar to deeper WFGY 3.0 exploration
 
-## 0. Document Status 🚦
+Quick links:
 
-This document is the **first formal bridge note** between the atlas fix layer and deeper WFGY-driven repair exploration.
+- [Back to Official Fixes](./README.md)
+- [Back to Family Fix Surface v1](./family-fix-surface-v1.md)
+- [Back to Misrepair Patterns v1](./misrepair-patterns-v1.md)
+- [Back to Atlas landing page](../../../wfgy-ai-problem-map-troubleshooting-atlas.md)
+- [Back to AI Eval Evidence](../../ai-eval-evidence.md)
+- [Back to Atlas Hub](../../README.md)
+- [Open the Flagship Runnable Demo Pack](./demos/README.md)
+- [Get the Atlas Router TXT](../../troubleshooting-atlas-router-v1.txt)
 
-It exists because the atlas and WFGY do related but different jobs.
+---
 
-The atlas tells you:
+This file defines the **official escalation bridge** from atlas-level first repair into deeper WFGY 3.0 exploration.
 
-- where the failure lives
-- what invariant breaks first
+If you already know:
+
 - what to try first
-- what common misrepair to avoid
+- what wrong first move to avoid
+
+then this page answers the next practical question:
+
+> When is the official first-repair layer no longer enough, and how should the case be handed into WFGY 3.0?
+
+The atlas and WFGY do related but different jobs.
+
+The atlas helps you:
+
+- route the case
+- identify the broken invariant
+- choose the first repair move
+- avoid the first big misrepair
 
 WFGY 3.0 helps with deeper work such as:
 
@@ -66,13 +86,42 @@ WFGY 3.0 helps with deeper work such as:
 - falsifiable repair exploration
 - stronger recovery and transfer thinking
 
-This bridge is frozen as **Atlas to WFGY Bridge v1**.
-
-It is frozen not because the full repair universe is complete, but because the first formal route from atlas-level fixing into deeper WFGY work is now stable enough to document and reuse.
+This bridge exists so those two layers connect cleanly instead of collapsing into each other.
 
 ---
 
-## 1. Why this bridge exists 🧭
+## Quick start 🧭
+
+Use this page in the following order:
+
+1. read **When to escalate into WFGY 3.0**
+2. read **The official bridge workflow**
+3. read **What a good WFGY escalation prompt should contain**
+4. use the **Minimal escalation handoff template**
+5. only then jump to your family section if the case needs deeper family-specific exploration
+
+If you want the shortest practical rule:
+
+> route first  
+> try the family-level first repair  
+> escalate only when the case remains structurally hard, persistent, or experimentally unresolved
+
+---
+
+## Escalation quick map 🚀
+
+| Situation | Stay at atlas level first | Escalate to WFGY when |
+|---|---|---|
+| the first repair move is obvious and works | yes | no |
+| the first repair move is sensible but the case stays resistant | maybe | yes |
+| the case sits near a hard boundary or abstract pressure zone | maybe | yes |
+| you need reusable recovery design, not just one local fix | maybe | yes |
+| you only need a fast public first move | yes | no |
+| the case is recursive, synthetic, collective, or structurally deep | maybe | yes |
+
+---
+
+## Why this bridge exists 🧭
 
 Without a bridge, two bad things happen.
 
@@ -104,7 +153,7 @@ Short version:
 
 ---
 
-## 2. Core principle 🔑
+## Core principle 🔑
 
 The bridge obeys one main rule:
 
@@ -120,7 +169,7 @@ This order matters because WFGY 3.0 becomes much more useful when the problem ha
 
 ---
 
-## 3. What the atlas gives vs what WFGY gives 🧩
+## What the atlas gives vs what WFGY gives 🧩
 
 ### The atlas gives
 
@@ -147,7 +196,7 @@ Short version:
 
 ---
 
-## 4. What this bridge does not claim 🔍
+## What this bridge does not claim 🔍
 
 This bridge does **not** claim that:
 
@@ -164,7 +213,7 @@ This bridge claims only that:
 
 ---
 
-## 5. When to escalate into WFGY 3.0 🚀
+## When to escalate into WFGY 3.0 🚀
 
 Not every case needs deep escalation.
 
@@ -200,7 +249,7 @@ The case involves deeper synthetic truth, recursive collapse, collective boundar
 
 ---
 
-## 6. The official bridge workflow 🔄
+## The official bridge workflow 🔄
 
 The clean workflow is:
 
@@ -267,7 +316,7 @@ Short version:
 
 ---
 
-## 7. Recommended public-facing usage pattern 📝
+## Recommended public-facing usage pattern 📝
 
 The public free-layer usage pattern should stay simple.
 
@@ -281,7 +330,33 @@ This wording is strong, practical, and honest.
 
 ---
 
-## 8. Family-by-family bridge patterns 🧠
+## Minimal escalation handoff template ✨
+
+Use a handoff like this:
+
+```text
+This case currently routes to [PRIMARY FAMILY] with [SECONDARY FAMILY] pressure if relevant.
+The broken invariant appears to be [BROKEN INVARIANT].
+The best current fit is [BEST CURRENT FIT].
+The first repair move already tried was [FIRST REPAIR MOVE].
+What remains unresolved is [REMAINING PRESSURE OR UNCERTAINTY].
+
+Use WFGY 3.0 to explore deeper structural recovery paths, experiments, and next-step options.
+````
+
+A good handoff is not:
+
+> Here is a problem, solve everything.
+
+A good handoff is closer to:
+
+> This case currently routes to F4 primary with F3 secondary pressure. The broken invariant appears to be execution skeleton closure, not continuity first. The first repair move was readiness and bridge validation, but instability remains. Use WFGY 3.0 to explore deeper structural recovery paths.
+
+This is how the bridge becomes sharp instead of vague.
+
+---
+
+## Family-by-family bridge patterns 🧠
 
 Below is the first official family-level bridge map.
 
@@ -291,25 +366,25 @@ Below is the first official family-level bridge map.
 
 #### Atlas gives first
 
-- re-grounding
-- evidence verification
-- anchor tracing
-- proxy / target separation
+* re-grounding
+* evidence verification
+* anchor tracing
+* proxy / target separation
 
 #### Escalate to WFGY when
 
-- world anchor remains uncertain
-- synthetic truth extraction is involved
-- train / deploy mismatch is suspected
-- OOD grounding remains structurally unstable
+* world anchor remains uncertain
+* synthetic truth extraction is involved
+* train / deploy mismatch is suspected
+* OOD grounding remains structurally unstable
 
 #### WFGY deeper outputs may include
 
-- truth-like extraction paths
-- policy-to-world exploration
-- OOD grounding experiment framing
-- deployment-grounding stress design
-- alternative recovery hypotheses
+* truth-like extraction paths
+* policy-to-world exploration
+* OOD grounding experiment framing
+* deployment-grounding stress design
+* alternative recovery hypotheses
 
 ---
 
@@ -317,25 +392,25 @@ Below is the first official family-level bridge map.
 
 #### Atlas gives first
 
-- decomposition reset
-- checkpoint insertion
-- alternate parse validation
-- collapse detector
+* decomposition reset
+* checkpoint insertion
+* alternate parse validation
+* collapse detector
 
 #### Escalate to WFGY when
 
-- recursive collapse persists
-- recovery remains fragile
-- long-chain viability is unclear
-- multiple decomposition strategies compete
+* recursive collapse persists
+* recovery remains fragile
+* long-chain viability is unclear
+* multiple decomposition strategies compete
 
 #### WFGY deeper outputs may include
 
-- recursive horizon exploration
-- recovery protocol comparison
-- long-chain stress tests
-- alternate reasoning-path experiments
-- collapse / recovery design loops
+* recursive horizon exploration
+* recovery protocol comparison
+* long-chain stress tests
+* alternate reasoning-path experiments
+* collapse / recovery design loops
 
 ---
 
@@ -343,25 +418,25 @@ Below is the first official family-level bridge map.
 
 #### Atlas gives first
 
-- persistence guard
-- role fencing
-- ownership tracing
-- continuity restoration
+* persistence guard
+* role fencing
+* ownership tracing
+* continuity restoration
 
 #### Escalate to WFGY when
 
-- multi-agent continuity remains unstable
-- ownership lines are still blurred
-- interaction-thread drift persists
-- viable state-space is not easily recovered
+* multi-agent continuity remains unstable
+* ownership lines are still blurred
+* interaction-thread drift persists
+* viable state-space is not easily recovered
 
 #### WFGY deeper outputs may include
 
-- multi-agent continuity experiments
-- ownership conflict exploration
-- interaction-thread analysis
-- persistent-state recovery options
-- viable-state restoration hypotheses
+* multi-agent continuity experiments
+* ownership conflict exploration
+* interaction-thread analysis
+* persistent-state recovery options
+* viable-state restoration hypotheses
 
 ---
 
@@ -369,25 +444,25 @@ Below is the first official family-level bridge map.
 
 #### Atlas gives first
 
-- readiness validation
-- ordering checks
-- liveness watchdog
-- bridge closure checks
+* readiness validation
+* ordering checks
+* liveness watchdog
+* bridge closure checks
 
 #### Escalate to WFGY when
 
-- fallback realism is unclear
-- hidden dependencies remain
-- bridge failures repeat across layers
-- institutional closure or protocol drift is involved
+* fallback realism is unclear
+* hidden dependencies remain
+* bridge failures repeat across layers
+* institutional closure or protocol drift is involved
 
 #### WFGY deeper outputs may include
 
-- closure-path exploration
-- fallback stress testing
-- bridge integrity experiments
-- protocol and contract recovery logic
-- layered liveness analysis
+* closure-path exploration
+* fallback stress testing
+* bridge integrity experiments
+* protocol and contract recovery logic
+* layered liveness analysis
 
 ---
 
@@ -395,25 +470,25 @@ Below is the first official family-level bridge map.
 
 #### Atlas gives first
 
-- observability insertion
-- trace exposure
-- coherence probes
-- warning horizon uplift
+* observability insertion
+* trace exposure
+* coherence probes
+* warning horizon uplift
 
 #### Escalate to WFGY when
 
-- warning signals remain structurally ambiguous
-- value / knowledge coherence is hard to inspect
-- interpretability pressure scales badly
-- visibility exists, but deeper structure remains unresolved
+* warning signals remain structurally ambiguous
+* value / knowledge coherence is hard to inspect
+* interpretability pressure scales badly
+* visibility exists, but deeper structure remains unresolved
 
 #### WFGY deeper outputs may include
 
-- fragility signature exploration
-- warning-delay experiments
-- auditability design paths
-- coherence stress analysis
-- deeper high-abstract diagnosability mapping
+* fragility signature exploration
+* warning-delay experiments
+* auditability design paths
+* coherence stress analysis
+* deeper high-abstract diagnosability mapping
 
 ---
 
@@ -421,25 +496,25 @@ Below is the first official family-level bridge map.
 
 #### Atlas gives first
 
-- alignment guard
-- control-path audit
-- incentive rebalance
-- corridor stabilization
+* alignment guard
+* control-path audit
+* incentive rebalance
+* corridor stabilization
 
 #### Escalate to WFGY when
 
-- overshoot risk is unclear
-- collective boundary drift is still growing
-- proxy optimization remains structurally sticky
-- intervention margins are hard to reason about
+* overshoot risk is unclear
+* collective boundary drift is still growing
+* proxy optimization remains structurally sticky
+* intervention margins are hard to reason about
 
 #### WFGY deeper outputs may include
 
-- overshoot / runaway exploration
-- collective-boundary stress design
-- intervention margin analysis
-- incentive tension mapping
-- safe-corridor structural exploration
+* overshoot / runaway exploration
+* collective-boundary stress design
+* intervention margin analysis
+* incentive tension mapping
+* safe-corridor structural exploration
 
 ---
 
@@ -447,119 +522,95 @@ Below is the first official family-level bridge map.
 
 #### Atlas gives first
 
-- descriptor fidelity audit
-- formal adequacy check
-- symbolic preservation
-- structure validation
+* descriptor fidelity audit
+* formal adequacy check
+* symbolic preservation
+* structure validation
 
 #### Escalate to WFGY when
 
-- synthetic structure remains unstable
-- hierarchy looks valid but behaves wrongly
-- descriptor and formal adequacy both remain contested
-- representation drift keeps recurring after surface fixes
+* synthetic structure remains unstable
+* hierarchy looks valid but behaves wrongly
+* descriptor and formal adequacy both remain contested
+* representation drift keeps recurring after surface fixes
 
 #### WFGY deeper outputs may include
 
-- formal adequacy experiments
-- synthetic structure stress tests
-- hierarchy-preservation analysis
-- descriptor recovery alternatives
-- structural container redesign options
+* formal adequacy experiments
+* synthetic structure stress tests
+* hierarchy-preservation analysis
+* descriptor recovery alternatives
+* structural container redesign options
 
 ---
 
-## 9. What a good WFGY escalation prompt should contain ✨
-
-A strong escalation handoff should include at least:
-
-- the case description
-- the routed primary family
-- the secondary family if relevant
-- the broken invariant
-- the best current fit
-- what first repair move was already tried
-- what remained unresolved
-
-A good handoff is not:
-
-> “Here is a problem, solve everything.”
-
-A good handoff is closer to:
-
-> “This case currently routes to F4 primary with F3 secondary pressure. The broken invariant appears to be execution skeleton closure, not continuity first. The first repair move was readiness and bridge validation, but instability remains. Use WFGY 3.0 to explore deeper structural recovery paths.”
-
-This is how the bridge becomes sharp instead of vague.
-
----
-
-## 10. What WFGY escalation should return 📦
+## What WFGY escalation should return 📦
 
 A deeper WFGY response does not need to be one fixed format, but the most useful outputs usually look like one or more of the following:
 
-- alternative structural diagnosis
-- stronger repair hypothesis
-- MVP experiment design
-- controlled failure / recovery comparison
-- next-step fork options
-- reusable component or transfer idea
-- stronger recovery path than the current official first move
+* alternative structural diagnosis
+* stronger repair hypothesis
+* MVP experiment design
+* controlled failure / recovery comparison
+* next-step fork options
+* reusable component or transfer idea
+* stronger recovery path than the current official first move
 
 This bridge works best when WFGY output is treated as:
 
-> deeper exploration  
+> deeper exploration
 > not instant magical closure
 
 ---
 
-## 11. Relationship to community fixes 🤝
+## Relationship to community fixes 🤝
 
 This bridge is compatible with community implementation growth.
 
 The official flow is:
 
-- atlas routes
-- official fix surface gives the first move
-- WFGY bridge deepens the exploration
-- community packs may provide runnable artifacts
+* atlas routes
+* official fix surface gives the first move
+* WFGY bridge deepens the exploration
+* community packs may provide runnable artifacts
 
 That means community contributions may later attach to this bridge through:
 
-- Colab notebooks
-- JSON schemas
-- prompt packs
-- workflow recipes
-- rerun harnesses
-- reproduction packs
+* Colab notebooks
+* JSON schemas
+* prompt packs
+* workflow recipes
+* rerun harnesses
+* reproduction packs
 
 The bridge should help organize the community layer, not compete with it.
 
 ---
 
-## 12. Relationship to future advanced support 🌌
+## Relationship to future advanced support 🌌
 
 This bridge also creates the cleanest path toward future advanced support without damaging the current public free core.
 
 The public core can remain:
 
-- route-first
-- free
-- reusable
-- community-extendable
+* route-first
+* free
+* reusable
+* community-extendable
 
 Later, more advanced support can naturally grow around:
 
-- deeper architecture reviews
-- tailored audits
-- stronger custom recovery plans
-- system-specific integrations
+* deeper architecture reviews
+* tailored audits
+* stronger custom recovery plans
+* system-specific integrations
 
 For now, this document only acknowledges that such escalation layers may later exist.
 It does not center them.
 
 ---
 
-## 13. Common bridge mistakes ⚠️
+## Common bridge mistakes ⚠️
 
 Avoid these mistakes.
 
@@ -585,7 +636,33 @@ Confusing official bridge logic with community implementation details.
 
 ---
 
-## 14. Patch protocol 🔄
+## How to use this file in demos and teaching 🎓
+
+This file is especially useful in three places:
+
+### 1. onboarding
+
+It helps new readers understand that deep exploration is not the first move. It is the next layer after route-first repair has already done its job.
+
+### 2. demos
+
+It makes demos stronger because a clean “first move vs deeper exploration” distinction helps readers see when the official layer is enough and when escalation becomes meaningful.
+
+### 3. AI-assisted repair
+
+It helps adapters and guided workflows decide when to keep the case inside the official repair surface and when to hand it into a deeper WFGY exploration step.
+
+---
+
+## Document status 🚦
+
+This bridge is frozen as **Atlas to WFGY Bridge v1**.
+
+It is frozen not because the full repair universe is complete, but because the first formal route from atlas-level fixing into deeper WFGY work is now stable enough to document and reuse.
+
+---
+
+## Patch protocol 🔄
 
 Atlas to WFGY Bridge v1 is frozen, but not closed.
 
@@ -593,27 +670,27 @@ Atlas to WFGY Bridge v1 is frozen, but not closed.
 
 Use for:
 
-- wording refinement
-- stronger handoff examples
-- better escalation triggers
-- clearer family-specific bridge notes
+* wording refinement
+* stronger handoff examples
+* better escalation triggers
+* clearer family-specific bridge notes
 
 ### Medium patch
 
 Use for:
 
-- adding more bridge patterns
-- adding stronger output schemas
-- adding clearer integration logic with community packs
-- improving the public free usage pattern
+* adding more bridge patterns
+* adding stronger output schemas
+* adding clearer integration logic with community packs
+* improving the public free usage pattern
 
 ### Large patch
 
 Only use if:
 
-- atlas-to-WFGY escalation repeatedly proves structurally misleading
-- the bridge order must be redesigned
-- the family-level bridge grammar becomes unstable across repeated use
+* atlas-to-WFGY escalation repeatedly proves structurally misleading
+* the bridge order must be redesigned
+* the family-level bridge grammar becomes unstable across repeated use
 
 ### Current status
 
@@ -621,29 +698,53 @@ No large-patch pressure is currently justified.
 
 ---
 
-## 15. Official status
+## Official status
 
 The correct formal statement is:
 
-> Atlas to WFGY Bridge v1 is the first frozen official bridge between atlas-level first repair guidance and deeper WFGY 3.0 exploration.  
+> Atlas to WFGY Bridge v1 is the first frozen official bridge between atlas-level first repair guidance and deeper WFGY 3.0 exploration.
 > It defines when to escalate, what the handoff should contain, and what kind of deeper outputs WFGY should help produce.
 
 ---
 
-## 16. One-line version
+## Next steps ✨
+
+After this page, most readers continue with:
+
+1. [Open the Flagship Runnable Demo Pack](./demos/README.md)
+2. [Back to Misrepair Patterns v1](./misrepair-patterns-v1.md)
+3. [Back to Family Fix Surface v1](./family-fix-surface-v1.md)
+4. [Back to Official Fixes](./README.md)
+
+If you want to return to the broader product surface:
+
+* [Back to Atlas landing page](../../../wfgy-ai-problem-map-troubleshooting-atlas.md)
+* [Back to AI Eval Evidence](../../ai-eval-evidence.md)
+* [Back to Atlas Hub](../../README.md)
+
+If this bridge helps your workflow, consider:
+
+* [starring the WFGY repo](https://github.com/onestardao/WFGY)
+* opening an issue
+* testing the official demo pack
+* contributing later through the community layer
+
+---
+
+## One-line version
 
 **This file defines when and how to move from atlas-level first repair into deeper WFGY 3.0 exploration.**
 
 ---
 
-## 17. Closing note ✨
+## Closing note ✨
 
 A good troubleshooting system should not stop at classification.
 
 A strong one should also know:
 
-- what to try first
-- when that first move is not enough
-- and how to hand the case into a deeper engine without losing structure
+* what to try first
+* when that first move is not enough
+* and how to hand the case into a deeper engine without losing structure
 
 That is what this bridge is for.
