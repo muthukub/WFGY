@@ -1,6 +1,59 @@
-# Auto Repair Architecture v1
+<!--
+AI_NOTE_START
 
-🏗️ **Auto Repair Architecture v1** defines how Atlas-based repair should be structured as a system layer.
+Document role:
+This file defines the architecture of Auto Repair v1 inside the Atlas Fixes layer.
+
+How to use this file:
+1. Read this page after the Auto Repair v1 README if you want the system-level view.
+2. Use this page to understand how Atlas diagnosis becomes structured repair planning.
+3. Use this page together with:
+   - [Auto Repair v1 README](./README.md)
+   - [Repair Action Schema v1](./repair-action-schema-v1.md)
+   - [Repair Validation Loop v1](./repair-validation-loop-v1.md)
+   - [Rollback Policy v1](./rollback-policy-v1.md)
+
+What this file is:
+- The architecture page for Auto Repair v1
+- A system-layer explanation of controlled repair after Atlas routing
+- A boundary document between diagnosis, planning, validation, rollback, and deeper continuation
+
+What this file is not:
+- Not proof that a fully autonomous repair engine already exists
+- Not the Atlas routing layer itself
+- Not a production executor specification
+- Not a replacement for deeper WFGY repair
+
+Reading discipline for AI:
+- Preserve the order of routing, repair planning, validation, and escalation.
+- Do not treat this page as proof of full autonomous execution.
+- Keep the distinction between Atlas, Fix Surface, Auto Repair, and WFGY Deep Repair visible.
+- Treat this file as an architecture contract, not as a hype page.
+
+AI_NOTE_END
+-->
+
+# Auto Repair Architecture v1 🏗️
+
+## How Atlas-based repair should be structured as a system layer
+
+Quick links:
+
+- [Back to Auto Repair v1 README](./README.md)
+- [Back to Fixes Hub](../README.md)
+- [Back to Official Fixes](../official/README.md)
+- [Back to Atlas landing page](../../../wfgy-ai-problem-map-troubleshooting-atlas.md)
+- [Back to AI Eval Evidence](../../ai-eval-evidence.md)
+- [Back to Atlas Hub](../../README.md)
+- [Get the Atlas Router TXT](../../troubleshooting-atlas-router-v1.txt)
+- [Open Repair Action Schema v1](./repair-action-schema-v1.md)
+- [Open Repair Validation Loop v1](./repair-validation-loop-v1.md)
+- [Open Rollback Policy v1](./rollback-policy-v1.md)
+- [Open Atlas Auto Repair to WFGY Bridge v1](./atlas-auto-repair-to-wfgy-bridge-v1.md)
+
+---
+
+If the Atlas is the layer that identifies the failure, Auto Repair Architecture v1 defines how that diagnosis should become a **controlled repair system**. 🧭
 
 This document does **not** claim that a fully autonomous repair engine already exists.
 
@@ -13,8 +66,38 @@ Instead, it defines the intended architecture for moving from:
 
 In short:
 
-> this document explains how Auto Repair should be built,
-> not how to pretend it is already finished.
+> this document explains how Auto Repair should be built,  
+> not how to pretend it is already finished
+
+---
+
+## Quick start 🚀
+
+### I am new to Auto Repair
+
+Use this path:
+
+1. read the [Auto Repair v1 README](./README.md)
+2. read this architecture page
+3. inspect the [Repair Action Schema v1](./repair-action-schema-v1.md)
+4. inspect the [Repair Validation Loop v1](./repair-validation-loop-v1.md)
+5. inspect the [Rollback Policy v1](./rollback-policy-v1.md)
+
+### I already know the Atlas and want the shortest architectural view
+
+Start here:
+
+1. this page
+2. [Repair Action Schema v1](./repair-action-schema-v1.md)
+3. [Repair Validation Loop v1](./repair-validation-loop-v1.md)
+4. [Atlas Auto Repair to WFGY Bridge v1](./atlas-auto-repair-to-wfgy-bridge-v1.md)
+
+Short version:
+
+> route first  
+> plan second  
+> validate third  
+> execute carefully or escalate when needed ✨
 
 ---
 
@@ -29,7 +112,7 @@ Its job is to take a routed case and turn it into a controlled repair workflow.
 That means Auto Repair should always sit **after**:
 
 - Atlas routing
-- family / node fit judgment
+- family or node fit judgment
 - fix-surface selection
 
 and **before**:
@@ -41,7 +124,7 @@ and **before**:
 
 ---
 
-## 2. Full system placement
+## 2. Full system placement 🧩
 
 The current high-level system can be understood like this:
 
@@ -67,7 +150,7 @@ Teaches how to route real cases.
 
 ### Adapter
 
-Makes the atlas usable by AI systems.
+Makes the Atlas usable by AI systems.
 
 ### Fix Surface
 
@@ -103,13 +186,25 @@ So the architecture is built on one non-negotiable rule:
 
 ---
 
-## 4. Minimal architecture blocks
+## 4. Auto Repair quick map 🗂️
 
-Auto Repair v1 should be understood as five architecture blocks.
+| Layer or block      | Main job                                                | Typical output                                              |
+| ------------------- | ------------------------------------------------------- | ----------------------------------------------------------- |
+| Atlas               | classify the failure                                    | family, fit, broken invariant hypothesis                    |
+| Fix Surface         | select the first repair direction                       | first repair family or move                                 |
+| Auto Repair Planner | turn diagnosis into a repair plan                       | candidate actions, ordering, warnings                       |
+| Validation Loop     | test whether the repair helped                          | accept, revise, rollback, escalate                          |
+| WFGY Deep Repair    | continue when local repair is structurally insufficient | deeper reframing, stronger experiments, harder continuation |
+
+This file is the right place when the goal is to understand **how controlled repair should be organized**, not just how one isolated fix should look.
 
 ---
 
-## Block A · Case Intake
+## 5. Minimal architecture blocks
+
+Auto Repair v1 should be understood as five architecture blocks.
+
+### Block A · Case Intake
 
 This block receives the routed case.
 
@@ -129,9 +224,7 @@ It assumes that Atlas routing has already happened.
 
 Its purpose is to standardize the repair entry point.
 
----
-
-## Block B · Repair Planner
+### Block B · Repair Planner
 
 This is the first truly active Auto Repair block.
 
@@ -154,9 +247,7 @@ At this stage, the planner should remain conservative.
 It should not claim to solve the whole case.
 It should only define a structured first repair plan.
 
----
-
-## Block C · Repair Action Layer
+### Block C · Repair Action Layer
 
 This block defines the space of allowed repair actions.
 
@@ -176,9 +267,7 @@ This block is where repair action schemas become important.
 
 Without this layer, the planner becomes too loose.
 
----
-
-## Block D · Validation Loop
+### Block D · Validation Loop
 
 This block checks whether the repair improved the case.
 
@@ -193,9 +282,7 @@ Its role is to answer:
 This block is essential.
 Without it, Auto Repair becomes guesswork.
 
----
-
-## Block E · Rollback and Escalation
+### Block E · Rollback and Escalation
 
 This block defines what happens when repair is unsafe, insufficient, or harmful.
 
@@ -211,7 +298,7 @@ This is the main safety block of the architecture.
 
 ---
 
-## 5. Primary workflow
+## 6. Primary workflow ⚙️
 
 The intended workflow is:
 
@@ -231,7 +318,7 @@ Anything more ambitious should still preserve this core sequence.
 
 ---
 
-## 6. What v1 is actually building
+## 7. What v1 is actually building
 
 Auto Repair v1 is mainly focused on the **planning architecture**, not full autonomous execution.
 
@@ -255,13 +342,13 @@ This distinction must remain clear.
 
 ---
 
-## 7. Family suitability for early Auto Repair
+## 8. Family suitability for early Auto Repair
 
 Not all families should be treated equally in early phases.
 
-### Best early targets
+### Best early targets ✅
 
-#### F1 · Grounding & Evidence Integrity
+#### F1 · Grounding and Evidence Integrity
 
 Why suitable:
 
@@ -276,13 +363,13 @@ Typical actions:
 * evidence filtering
 * retrieval correction
 
-#### F4 · Execution & Contract Integrity
+#### F4 · Execution and Contract Integrity
 
 Why suitable:
 
 * many failures are workflow-structural
 * gates and ordering can often be stated explicitly
-* before / after logic is easier to inspect
+* before and after logic is easier to inspect
 
 Typical actions:
 
@@ -291,7 +378,7 @@ Typical actions:
 * closure hardening
 * downstream block-until-ready rule
 
-#### F7 · Representation & Localization Integrity
+#### F7 · Representation and Localization Integrity
 
 Why suitable:
 
@@ -306,11 +393,9 @@ Typical actions:
 * JSON shell correction
 * container validation
 
----
+### Medium-risk targets ⚠️
 
-### Medium-risk targets
-
-#### F5 · Observability & Diagnosability Integrity
+#### F5 · Observability and Diagnosability Integrity
 
 Useful for:
 
@@ -320,7 +405,7 @@ Useful for:
 
 But caution is needed, because improved visibility is not always the same as repaired failure.
 
-#### F3 · State & Continuity Integrity
+#### F3 · State and Continuity Integrity
 
 Possible for:
 
@@ -330,11 +415,9 @@ Possible for:
 
 But deeper continuity issues can become complicated quickly.
 
----
+### High-risk early targets 🚧
 
-### High-risk early targets
-
-#### F6 · Boundary & Safety Integrity
+#### F6 · Boundary and Safety Integrity
 
 This region should be handled very carefully.
 
@@ -356,7 +439,7 @@ This is because boundary-heavy cases often require:
 
 ---
 
-## 8. Repair planner contract
+## 9. Repair planner contract
 
 The planner block should eventually produce outputs like:
 
@@ -377,7 +460,7 @@ If the planner is weak, later execution becomes dangerous.
 
 ---
 
-## 9. Validation contract
+## 10. Validation contract
 
 The validation block should eventually answer at least these questions:
 
@@ -394,7 +477,7 @@ It is part of the architecture.
 
 ---
 
-## 10. Rollback contract
+## 11. Rollback contract
 
 Rollback must be part of the design from the beginning.
 
@@ -411,7 +494,7 @@ A system that can propose repair but cannot rollback is not ready for trustworth
 
 ---
 
-## 11. Relationship to WFGY Deep Repair
+## 12. Relationship to WFGY Deep Repair 🌊
 
 Auto Repair should not be mistaken for the deepest repair layer.
 
@@ -441,7 +524,7 @@ This keeps the system modular.
 
 ---
 
-## 12. Recommended growth path
+## 13. Recommended growth path
 
 A healthy build path looks like this:
 
@@ -471,7 +554,7 @@ That would create unnecessary instability.
 
 ---
 
-## 13. Recommended future file set
+## 14. Recommended future file set
 
 As the folder grows, the following files make sense:
 
@@ -496,7 +579,7 @@ But this is the intended architecture path.
 
 ---
 
-## 14. What v1 should be able to say honestly
+## 15. What v1 should be able to say honestly
 
 The strongest honest statement for v1 is:
 
@@ -506,6 +589,24 @@ That is strong enough to matter and honest enough to trust.
 
 ---
 
-## 15. One-line architecture summary
+## 16. Next steps ✨
+
+After this page, most readers continue with:
+
+1. [Open Repair Action Schema v1](./repair-action-schema-v1.md)
+2. [Open Repair Validation Loop v1](./repair-validation-loop-v1.md)
+3. [Open Rollback Policy v1](./rollback-policy-v1.md)
+4. [Open Atlas Auto Repair to WFGY Bridge v1](./atlas-auto-repair-to-wfgy-bridge-v1.md)
+
+If you want the broader product surface:
+
+* [Back to Auto Repair v1 README](./README.md)
+* [Back to Fixes Hub](../README.md)
+* [Back to Atlas landing page](../../../wfgy-ai-problem-map-troubleshooting-atlas.md)
+* [Back to Atlas Hub](../../README.md)
+
+---
+
+## 17. One-line architecture summary 🌍
 
 **Auto Repair Architecture v1 defines the bridge from Atlas diagnosis and fix-surface selection to structured repair planning, validation, rollback, and later constrained execution.**
