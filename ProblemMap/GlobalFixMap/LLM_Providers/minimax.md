@@ -17,7 +17,7 @@
 </details>
 
 
-Use this page when failures look provider specific on MiniMax models (MiniMax-M2.5, MiniMax-M2.5-highspeed). Examples include temperature rejection at zero, tool-call JSON drift in long 204K-context windows, Chinese tokenizer similarity mismatches, or streaming stalls under high concurrency. Each fix maps back to WFGY pages so you can verify with measurable targets.
+Use this page when failures look provider specific on MiniMax models (MiniMax-M2.7, MiniMax-M2.7-highspeed, MiniMax-M2.5, MiniMax-M2.5-highspeed). MiniMax-M2.7 is the latest flagship model with enhanced reasoning and coding capabilities. Examples include temperature rejection at zero, tool-call JSON drift in long 204K-context windows, Chinese tokenizer similarity mismatches, or streaming stalls under high concurrency. Each fix maps back to WFGY pages so you can verify with measurable targets.
 
 **Core acceptance**
 
@@ -87,7 +87,7 @@ Use this page when failures look provider specific on MiniMax models (MiniMax-M2
   Move citation text to a dedicated field in the schema and reference with IDs. See [Retrieval Traceability](https://github.com/onestardao/WFGY/blob/main/ProblemMap/retrieval-traceability.md). If the model "bluffs" when filtered, apply controls in [Bluffing](https://github.com/onestardao/WFGY/blob/main/ProblemMap/bluffing.md).
 
 - **Long chat melts down after filling the 204K window**
-  MiniMax-M2.5 supports up to 204K tokens. Entropy collapse can still occur at the tail of long sessions. Cut context windows at stable joins and verify with [Context Drift](https://github.com/onestardao/WFGY/blob/main/ProblemMap/context-drift.md) and [Entropy Collapse](https://github.com/onestardao/WFGY/blob/main/ProblemMap/entropy-collapse.md). If replies flip across turns, check [Memory Desync](https://github.com/onestardao/WFGY/blob/main/ProblemMap/patterns/pattern_memory_desync.md).
+  MiniMax models (M2.7, M2.5) support up to 204K tokens. Entropy collapse can still occur at the tail of long sessions. Cut context windows at stable joins and verify with [Context Drift](https://github.com/onestardao/WFGY/blob/main/ProblemMap/context-drift.md) and [Entropy Collapse](https://github.com/onestardao/WFGY/blob/main/ProblemMap/entropy-collapse.md). If replies flip across turns, check [Memory Desync](https://github.com/onestardao/WFGY/blob/main/ProblemMap/patterns/pattern_memory_desync.md).
 
 - **OpenAI SDK client misconfiguration**
   MiniMax uses an OpenAI-compatible API. When using the OpenAI SDK, set `base_url="https://api.minimax.io/v1"` and pass your MiniMax API key. Common pitfall: forgetting to change the base URL or passing the wrong key results in auth errors that look like model failures.
