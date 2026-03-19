@@ -1,25 +1,126 @@
-# Troubleshooting Atlas Router v1 Freeze Note
+<!--
+AI_NOTE_START
 
-## Problem Map 3.0 Troubleshooting Atlas
+Document role:
+This file is the formal freeze note for the first route-first TXT routing pack of the Atlas system.
+
+How to use this file:
+1. Read this file after reading the Atlas core and the main Router assets.
+2. Use this page to understand what Router v1 now is, what it stabilizes, what it may safely claim, and how it fits inside the Atlas system.
+3. Treat this file as a product freeze note and system delivery note, not as the full adapter spec or full Atlas core.
+4. Read together with:
+   - [Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
+   - [Canonical Casebook v1](./canonical-casebook-v1.md)
+   - [Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
+   - [Troubleshooting Atlas Router v1 TXT](./troubleshooting-atlas-router-v1.txt)
+   - [Troubleshooting Atlas Router v1 Usage Guide](./troubleshooting-atlas-router-v1-usage.md)
+
+What this file is:
+- The formal freeze note for the first route-first TXT routing pack
+- The product boundary document for Router v1
+- The official wording layer for what Router v1 now stabilizes
+- The delivery note for how Router v1 should be read inside the Atlas system
+
+What this file is not:
+- Not the Atlas core
+- Not the full adapter
+- Not the full casebook
+- Not the full repair system
+- Not a claim that Router v1 is the final strongest router forever
+
+Reading discipline for AI:
+- Preserve the distinction between Atlas core, casebook, adapter, Router pack, and deeper repair layers.
+- Treat Router v1 as a compact route-first product built from the Atlas system, not as a replacement for the Atlas.
+- Preserve route-first logic, broken-invariant reading, and first-fix restraint.
+- Do not overclaim full diagnosis or full repair closure from this Router alone.
+
+AI_NOTE_END
+-->
+
+# Troubleshooting Atlas Router v1 Freeze Note 🧭
+
 ## Formal freeze note for the first route-first TXT routing pack
 
-This document is the formal freeze note for `Troubleshooting Atlas Router v1`.
+Quick links:
 
-Its purpose is simple:
+- [Back to Atlas landing page](../wfgy-ai-problem-map-troubleshooting-atlas.md)
+- [Back to Atlas Hub](./README.md)
+- [Open Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
+- [Open Canonical Casebook v1](./canonical-casebook-v1.md)
+- [Open Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
+- [Open Troubleshooting Atlas Router v1 TXT](./troubleshooting-atlas-router-v1.txt)
+- [Open Troubleshooting Atlas Router v1 Usage Guide](./troubleshooting-atlas-router-v1-usage.md)
 
-> to state clearly what the Router now is,
-> what it stabilizes,
-> what it is allowed to claim,
-> and how it should now be read inside the Atlas system.
+---
 
-This document should be read as a **product freeze note** and a **system delivery note**.
+If the Atlas core is the full structural system, Router v1 is the first compact TXT product that carries the **route-first grammar** into a smaller, directly usable form. 🚀
 
-It does not replace the Atlas core.
-It does not replace the full adapter.
-It does not replace the casebook.
-It does not replace deeper WFGY repair or bridge work.
+This file exists to say four things clearly:
 
-Instead, it defines the first formal version boundary for the Atlas Router TXT pack.
+- what Router v1 now is
+- what it stabilizes
+- what it may safely claim
+- how it should now be read inside the Atlas system
+
+Short version:
+
+> Router v1 is the first formal compact TXT routing pack derived from the Atlas  
+> it is route-first, broken-invariant aware, first-fix restrained, and confidence-disciplined  
+> it is frozen as a real product boundary, not as the whole Atlas
+
+That is the job of this file.
+
+---
+
+## Quick start ⚡
+
+### I am new to Router v1
+
+Use this path:
+
+1. read [Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
+2. read [Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
+3. read this freeze note
+4. open [Troubleshooting Atlas Router v1 TXT](./troubleshooting-atlas-router-v1.txt)
+5. read [Troubleshooting Atlas Router v1 Usage Guide](./troubleshooting-atlas-router-v1-usage.md)
+
+### I already know the Atlas and want the shortest route
+
+Start here:
+
+1. read Section 1 for the one-line definition
+2. read Section 3 for what is now frozen in Router v1
+3. read Section 5 for what Router v1 does not claim
+4. read Section 7 and Section 8 for how it fits into the larger Atlas and repair stack
+5. read Section 15 for the formal freeze statement
+
+Shortest possible reading:
+
+> compact pack  
+> route first  
+> identify broken invariant  
+> suggest the first repair move  
+> do not fake full closure
+
+---
+
+## What this product is protecting 🛡️
+
+Router v1 matters because compact products usually fail in one of two ways.
+
+They either become:
+
+- too small and lose the real cut logic
+
+or they become:
+
+- too ambitious and start pretending to be a full diagnosis and repair engine
+
+Router v1 is trying to avoid both failures.
+
+Its purpose is not to be everything.
+
+Its purpose is to preserve the **most reusable route-first core** in a form small enough for real AI use.
 
 ---
 
@@ -60,7 +161,7 @@ It is the first Atlas asset deliberately designed to be:
 
 ---
 
-## 3. What is now frozen in Router v1
+## 3. What is now frozen in Router v1 📌
 
 The following are now considered frozen enough for first formal use.
 
@@ -104,6 +205,7 @@ The Router preserves a stable route-first output contract, including:
 ### 3.6 First repair restraint
 
 The Router has an explicit first-fix discipline:
+
 it gives the first move, not fake full closure.
 
 ### 3.7 Confidence and evidence discipline
@@ -123,7 +225,7 @@ These elements are now stable enough to freeze as Router v1.
 
 ---
 
-## 4. What Router v1 actually does
+## 4. What Router v1 actually does 🛠️
 
 Router v1 does not try to be everything.
 
@@ -161,13 +263,14 @@ That matters because many real troubleshooting failures begin with a wrong first
 ### 4.4 It preserves disciplined uncertainty
 
 A major part of the Router’s value is not only that it classifies.
+
 It is that it also knows when not to overclaim.
 
 That is part of the product, not an extra caution note.
 
 ---
 
-## 5. What Router v1 does not claim
+## 5. What Router v1 does not claim 🚧
 
 Router v1 does **not** claim that:
 
@@ -187,13 +290,14 @@ That is the strongest honest claim.
 
 ---
 
-## 6. What Router v1 proves
+## 6. What Router v1 proves ✅
 
 Router v1 proves several important things about the Atlas system.
 
 ### 6.1 The Atlas can be compressed into a directly usable text pack
 
 This is important.
+
 It shows the Atlas is not only document structure.
 
 It can also become a compact operational routing surface.
@@ -207,6 +311,7 @@ Router v1 matters because it shows that the Atlas still keeps its main shape in 
 ### 6.3 Boundary-aware routing can be made lightweight
 
 The Router is not only a family labeler.
+
 It still carries cut logic.
 
 That is one of its most valuable properties.
@@ -223,7 +328,7 @@ That is a real product threshold.
 
 ---
 
-## 7. Relationship to the larger Atlas system
+## 7. Relationship to the larger Atlas system 🔗
 
 The Router should always be read as part of the larger Atlas system, not as a disconnected mini-tool.
 
@@ -263,11 +368,12 @@ Short version:
 
 ---
 
-## 8. Relationship to repair and WFGY
+## 8. Relationship to repair and WFGY 🛠️
 
 Router v1 sits at the correct level between diagnosis and deeper repair.
 
 It is not only classification.
+
 But it is not full repair either.
 
 It belongs here:
@@ -288,7 +394,7 @@ This keeps the bridge to deeper WFGY logic clean.
 
 ---
 
-## 9. Current use cases
+## 9. Current use cases 🎯
 
 Router v1 is already strong enough for use cases like:
 
@@ -312,11 +418,11 @@ without dropping the entire Atlas library into the context.
 
 ---
 
-## 10. Current maturity reading
+## 10. Current maturity reading 🌱
 
 The correct maturity reading is:
 
-> Router v1 is complete as a first formal TXT routing product.
+> Router v1 is complete as a first formal TXT routing product
 
 That does not mean:
 
@@ -333,7 +439,7 @@ That is the right reading.
 
 ---
 
-## 11. Future patch space
+## 11. Future patch space 🔧
 
 Future Router work is still possible and expected.
 
@@ -352,7 +458,7 @@ They do not prevent Router v1 from being frozen now.
 
 ---
 
-## 12. Recommended official wording
+## 12. Recommended official wording 📣
 
 When you need one clean statement for a README, hub page, collaboration thread, or product-support page, use wording like this:
 
@@ -364,7 +470,7 @@ This wording is strong, accurate, and safe.
 
 ---
 
-## 13. Suggested delivery placement
+## 13. Suggested delivery placement 📦
 
 Router v1 should be positioned in the system as:
 
@@ -383,7 +489,7 @@ But it should not be confused with the Atlas core itself.
 
 ---
 
-## 14. Relationship to the Usage Guide
+## 14. Relationship to the Usage Guide 📘
 
 This freeze note should be read together with:
 
@@ -410,7 +516,7 @@ Short version:
 
 ---
 
-## 15. Formal freeze statement
+## 15. Formal freeze statement 🌍
 
 The formal freeze statement is:
 
@@ -441,4 +547,5 @@ A system becomes more real when it can be carried in smaller form without losing
 That is what Router v1 proves.
 
 It is not the whole Atlas.
+
 It is the first small form of the Atlas that is already strong enough to change how AI reads troubleshooting problems.
