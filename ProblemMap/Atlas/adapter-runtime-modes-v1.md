@@ -7,9 +7,10 @@ This file defines the first formal runtime-mode layer for the Atlas-to-AI Adapte
 How to use this file:
 1. Read this file after reading the main adapter document.
 2. Use this page to understand when different runtime modes should be used.
-3. Treat this document as the mode policy and behavior layer for AI-facing atlas routing.
+3. Treat this document as the mode policy and behavior layer for AI-facing Atlas routing.
 4. Read together with:
    - [Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
+   - [Adapter Failure Discipline v1](./adapter-failure-discipline-v1.md)
    - [Canonical Casebook v1](./canonical-casebook-v1.md)
    - [Patch Governance v1](./patch-governance-v1.md)
    - [Release and Freeze Policy v1](./release-and-freeze-policy-v1.md)
@@ -17,10 +18,11 @@ How to use this file:
 What this file is:
 - The first formal runtime-mode document for the Atlas adapter
 - A behavior guide for strict, teaching, repair-first, and compact routing
-- A stable mode-reference page for human and AI-facing usage
+- A stable mode-reference page for human-facing and AI-facing usage
+- A policy layer for choosing the right adapter behavior without breaking route-first discipline
 
 What this file is not:
-- Not the atlas core
+- Not the Atlas core
 - Not the full adapter contract
 - Not the full casebook
 - Not the full repair system
@@ -30,71 +32,95 @@ Reading discipline for AI:
 - Preserve the distinction between routing mode, teaching mode, repair preview, and compact routing.
 - Do not silently merge these modes into one generic behavior profile.
 - Keep mode selection explicit and task-sensitive.
-- Treat runtime modes as controlled adapter behaviors, not as replacements for the atlas core.
+- Treat runtime modes as controlled adapter behaviors, not as replacements for the Atlas core.
 
 AI_NOTE_END
 -->
 
-# Adapter Runtime Modes v1
+# Adapter Runtime Modes v1 ⚙️
 
-## Problem Map 3.0 Troubleshooting Atlas
-## First formal runtime-mode layer for Atlas-to-AI Adapter
+## First formal runtime-mode layer for Atlas-to-AI Adapter behavior
 
-This document defines the first formal runtime modes for the Atlas-to-AI Adapter system.
+Quick links:
 
-Its purpose is simple:
+- [Back to Atlas landing page](../wfgy-ai-problem-map-troubleshooting-atlas.md)
+- [Back to Atlas Hub](./README.md)
+- [Open Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
+- [Open Adapter Failure Discipline v1](./adapter-failure-discipline-v1.md)
+- [Open Canonical Casebook v1](./canonical-casebook-v1.md)
+- [Open Patch Governance v1](./patch-governance-v1.md)
+- [Open Release and Freeze Policy v1](./release-and-freeze-policy-v1.md)
 
-> to explain how the same atlas routing layer should behave differently under different usage conditions  
-> while still preserving the same route-first discipline
+---
+
+If the Atlas-to-AI Adapter is the layer that makes Atlas routing usable inside real AI interaction, this page is the layer that decides **how that same routing grammar should behave under different usage conditions**. 🧭
+
+This document does not create four different systems.
+
+It defines four controlled ways to use the **same** Atlas adapter without losing route-first discipline.
+
+Short version:
+
+> one Atlas  
+> one adapter contract  
+> four controlled runtime modes  
+> same routing grammar underneath
 
 That is the job of this file.
 
-This document should be read as a **runtime behavior layer**.
-It does not replace the atlas core.
-It does not replace the adapter contract.
-It does not replace the casebook.
+---
 
-Instead, it answers a different question:
+## Quick start 🚀
 
-> once the atlas is being used by humans, notebooks, workflows, or AI systems, what mode should the adapter run in, and what output discipline should that mode preserve
+### I am new to the adapter layer
+
+Use this path:
+
+1. read [Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
+2. read this page
+3. read [Adapter Failure Discipline v1](./adapter-failure-discipline-v1.md)
+4. inspect [Canonical Casebook v1](./canonical-casebook-v1.md)
+5. inspect [Patch Governance v1](./patch-governance-v1.md)
+
+### I already know the adapter and want the shortest route
+
+Start here:
+
+1. read Section 3 for the four formal modes
+2. read Section 8 for the mode comparison
+3. read Section 9 for the core invariants that must survive across all modes
+4. read Section 10 for practical mode selection
+
+Shortest possible reading:
+
+> the mode may change  
+> the routing grammar may not
 
 ---
 
-## 1. Why this document exists
+## What this page is doing 🛠️
 
-The Atlas adapter is meant to be reused across different settings.
+This page exists to stop a very common failure pattern:
 
-But not every setting needs the same behavior.
+the adapter gets reused across notebooks, demos, support flows, compact models, and teaching settings, then slowly starts behaving like different systems in different places.
 
-A human onboarding flow may need more explanation.
-A benchmark triage loop may need harder structure.
-A compact model may need shorter outputs.
-A product demo may need a repair preview after routing.
+That creates problems like:
 
-Without runtime modes, these different settings can easily become muddled.
+- strict routing becoming too talkative
+- teaching mode becoming too loose
+- repair preview sounding more solved than it is
+- compact mode dropping important structure
+- readers no longer knowing what the adapter is supposed to preserve
 
-That creates several problems:
+This page prevents that by defining a clean mode layer.
 
-- outputs become inconsistent
-- mode drift becomes invisible
-- teaching behavior leaks into strict routing
-- repair-preview behavior overclaims closure
-- compact mode drops essential fields
-- readers stop knowing what the adapter is trying to do
+It answers a simple operational question:
 
-This document exists to prevent that.
-
-It establishes a clean rule:
-
-> one atlas  
-> one adapter contract  
-> multiple disciplined runtime modes
-
-That is the correct design.
+> once the Atlas is being used by humans, notebooks, workflows, or AI systems, what mode should the adapter run in, and what output discipline should that mode preserve
 
 ---
 
-## 2. Core runtime principle
+## Core runtime principle ✨
 
 All runtime modes must preserve the same core ordering:
 
@@ -113,11 +139,27 @@ This means runtime modes may change:
 But they must not change the basic logic of the system.
 
 The modes are not different ontologies.
+
 They are different controlled views over the same routing grammar.
 
 ---
 
-## 3. The four formal runtime modes
+## Runtime quick map 🗂️
+
+| Mode | Main job | Best for | Main risk |
+| --- | --- | --- | --- |
+| Strict Routing | clean disciplined routing | triage, batch routing, notebook control | false hardness through overcompression |
+| Teaching | explain the cut and nearby boundaries | onboarding, workshops, guided learning | explanation inflation |
+| Repair-First Preview | show the first practical move after routing | demos, support flows, route-and-suggest UI | overpromising closure |
+| Compact Routing | preserve minimum viable routing structure under token pressure | small models, low-cost routing, batch deployment | false simplicity |
+
+These are not four different adapters.
+
+They are four controlled runtime views of the same adapter.
+
+---
+
+## The four formal runtime modes 📌
 
 The current adapter has four formal runtime modes.
 
@@ -131,11 +173,12 @@ They are:
 These four modes are enough for the current first formal adapter release.
 
 They do not claim to cover every possible future mode.
+
 They are the first stable set.
 
 ---
 
-## 4. Mode 1
+## Mode 1
 
 # Strict Routing Mode
 
@@ -209,7 +252,7 @@ Strict Routing Mode should normally preserve the following fields:
 - confidence
 - evidence_sufficiency
 
-If ambiguity or no-fit is present, the reason must remain explicit.
+If ambiguity or no_fit is present, the reason must remain explicit.
 
 ---
 
@@ -231,7 +274,7 @@ This keeps the mode hard, clean, and less prone to drift.
 
 The main risk in this mode is overcompression that hides real uncertainty.
 
-Strict mode should be concise, but not false-hard.
+Strict mode should be concise, but not falsely hard.
 
 If evidence is weak, confidence must stay limited.
 
@@ -243,7 +286,7 @@ If evidence is weak, confidence must stay limited.
 
 ---
 
-## 5. Mode 2
+## Mode 2
 
 # Teaching Mode
 
@@ -266,7 +309,7 @@ but also:
 - why this route makes sense
 - which boundary rule matters
 - what a common wrong cut would have been
-- how the atlas should be read in practice
+- how the Atlas should be read in practice
 
 This makes it useful for onboarding and guided learning.
 
@@ -295,9 +338,10 @@ In this mode, the adapter should:
 - mention the most relevant neighbor boundary
 - optionally mention common misroute risk
 - remain structured rather than drifting into free prose
-- stay faithful to the atlas rather than becoming a general essay engine
+- stay faithful to the Atlas rather than becoming a general essay engine
 
-Teaching Mode should still feel like the atlas.
+Teaching Mode should still feel like the Atlas.
+
 It should just be more explanatory.
 
 ---
@@ -345,7 +389,7 @@ It must still preserve route-first discipline.
 
 ---
 
-## 6. Mode 3
+## Mode 3
 
 # Repair-First Preview Mode
 
@@ -358,6 +402,7 @@ Repair-First Preview Mode is the action-oriented routing mode that preserves rou
 ## Main purpose
 
 This mode exists for situations where users do not only want the route.
+
 They also want a practical preview of what should happen next.
 
 Its job is to say:
@@ -432,7 +477,9 @@ The main risk in this mode is overpromising.
 This mode must never confuse:
 
 - first repair move
+
 with
+
 - full root-cause closure
 
 That boundary is essential.
@@ -445,7 +492,7 @@ That boundary is essential.
 
 ---
 
-## 7. Mode 4
+## Mode 4
 
 # Compact Routing Mode
 
@@ -460,6 +507,7 @@ Compact Routing Mode is the shortest disciplined routing mode for constrained-to
 This mode exists for cases where the adapter must remain useful under tighter output limits.
 
 Its job is not to teach deeply.
+
 Its job is not to narrate.
 
 Its job is to preserve the minimum viable routing structure under constraint.
@@ -487,7 +535,7 @@ In this mode, the adapter should:
 
 - compress wording aggressively
 - preserve essential routing fields
-- keep why-primary-not-secondary short but explicit
+- keep why_primary_not_secondary short but explicit
 - keep broken invariant visible
 - preserve confidence and evidence sufficiency
 - shorten repair direction to one or two minimal moves
@@ -540,7 +588,7 @@ Compact mode must not become:
 - vague
 - overconfident
 - field-dropping
-- or structurally incomplete
+- structurally incomplete
 
 Shorter output does not justify weaker discipline.
 
@@ -552,7 +600,7 @@ Shorter output does not justify weaker discipline.
 
 ---
 
-## 8. Runtime mode comparison
+## Runtime mode comparison 🔍
 
 The four modes can be summarized like this.
 
@@ -588,7 +636,7 @@ These are different operating views of the same adapter, not different systems.
 
 ---
 
-## 9. Core invariants that must survive across all modes
+## Core invariants that must survive across all modes 🧱
 
 No matter which mode is used, the following invariants must survive.
 
@@ -603,6 +651,7 @@ No mode may hide the structural failure behind generic language.
 ### 9.3 Why-primary-not-secondary must remain recoverable
 
 Some modes compress it.
+
 None may erase it.
 
 ### 9.4 Confidence must remain honest
@@ -617,7 +666,7 @@ These invariants are what make the mode system coherent.
 
 ---
 
-## 10. How mode selection should work
+## How mode selection should work 🧠
 
 Mode selection should be task-sensitive, not arbitrary.
 
@@ -654,7 +703,7 @@ This keeps the mode layer practical.
 
 ---
 
-## 11. Relationship to casebook and demos
+## Relationship to casebook and demos 🔗
 
 The runtime modes should not be confused with the casebook or the demos.
 
@@ -686,7 +735,7 @@ The mode system is a behavior layer, not a content library.
 
 ---
 
-## 12. Relationship to future patching
+## Relationship to future patching 📎
 
 The runtime modes are frozen in first formal form, but not permanently closed.
 
@@ -704,7 +753,7 @@ That is especially important because adapter behavior can become inconsistent ve
 
 ---
 
-## 13. What this document does not claim
+## What this document does not claim 🚧
 
 This document does **not** claim that:
 
@@ -722,25 +771,41 @@ That is the strongest honest version.
 
 ---
 
-## 14. Recommended official wording
+## Recommended official wording 📣
 
 When you need a short runtime-mode statement for a new window, documentation page, or collaboration thread, use wording like this:
 
 > The Atlas adapter currently supports four formal runtime modes: Strict Routing, Teaching, Repair-First Preview, and Compact Routing.  
-> These modes do not change the atlas logic itself.  
+> These modes do not change the Atlas logic itself.  
 > They change how the routing layer behaves under different usage conditions while preserving route-first discipline, broken-invariant visibility, and explicit confidence handling.
 
 This wording is strong, accurate, and reusable.
 
 ---
 
-## 15. One-line status
+## Next steps ✨
+
+After this page, most readers continue with:
+
+1. [Open Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
+2. [Open Adapter Failure Discipline v1](./adapter-failure-discipline-v1.md)
+3. [Open Canonical Casebook v1](./canonical-casebook-v1.md)
+4. [Open Patch Governance v1](./patch-governance-v1.md)
+
+If you want the broader Atlas surface:
+
+- [Back to Atlas landing page](../wfgy-ai-problem-map-troubleshooting-atlas.md)
+- [Back to Atlas Hub](./README.md)
+
+---
+
+## One-line status 🌍
 
 **This document defines the first four formal runtime modes of the Atlas adapter and explains how they preserve the same routing grammar under different use conditions.**
 
 ---
 
-## 16. Closing note
+## Closing note
 
 A strong adapter should not behave the same way everywhere.
 
