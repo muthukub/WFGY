@@ -35,36 +35,97 @@ Reading discipline for AI:
 AI_NOTE_END
 -->
 
-# Adapter Failure Discipline v1
+# Adapter Failure Discipline v1 🧭
 
-## Problem Map 3.0 Troubleshooting Atlas
-## First formal discipline layer for preventing adapter drift and routing failure
+## First formal discipline layer for preventing adapter drift, false confidence, and premature repair
 
-This document defines the first formal failure-discipline rules for the Atlas-to-AI Adapter system.
+Quick links:
 
-Its purpose is simple:
-
-> to make clear what kinds of adapter failure must be actively resisted  
-> so the routing layer stays useful, honest, and structurally stable
-
-That is the job of this file.
-
-This document should be read as a **discipline layer**.
-It does not replace the atlas core.
-It does not replace the adapter contract.
-It does not replace runtime modes.
-
-Instead, it answers a more operational question:
-
-> once the Atlas is being used through an adapter, what are the main ways that the adapter can fail, and what rules must remain in place to prevent that failure
+- [Back to Atlas landing page](../wfgy-ai-problem-map-troubleshooting-atlas.md)
+- [Back to Atlas Hub](./README.md)
+- [Open Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
+- [Open Adapter Runtime Modes v1](./adapter-runtime-modes-v1.md)
+- [Open Canonical Casebook v1](./canonical-casebook-v1.md)
+- [Open Patch Governance v1](./patch-governance-v1.md)
+- [Open Validation Basis v1](./validation-basis-v1.md)
 
 ---
 
-## 1. Why this document exists
+If the Atlas-to-AI Adapter is the layer that makes Atlas routing usable inside real AI interaction, this page is the layer that keeps that adapter from quietly becoming sloppy, overconfident, or overhelpful.
 
-A routing adapter can fail even when the underlying atlas is good.
+This document does not exist to make the adapter sound strict.
 
-That happens because adapters live in dangerous territory.
+It exists to make sure the adapter stays structurally honest under pressure.
+
+Short version:
+
+> route first  
+> explain the cut  
+> keep confidence honest  
+> preview repair with restraint  
+> do not let mode flexibility become routing drift
+
+That is the job of this file.
+
+---
+
+## Quick start 🚀
+
+### I am new to the adapter layer
+
+Use this path:
+
+1. read [Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
+2. read [Adapter Runtime Modes v1](./adapter-runtime-modes-v1.md)
+3. read this page
+4. then inspect [Canonical Casebook v1](./canonical-casebook-v1.md)
+5. then inspect [Patch Governance v1](./patch-governance-v1.md)
+
+### I already know the adapter and want the shortest route
+
+Start here:
+
+1. this README
+2. Section 4, the ten core rules
+3. Section 6, how the rules behave across runtime modes
+4. Section 7 and Section 8, what to do when evidence is weak or the case is difficult
+
+Shortest possible reading:
+
+> the adapter must remain a disciplined Atlas interface,  
+> not a smooth-sounding shortcut machine
+
+---
+
+## What this page is protecting 🛡️
+
+This page protects the Atlas adapter from four kinds of failure:
+
+1. **routing drift**  
+   the adapter starts naming families loosely instead of cutting by broken invariant
+
+2. **confidence abuse**  
+   the adapter sounds certain when evidence is weak
+
+3. **repair overreach**  
+   the adapter rushes into fix language before the route is stable
+
+4. **mode drift**  
+   the adapter changes behavior across modes in ways that silently damage structure
+
+That is the real scope.
+
+This file is not just a style guide.
+
+It is the first formal discipline layer for keeping the adapter useful, honest, and stable.
+
+---
+
+## Why this document exists
+
+A routing adapter can fail even when the underlying Atlas is good.
+
+That happens because adapters live in a messy environment.
 
 They are exposed to:
 
@@ -75,7 +136,7 @@ They are exposed to:
 - weak evidence
 - token pressure
 - mode confusion
-- pressure to give action even when the cut is unclear
+- pressure to give action before the cut is clear
 
 Without explicit discipline, the adapter can slowly degrade into behaviors like:
 
@@ -84,22 +145,25 @@ Without explicit discipline, the adapter can slowly degrade into behaviors like:
 - overcompressed reasoning
 - misrepair overreach
 - silent boundary drift
-- generic outputs that no longer reflect the atlas
+- generic outputs that no longer reflect Atlas structure
 
-That is exactly what this document exists to prevent.
+That is exactly what this page exists to prevent.
 
 The Atlas adapter should not merely sound structured.
+
 It should actually remain structurally disciplined.
 
 ---
 
-## 2. Core principle
+## Core principle ✨
 
 The most important principle is this:
 
-> adapter usefulness depends on disciplined restraint, not on maximum verbosity or maximum confidence
+> adapter usefulness depends on disciplined restraint,  
+> not on maximum verbosity and not on maximum confidence
 
 The adapter becomes better not when it says more.
+
 It becomes better when it preserves the right structure under pressure.
 
 That means the adapter must resist several temptations:
@@ -114,7 +178,7 @@ This file defines the rules that resist those temptations.
 
 ---
 
-## 3. What adapter failure means in this system
+## What adapter failure means here
 
 Adapter failure does **not** only mean a technical crash.
 
@@ -131,7 +195,7 @@ That includes failures such as:
 - dropping required fields in compact settings
 - silently changing behavior across modes
 
-So when this document says “failure,” it means both:
+So when this document says **failure**, it means both:
 
 - structural output failure
 - behavioral routing failure
@@ -140,7 +204,20 @@ That is the correct scope.
 
 ---
 
-## 4. The ten core failure-discipline rules
+## Adapter failure quick map 🗂️
+
+| Failure region | What goes wrong | Typical symptom |
+| --- | --- | --- |
+| Routing drift | the adapter stops cutting by invariant | labels feel plausible but weak |
+| Confidence abuse | the adapter sounds stronger than the evidence | polished certainty on unstable routing |
+| Repair overreach | the adapter moves into fix language too early | first move sounds like full closure |
+| Mode drift | runtime modes stop preserving the same discipline core | compact, teaching, or repair mode silently mutates structure |
+
+This map is useful because it lets reviewers inspect adapter behavior faster before diving into the full rule set.
+
+---
+
+## The ten core failure-discipline rules 📌
 
 The current first formal adapter release should preserve the following ten core rules.
 
@@ -165,6 +242,7 @@ Even in Repair-First Preview Mode, the adapter must not reverse this order.
 Why this rule matters:
 
 Many bad outputs happen when the system tries to be helpful too early.
+
 That produces fake repair confidence on top of a weak cut.
 
 The adapter must resist that.
@@ -189,6 +267,7 @@ The primary family must correspond to the best current reading of the main broke
 Why this rule matters:
 
 Without this rule, routing becomes cosmetic.
+
 With this rule, routing remains structural.
 
 ---
@@ -231,7 +310,9 @@ The adapter must not replace it with:
 Why this rule matters:
 
 The Atlas is not just about naming where something goes.
+
 It is about cutting correctly.
+
 If the cut cannot be explained, the route is too weak.
 
 ---
@@ -253,7 +334,7 @@ A case should be marked ambiguous only when the current evidence really does not
 
 Why this rule matters:
 
-If ambiguous becomes a lazy escape hatch, the adapter stops being useful exactly where the atlas is most valuable.
+If ambiguous becomes a lazy escape hatch, the adapter stops being useful exactly where the Atlas is most valuable.
 
 ---
 
@@ -271,7 +352,7 @@ The adapter must not trigger no-fit because:
 - the prompt is short
 - the answer space is uncomfortable
 
-No-fit should be reserved for cases where the adapter has real reason to think the current atlas genuinely lacks a stable fit.
+No-fit should be reserved for cases where the adapter has real reason to think the current Atlas genuinely lacks a stable fit.
 
 Why this rule matters:
 
@@ -322,6 +403,7 @@ For example, the adapter must resist patterns like:
 Why this rule matters:
 
 Overlays are useful only when they remain secondary markers.
+
 If they start replacing family routing, the system flattens.
 
 ---
@@ -335,7 +417,8 @@ The adapter may use exemplars, casebook patterns, and boundary examples.
 But it must not behave as if:
 
 - “this looks like a famous example”
-is enough to justify routing
+
+is enough to justify routing.
 
 Exemplars should support:
 
@@ -357,6 +440,7 @@ If the adapter starts matching cases by vibe rather than by structure, it become
 # Patch changes must not silently rewrite adapter behavior
 
 Later improvements to the adapter are allowed.
+
 But they must happen through explicit patching.
 
 The adapter must not drift through hidden changes such as:
@@ -369,15 +453,17 @@ The adapter must not drift through hidden changes such as:
 Why this rule matters:
 
 The adapter is part of the Atlas control surface.
+
 Silent behavioral mutation makes the whole system harder to trust.
 
 ---
 
-## 5. The main adapter failure families
+## The four main adapter failure regions 🧩
 
 The ten rules above can be grouped into four major adapter-failure regions.
 
 These are not top-level Atlas families.
+
 They are adapter failure patterns.
 
 ### A. Routing drift
@@ -411,18 +497,18 @@ Examples:
 
 Examples:
 
-- Strict mode becoming too explanatory
+- Strict mode becoming too hard-edged without evidence
 - Teaching mode becoming too loose
 - Repair-First mode becoming overpromising
 - Compact mode dropping required structure
 
-These four failure regions are useful because they help reviewers inspect adapter outputs more clearly.
+These four regions are useful because they help reviewers inspect adapter outputs more clearly.
 
 ---
 
-## 6. How failure discipline applies across modes
+## How failure discipline applies across modes ⚙️
 
-The same discipline rules apply across all runtime modes, but with different pressure points.
+The same discipline rules apply across all runtime modes, but different modes create different pressure points.
 
 ### Strict Routing Mode
 
@@ -484,9 +570,10 @@ Most important protection:
 
 ---
 
-## 7. What should happen when evidence is weak
+## What should happen when evidence is weak 🔍
 
 Weak evidence is normal.
+
 The adapter must be able to behave well under it.
 
 When evidence is weak, the adapter should:
@@ -501,11 +588,12 @@ When evidence is weak, the adapter should:
 This is one of the most important practical behaviors in the whole adapter system.
 
 A good adapter does not panic when evidence is weak.
+
 It becomes more honest.
 
 ---
 
-## 8. What should happen when a case is difficult
+## What should happen when a case is difficult 🧠
 
 Difficult cases are where the adapter earns trust.
 
@@ -524,13 +612,13 @@ It should **not** react by becoming:
 - vague
 - overconfident
 - overphilosophical
-- or structurally empty
+- structurally empty
 
 Difficult cases are not permission to abandon form.
 
 ---
 
-## 9. What this means for demos and product surfaces
+## Why this matters for demos and product surfaces 🪟
 
 The adapter will often be seen through:
 
@@ -551,11 +639,13 @@ For product-facing use, the adapter must especially resist:
 - repair wording that sounds more solved than it really is
 - mode confusion between teaching and repair preview
 
-This matters because product polish must not outrun structural honesty.
+Product polish must not outrun structural honesty.
+
+That is the real rule.
 
 ---
 
-## 10. Relationship to casebook and repair layer
+## Relationship to casebook and repair layer 🔗
 
 This document should be read together with the casebook and fix layer, but not confused with them.
 
@@ -576,14 +666,15 @@ This document should be read together with the casebook and fix layer, but not c
 
 - behavioral rules that stop the adapter from misusing both of the above
 
-That distinction is important.
+That distinction matters.
 
 This file is not content.
+
 It is conduct.
 
 ---
 
-## 11. Relationship to patch governance
+## Relationship to patch governance 📎
 
 Adapter failure discipline must remain patchable, but not casually mutable.
 
@@ -599,13 +690,13 @@ But these refinements must happen through explicit patching.
 
 Why?
 
-Because if adapter discipline changes silently, downstream users lose track of what the adapter is supposed to be protecting.
+Because if adapter discipline changes silently, downstream users lose track of what the adapter is supposed to protect.
 
-That would damage system trust.
+That damages system trust.
 
 ---
 
-## 12. What this document does not claim
+## What this document does not claim 🚧
 
 This document does **not** claim that:
 
@@ -623,7 +714,7 @@ That is the strongest honest version.
 
 ---
 
-## 13. Recommended official wording
+## Recommended official wording 📣
 
 When you need a short adapter-discipline statement for a new window, support page, or collaboration thread, use wording like this:
 
@@ -635,13 +726,29 @@ This wording is strong, accurate, and reusable.
 
 ---
 
-## 14. One-line status
+## Next steps ✨
+
+After this page, most readers continue with:
+
+1. [Open Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
+2. [Open Adapter Runtime Modes v1](./adapter-runtime-modes-v1.md)
+3. [Open Canonical Casebook v1](./canonical-casebook-v1.md)
+4. [Open Patch Governance v1](./patch-governance-v1.md)
+
+If you want the broader Atlas surface:
+
+- [Back to Atlas landing page](../wfgy-ai-problem-map-troubleshooting-atlas.md)
+- [Back to Atlas Hub](./README.md)
+
+---
+
+## One-line status 🌍
 
 **This document defines the formal discipline rules that keep the Atlas adapter from drifting into vague routing, false confidence, premature repair, or unstable mode behavior.**
 
 ---
 
-## 15. Closing note
+## Closing note
 
 A routing adapter does not fail only when it crashes.
 
