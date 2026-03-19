@@ -5,7 +5,7 @@ Document role:
 This file defines the first formal release and freeze policy for the Atlas system.
 
 How to use this file:
-1. Read this file after understanding the frozen atlas core and patch governance rules.
+1. Read this file after understanding the frozen Atlas core and patch governance rules.
 2. Use this page to understand when a document, layer, or wave is ready to be released or frozen.
 3. Treat this file as the policy layer for release timing, freeze interpretation, and version-boundary discipline.
 4. Read together with:
@@ -19,9 +19,10 @@ What this file is:
 - The first formal release policy for the Atlas system
 - The first formal freeze policy for Atlas documents and system layers
 - A rulebook for deciding when something is stable enough to publish, freeze, or carry forward as a version node
+- A policy layer for keeping release status, freeze status, and patch status legible
 
 What this file is not:
-- Not the atlas core itself
+- Not the Atlas core itself
 - Not the patch log
 - Not the internal work diary
 - Not a benchmark report
@@ -32,34 +33,96 @@ Reading discipline for AI:
 - Do not confuse “released” with “universally complete.”
 - Do not confuse “frozen” with “never patch again.”
 - Keep version boundaries explicit and layered.
+- Treat this file as policy infrastructure, not as a shortcut around freeze discipline.
 
 AI_NOTE_END
 -->
 
-# Release and Freeze Policy v1
+# Release and Freeze Policy v1 📦
 
-## Problem Map 3.0 Troubleshooting Atlas
 ## First formal policy for release timing, freeze boundaries, and version discipline
 
-This document defines the first formal release and freeze policy for the Atlas system.
+Quick links:
 
-Its purpose is simple:
+- [Back to Atlas landing page](../wfgy-ai-problem-map-troubleshooting-atlas.md)
+- [Back to Atlas Hub](./README.md)
+- [Open Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
+- [Open Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
+- [Open Atlas v1 Integrated Handoff](./atlas-v1-integrated-handoff.md)
+- [Open Patch Governance v1](./patch-governance-v1.md)
+- [Open Patch Wave 2 Freeze Note v1](./patch-wave-2-freeze-note-v1.md)
 
-> to explain when something is ready to be released  
-> when something is ready to be frozen  
-> how those two states differ  
-> and how future growth should remain legible
+---
 
-That is the job of this file.
+If `Patch Governance v1` explains **how later growth should happen**, this page explains **when something is ready to be published, when it is ready to be frozen, and how those states should be read without confusion**.
 
-This document should be read as a **policy layer**.
-It does not replace the atlas core.
-It does not replace patch governance.
-It does not replace negative-space discipline.
+That is the real job of this file.
 
-Instead, it answers a more operational question:
+This document is not here to add new structure to the Atlas.
 
-> once the Atlas becomes a real multi-layer system, how do we decide what is stable enough to publish, what is stable enough to freeze, and what must remain visibly open
+It is here to keep release language, freeze language, and version boundaries clean enough that the system stays readable as it grows.
+
+Short version:
+
+> release means ready to enter official system navigation  
+> freeze means stable enough to stop silent rewriting  
+> patching means later growth now has to happen explicitly
+
+---
+
+## Quick start 🚀
+
+### I am new to release and freeze policy
+
+Use this path:
+
+1. read [Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
+2. read [Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
+3. read [Patch Governance v1](./patch-governance-v1.md)
+4. read this page
+5. then read any relevant freeze note or patch-wave note
+
+### I already know the Atlas and want the shortest route
+
+Start here:
+
+1. read Section 2 for the core policy distinction
+2. read Section 5 for the four major states
+3. read Section 6 and Section 7 for release and freeze criteria
+4. read Section 11 for what should never happen
+5. read Section 13 for the practical rules
+
+Shortest possible reading:
+
+> released does not mean universally complete  
+> frozen does not mean unpatchable  
+> and version boundaries must stay visible
+
+---
+
+## What this file protects 🛡️
+
+This page protects the Atlas system from a very common kind of documentation drift.
+
+Without a clear release and freeze policy, people start to blur together things that should stay distinct:
+
+- work in progress
+- released
+- frozen
+- patched
+- superseded
+
+That creates confusion fast.
+
+This policy exists so the system can grow without making readers guess:
+
+- what is official
+- what is stable
+- what is still open
+- what changed
+- what did not change
+
+That clarity is part of system trust.
 
 ---
 
@@ -90,7 +153,7 @@ That distinction is essential.
 
 ---
 
-## 2. Core policy distinction
+## 2. Core policy distinction ✨
 
 The most important distinction in this document is this:
 
@@ -115,7 +178,7 @@ The policy must preserve those differences.
 
 ---
 
-## 3. What “released” means in this system
+## 3. What “released” means in this system 📣
 
 In the Atlas system, a release means the following:
 
@@ -139,7 +202,7 @@ That is healthy.
 
 ---
 
-## 4. What “frozen” means in this system
+## 4. What “frozen” means in this system 🧊
 
 In the Atlas system, a freeze means the following:
 
@@ -161,7 +224,7 @@ That is the correct reading.
 
 ---
 
-## 5. The four major states
+## 5. The four major states 🗂️
 
 For practical use, Atlas assets should be read through four main states.
 
@@ -208,7 +271,7 @@ The Atlas system should preserve this status carefully to avoid confusion.
 
 ---
 
-## 6. Release criteria
+## 6. Release criteria 📌
 
 An Atlas asset should usually be released only when the following conditions are satisfied.
 
@@ -231,6 +294,7 @@ A document should not be released if a reader cannot tell whether it is:
 The document must be readable enough to stand on its own.
 
 That does not mean it must be small.
+
 It means its internal logic should be understandable.
 
 ### 6.3 Consistent system placement
@@ -250,11 +314,12 @@ This is especially important for bridge documents, repair-facing documents, and 
 The document must not still depend on obvious placeholder wording or unresolved role confusion.
 
 A release can still be patchable.
+
 But it should not feel like an internal scratchpad.
 
 ---
 
-## 7. Freeze criteria
+## 7. Freeze criteria 🔒
 
 An Atlas asset should usually be frozen only when the following stronger conditions are satisfied.
 
@@ -273,6 +338,7 @@ For example, a document should not be frozen if it still feels half like a patch
 The asset should have survived enough conceptual, structural, or system-level pressure to justify stability.
 
 This does not always mean benchmark pressure.
+
 It may mean:
 
 - boundary pressure
@@ -295,13 +361,14 @@ That is one of the most practical freeze criteria in the whole system.
 
 ---
 
-## 8. When to use paired documents
+## 8. When to use paired documents 🔗
 
 Some Atlas layers are strongest when they are frozen as paired documents rather than as a single text.
 
 This is already visible in the system.
 
 ### Example
+
 `Atlas Final Freeze v1` and `Atlas Negative Space Report v1`
 
 This pair works because one document defines:
@@ -324,11 +391,11 @@ This is a feature, not a weakness.
 
 ---
 
-## 9. Release and freeze by layer
+## 9. Release and freeze by layer 🧱
 
 Different Atlas layers should not all be judged by exactly the same release or freeze threshold.
 
-### 9.1 Core atlas layer
+### 9.1 Core Atlas layer
 
 This layer requires the strongest freeze threshold.
 
@@ -384,7 +451,7 @@ These can be more flexible, but should still remain version-aware.
 
 ---
 
-## 10. Relationship to patching
+## 10. Relationship to patching 🔄
 
 Release and freeze policy must work together with patch governance.
 
@@ -404,7 +471,7 @@ because the system now has stable reference points.
 
 ---
 
-## 11. What should never happen
+## 11. What should never happen ⛔
 
 The following are policy failures and should be avoided.
 
@@ -445,7 +512,7 @@ Status ambiguity is governance debt.
 
 ---
 
-## 12. Recommended status language
+## 12. Recommended status language 🏷️
 
 To reduce confusion, Atlas assets should use a small number of consistent status phrases.
 
@@ -478,7 +545,7 @@ Consistency here matters more than style.
 
 ---
 
-## 13. Practical release rules for current work
+## 13. Practical release rules for current work 📎
 
 For current Atlas work, the most useful operational rules are these.
 
@@ -493,23 +560,26 @@ Do not freeze a document until its interpretation boundary is strong enough to r
 ### Rule 3
 
 If a document needs a strong “does not claim” section to stay honest, that is fine.
+
 That may mean it is ready for a paired or cautious freeze, not that it is weak.
 
 ### Rule 4
 
 If a layer is growing quickly, release can happen before stronger freeze.
+
 But that status should be explicit.
 
 ### Rule 5
 
 If later work materially changes how a frozen page should be read, write a patch note or later version node.
+
 Do not quietly rewrite history.
 
 These five rules already prevent many future problems.
 
 ---
 
-## 14. Relationship to system trust
+## 14. Relationship to system trust 🤝
 
 Release and freeze policy matter because trust is not built only by content.
 
@@ -529,7 +599,7 @@ This is why policy matters.
 
 ---
 
-## 15. Recommended official wording
+## 15. Recommended official wording 📣
 
 When you need one short release-and-freeze statement for a new window, support page, or collaboration thread, use wording like this:
 
@@ -541,7 +611,23 @@ This wording is strong, accurate, and reusable.
 
 ---
 
-## 16. One-line status
+## Next steps ✨
+
+After this page, most readers continue with:
+
+1. [Open Patch Governance v1](./patch-governance-v1.md)
+2. [Open Atlas v1 Integrated Handoff](./atlas-v1-integrated-handoff.md)
+3. [Open Patch Wave 2 Freeze Note v1](./patch-wave-2-freeze-note-v1.md)
+
+If you want the broader Atlas surface:
+
+- [Back to Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
+- [Back to Atlas Hub](./README.md)
+- [Back to Atlas landing page](../wfgy-ai-problem-map-troubleshooting-atlas.md)
+
+---
+
+## 16. One-line status 🌍
 
 **This document defines how Atlas documents and layers become released, frozen, patchable, or superseded without losing version clarity or structural trust.**
 
