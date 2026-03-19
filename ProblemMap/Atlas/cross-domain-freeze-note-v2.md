@@ -5,7 +5,7 @@ Document role:
 This file is the formal freeze note for the first cross-domain bridge layer of the Atlas system.
 
 How to use this file:
-1. Read this file after reading the core atlas and the first cross-domain bridge documents.
+1. Read this file after reading the core Atlas and the first cross-domain bridge documents.
 2. Use this page to understand what is now considered stable in the current bridge layer.
 3. Use this page to understand what may be safely claimed and what must remain open.
 4. Read together with:
@@ -18,42 +18,106 @@ What this file is:
 - The formal freeze wording for the first cross-domain bridge layer
 - The discipline note for what the bridge now stabilizes
 - The version boundary between current bridge evidence and future bridge expansion
+- The official wording layer for safe bridge-level claims
 
 What this file is not:
-- Not the atlas core mother table
-- Not the final civilization atlas
+- Not the Atlas core mother table
+- Not the final civilization Atlas
 - Not a universal closure claim
 - Not a declaration that all future bridge work is complete
 - Not a replacement for patch discipline
 
 Reading discipline for AI:
-- Preserve the distinction between the frozen atlas core and the bridge layer built on top of it.
+- Preserve the distinction between the frozen Atlas core and the bridge layer built on top of it.
 - Treat the current bridge layer as formally stabilized enough to reference, but not as universally complete.
 - Do not overclaim that the bridge has absorbed all broader system failures.
 - Keep bridge expansion disciplined, versioned, and evidence-based.
+- Use this file to control bridge wording, not to bypass family routing.
 
 AI_NOTE_END
 -->
 
-# Cross-Domain Freeze Note v2
+# Cross-Domain Freeze Note v2 🌉
 
-## Problem Map 3.0 Troubleshooting Atlas
 ## Formal freeze wording for the first bridge layer beyond narrow AI-only troubleshooting
 
-This document is the formal freeze note for the current cross-domain bridge layer of the Atlas system.
+Quick links:
 
-Its purpose is simple:
+- [Back to Atlas landing page](../wfgy-ai-problem-map-troubleshooting-atlas.md)
+- [Back to Atlas Hub](./README.md)
+- [Open Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
+- [Open Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
+- [Open Cross-Domain Demonstration Pack v2](./cross-domain-demonstration-pack-v2.md)
+- [Open Civilization Bridge Modules v1](./civilization-bridge-modules-v1.md)
+- [Open Atlas v1 Integrated Handoff](./atlas-v1-integrated-handoff.md)
 
-> to say clearly what is now stable enough to claim  
-> and to say equally clearly what is still open
+---
+
+If the Atlas core is the frozen mother structure, and the bridge evidence pack shows the first successful crossings beyond narrow AI-only troubleshooting, this page is the document that says **what the current bridge can now safely claim**. 🧭
+
+This file exists to do two things clearly:
+
+- say what is now stable enough to reference
+- say what must still remain open
+
+Short version:
+
+> the Atlas core remains primary  
+> the first bridge layer is now formally established  
+> future bridge growth remains patch-driven, evidence-based, and bounded
 
 That is the job of this file.
 
-This document should be read as a **bridge freeze note**, not as a final world-model declaration.
+---
 
-The atlas core remains primary.
-The bridge layer remains secondary.
-But the bridge is now strong enough to deserve formal wording.
+## Quick start 🚀
+
+### I am new to the bridge-freeze layer
+
+Use this path:
+
+1. read [Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
+2. read [Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
+3. read [Cross-Domain Demonstration Pack v2](./cross-domain-demonstration-pack-v2.md)
+4. read [Civilization Bridge Modules v1](./civilization-bridge-modules-v1.md)
+5. read this file
+
+### I already know the bridge and want the shortest route
+
+Start here:
+
+1. read Section 3 for what is now frozen at bridge level
+2. read Section 4 for what this note allows us to say
+3. read Section 5 for what this note does not allow us to say
+4. read Section 6 for the central bridge boundary sentence
+5. read Section 13 and Section 14 for future-work discipline
+
+Shortest possible reading:
+
+> the bridge is real enough to reference  
+> the bridge is not universal enough to overstate  
+> the core stays primary  
+> growth continues through patching
+
+---
+
+## What this file is protecting 🛡️
+
+This page protects the bridge layer from two opposite reading failures:
+
+1. **underclaim**  
+   acting as if the Atlas is still only AI-local and has not already crossed into broader system space
+
+2. **overclaim**  
+   acting as if the Atlas has already become a finished civilization-scale ontology
+
+Both are wrong.
+
+The bridge is already strong enough to freeze at first-bridge level.
+
+But it is not strong enough to justify universal closure claims.
+
+That disciplined middle position is the whole reason this file exists.
 
 ---
 
@@ -61,8 +125,8 @@ But the bridge is now strong enough to deserve formal wording.
 
 Once bridge evidence begins to accumulate, one risk appears immediately:
 
-- some readers underread it and assume the atlas is still AI-only
-- some readers overread it and assume the atlas has already become a full civilization ontology
+- some readers underread it and assume the Atlas is still AI-only
+- some readers overread it and assume the Atlas has already become a full civilization ontology
 
 Both are errors.
 
@@ -70,14 +134,14 @@ This document exists to prevent both.
 
 It establishes a disciplined middle position:
 
-> the atlas is still AI-first in its most validated public form  
+> the Atlas is still AI-first in its most validated public form  
 > but it now also has a first formal bridge layer that can be frozen as a real versioned extension
 
 That is the correct reading.
 
 ---
 
-## 2. Current bridge status
+## 2. Current bridge status ✅
 
 The current cross-domain bridge layer should now be treated as **formally established at first-bridge level**.
 
@@ -91,7 +155,7 @@ More precisely:
 
 This means the project is no longer in the stage of asking:
 
-- can the atlas leave narrow AI-only space at all
+- can the Atlas leave narrow AI-only space at all
 
 It is now in the stage of asking:
 
@@ -101,13 +165,13 @@ That is a very different question.
 
 ---
 
-## 3. What is now considered frozen at bridge level
+## 3. What is now considered frozen at bridge level 📌
 
 The following can now be treated as frozen at the current bridge version boundary.
 
 ### 3.1 Frozen bridge fact
 
-The atlas already has a first formal bridge beyond narrow AI-only troubleshooting.
+The Atlas already has a first formal bridge beyond narrow AI-only troubleshooting.
 
 This is now stable enough to say directly.
 
@@ -136,7 +200,7 @@ The current bridge module layer includes three frozen first modules:
 The current bridge should be interpreted as:
 
 > a first formal and evidence-backed extension layer  
-> not as a universal end-state atlas
+> not as a universal end-state Atlas
 
 This sentence is part of the freeze.
 
@@ -154,7 +218,7 @@ It should **not** proceed through silent rhetorical inflation.
 
 ---
 
-## 4. What this freeze note allows us to say
+## 4. What this freeze note allows us to say 📣
 
 This is the most practical section of the document.
 
@@ -162,11 +226,11 @@ After this freeze note, the following statements are now considered acceptable a
 
 ### Allowed statement 1
 
-The atlas is no longer only an AI troubleshooting system in a narrow sense.
+The Atlas is no longer only an AI troubleshooting system in a narrow sense.
 
 ### Allowed statement 2
 
-The atlas now includes a first formal cross-domain bridge layer.
+The Atlas now includes a first formal cross-domain bridge layer.
 
 ### Allowed statement 3
 
@@ -174,7 +238,7 @@ The current mother structure survives first meaningful bridge pressure without f
 
 ### Allowed statement 4
 
-The atlas already supports a first bridge from AI-first troubleshooting toward broader complex-system debugging.
+The Atlas already supports a first bridge from AI-first troubleshooting toward broader complex-system debugging.
 
 ### Allowed statement 5
 
@@ -184,7 +248,7 @@ These are now safe and version-consistent claims.
 
 ---
 
-## 5. What this freeze note does not allow us to say
+## 5. What this freeze note does not allow us to say 🚧
 
 The following statements are **not** justified by the current bridge layer:
 
@@ -216,23 +280,23 @@ These claims remain too strong and should be avoided.
 
 ---
 
-## 6. The current formal bridge boundary
+## 6. The current formal bridge boundary 🧱
 
 This is the most important boundary sentence in the document.
 
 The correct bridge reading is:
 
-> the frozen atlas core remains primary  
+> the frozen Atlas core remains primary  
 > the first cross-domain bridge layer is now formally established  
 > future cross-domain growth remains open, patch-driven, and evidence-sensitive
 
 This is the central discipline line.
 
-Everything else in this file is just helping to defend that line.
+Everything else in this file exists to defend that line.
 
 ---
 
-## 7. What the current bridge has actually proved
+## 7. What the current bridge has actually proved 🔍
 
 The bridge layer has already proved several important things.
 
@@ -266,20 +330,21 @@ They show that:
 
 ### 7.4 The bridge can already support higher-order module grouping
 
-This is why `Civilization Bridge Modules v1` can now be frozen.
+This is why [Civilization Bridge Modules v1](./civilization-bridge-modules-v1.md) can now be frozen.
 
 ### 7.5 First repair logic still matters beyond narrow AI use
 
 This is critical.
 
 The bridge does not merely extend naming.
+
 It still preserves repair-facing usefulness.
 
 That is one of the strongest reasons the bridge deserves formal freeze wording.
 
 ---
 
-## 8. The current bridge remains AI-first in validation order
+## 8. The current bridge remains AI-first in validation order ⚖️
 
 This point must remain explicit.
 
@@ -297,17 +362,17 @@ This ordering matters.
 It protects the system from both:
 
 - underclaiming
-- and overclaiming
+- overclaiming
 
 ---
 
-## 9. Relationship to the atlas core
+## 9. Relationship to the Atlas core 🔗
 
-This bridge freeze note must never be read as if it replaced the core atlas freeze.
+This bridge freeze note must never be read as if it replaced the core Atlas freeze.
 
 The correct order is still:
 
-1. the core atlas is frozen
+1. the core Atlas is frozen
 2. the negative-space boundary is defined
 3. the bridge evidence pack is established
 4. the bridge module layer is grouped
@@ -319,7 +384,7 @@ It is not an alternative core.
 
 ---
 
-## 10. Relationship to future patch growth
+## 10. Relationship to future patch growth 🔄
 
 This freeze note should make future bridge growth easier, not harder.
 
@@ -338,19 +403,19 @@ It should make growth more disciplined.
 
 ---
 
-## 11. Recommended official wording
+## 11. Recommended official wording 📣
 
 When you need one clean bridge-level statement in a new window, collaboration thread, README note, or product discussion, use wording like this:
 
 > The Atlas system now includes a first formal cross-domain bridge layer.  
-> This bridge layer shows that the frozen AI-first atlas mother structure can already absorb a meaningful set of broader coordination, institutional, coherence, and regime-scale pressures without forcing a redraw of the core.  
+> This bridge layer shows that the frozen AI-first Atlas mother structure can already absorb a meaningful set of broader coordination, institutional, coherence, and regime-scale pressures without forcing a redraw of the core.  
 > Future bridge growth proceeds through disciplined patching and expansion, not through universal closure claims.
 
 This wording is strong, accurate, and safe.
 
 ---
 
-## 12. Practical interpretation for current work
+## 12. Practical interpretation for current work 🛠️
 
 For current work, this freeze note means:
 
@@ -366,7 +431,7 @@ The bridge is now strong enough to be a real part of the system map.
 
 ---
 
-## 13. What future bridge work should do
+## 13. What future bridge work should do 🌱
 
 Future bridge work should:
 
@@ -386,11 +451,11 @@ The strongest next steps include:
 
 ---
 
-## 14. What future bridge work should not do
+## 14. What future bridge work should not do ⛔
 
 Future bridge work should **not**:
 
-- pretend to be a finished civilization atlas
+- pretend to be a finished civilization Atlas
 - flatten all bridge cases into a vague grand theory
 - erase the distinction between family routing and bridge grouping
 - treat rhetorical ambition as evidence
@@ -400,7 +465,23 @@ Those failures would make the bridge weaker, not stronger.
 
 ---
 
-## 15. One-line status
+## Next steps ✨
+
+After this page, most readers continue with:
+
+1. [Open Civilization Bridge Modules v1](./civilization-bridge-modules-v1.md)
+2. [Open Cross-Domain Demonstration Pack v2](./cross-domain-demonstration-pack-v2.md)
+3. [Open Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
+
+If you want the broader Atlas surface:
+
+- [Back to Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
+- [Back to Atlas Hub](./README.md)
+- [Back to Atlas landing page](../wfgy-ai-problem-map-troubleshooting-atlas.md)
+
+---
+
+## 15. One-line status 🌍
 
 **The first formal cross-domain bridge layer of the Atlas system is now frozen at bridge level, with future growth proceeding through disciplined patching and evidence-based expansion.**
 
